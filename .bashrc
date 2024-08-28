@@ -35,3 +35,6 @@ fi
 # Custom Prompt
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${bold}${red}\@ ${blue}\w${reset}\n$ "
+
+# It's apparently important to set up zoxide at the end of the file
+eval "$(zoxide init --cmd cd bash)"
