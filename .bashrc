@@ -10,6 +10,7 @@ alias grep='grep --color=auto'
 # Everything above this comment was the default .bashrc file
 
 alias nv='nvim'
+alias bat='bat --theme=gruvbox-dark'
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
