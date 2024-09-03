@@ -39,5 +39,14 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${bold}${red}\@ ${blue}\w${reset}\n$ "
 
+function z_my_functions() {
+    declare -F | grep 'declare -f z_' | cut -d' ' -f 3
+}
+
+function z_my_ip() {
+    ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[1-9.]\+'
+    curl -s https://checkip.amazonaws.com
+}
+
 # It's apparently important to set up zoxide at the end of the file
 eval "$(zoxide init --cmd cd bash)"
