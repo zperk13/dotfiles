@@ -11,6 +11,7 @@ alias grep='grep --color=auto'
 
 alias nv='nvim'
 alias bat='bat --theme=gruvbox-dark'
+alias icat='kitty +kitten icat'
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
