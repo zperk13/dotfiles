@@ -60,6 +60,7 @@ function my_ip() {
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t-\tcat alternative'
+    echo -e 'difft\t-\tdiff alternative'
     echo -e 'dust\t-\tdu alternative (disk usage)'
     echo -e 'fetch\t-\tSystem info'
     echo -e 'icat\t-\tView image'
