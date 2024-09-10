@@ -41,13 +41,31 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${bold}${red}\@ ${blue}\w${reset}\n$ "
 
-function z_my_functions() {
-    declare -F | grep 'declare -f z_' | cut -d' ' -f 3
+function my_local_ip() {
+    ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[1-9.]\+'
 }
 
-function z_my_ip() {
-    ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[1-9.]\+'
+function my_public_ip() {
     curl -s https://checkip.amazonaws.com
+}
+
+function my_ip() {
+    my_local_ip
+    my_public_ip
+}
+
+# List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
+function h() {
+    echo -e 'bat\t-\tcat alternative'
+    echo -e 'dust\t-\tdu alternative (disk usage)'
+    echo -e 'icat\t-\tView image'
+    echo -e 'jless\t-\tJSON viewer'
+    echo -e 'h\t-\tthis'
+    echo -e 'my_local_ip\t-\tPrint local ip'
+    echo -e 'my_public_ip\t-\tPrint public ip'
+    echo -e 'my_ip\t-\tPrint local & public ip'
+    echo -e 'nv\t-\tNeovim'
+    echo -e 'yt-dlp\t-\tDownload YouTube videos'
 }
 
 # It's apparently important to set up zoxide at the end of the file
