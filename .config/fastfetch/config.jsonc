@@ -20,9 +20,9 @@
             "format": "{1} {2}"
         },
         {
-        "type": "memory",
-        "format": "{2}",
-        "key": "RAM"
+            "type": "memory",
+            "format": "{2}",
+            "key": "RAM"
         },
         "version",
         "colors"
