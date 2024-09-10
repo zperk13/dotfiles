@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # Everything above this comment was the default .bashrc file
 
-alias nv='nvim'
+alias nv='nvim' # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias
 alias bat='bat --theme=gruvbox-dark'
 alias icat='kitty +kitten icat'
 
@@ -51,4 +51,5 @@ function z_my_ip() {
 }
 
 # It's apparently important to set up zoxide at the end of the file
+# This was just copied from the zoxide README
 eval "$(zoxide init --cmd cd bash)"
