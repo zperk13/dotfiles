@@ -12,6 +12,7 @@ alias grep='grep --color=auto'
 alias nv='nvim' # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias
 alias bat='bat --theme=gruvbox-dark'
 alias icat='kitty +kitten icat'
+alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
@@ -58,6 +59,7 @@ function my_ip() {
 function h() {
     echo -e 'bat\t-\tcat alternative'
     echo -e 'dust\t-\tdu alternative (disk usage)'
+    echo -e 'fetch\t-\tSystem info'
     echo -e 'icat\t-\tView image'
     echo -e 'jless\t-\tJSON viewer'
     echo -e 'h\t-\tthis'

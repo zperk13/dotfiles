@@ -1,0 +1,30 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "modules": [
+        {
+            "type": "os",
+            "key": "Distro"
+        },
+        "kernel",
+        "initsystem",
+        "packages",
+        "shell",
+        "editor",
+        "de",
+        {
+            "type": "cpu",
+            "format": "{1}"
+        },
+        {
+            "type": "gpu",
+            "format": "{1} {2}"
+        },
+        {
+        "type": "memory",
+        "format": "{2}",
+        "key": "RAM"
+        },
+        "version",
+        "colors"
+    ]
+}
