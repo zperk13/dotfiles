@@ -60,21 +60,21 @@ function my_ip() {
 
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
-    echo -e 'bat\t-\tcat alternative'
-    echo -e 'difft\t-\tdiff alternative'
-    echo -e 'dust\t-\tdu alternative (disk usage)'
-    echo -e 'fetch\t-\tSystem info'
-    echo -e 'G\t-\tlazygit'
-    echo -e 'icat\t-\tView image'
-    echo -e 'jless\t-\tJSON viewer'
-    echo -e 'h\t-\tthis'
-    echo -e 'my_local_ip\t-\tPrint local ip'
-    echo -e 'my_public_ip\t-\tPrint public ip'
-    echo -e 'my_ip\t-\tPrint local & public ip'
-    echo -e 'nv\t-\tNeovim'
-    echo -e 'tree\t-\tRecursive directory tree'
-    echo -e 'y\t-\tFile explorer'
-    echo -e 'yt-dlp\t-\tDownload YouTube videos'
+    echo -e 'bat\t\tcat alternative'
+    echo -e 'difft\t\tdiff alternative'
+    echo -e 'dust\t\tdu alternative (disk usage)'
+    echo -e 'fetch\t\tSystem info'
+    echo -e 'G\t\tlazygit'
+    echo -e 'icat\t\tView image'
+    echo -e 'jless\t\tJSON viewer'
+    echo -e 'h\t\tthis'
+    echo -e 'my_local_ip\tPrint local ip'
+    echo -e 'my_public_ip\tPrint public ip'
+    echo -e 'my_ip\t\tPrint local & public ip'
+    echo -e 'nv\t\tNeovim'
+    echo -e 'tree\t\tRecursive directory tree'
+    echo -e 'y\t\tFile explorer'
+    echo -e 'yt-dlp\t\tDownload YouTube videos'
 }
 
 # This is just copied from https://yazi-rs.github.io/docs/quick-start#shell-wrapper
