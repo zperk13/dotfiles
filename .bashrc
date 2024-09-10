@@ -70,7 +70,18 @@ function h() {
     echo -e 'my_ip\t-\tPrint local & public ip'
     echo -e 'nv\t-\tNeovim'
     echo -e 'tree\t-\tRecursive directory tree'
+    echo -e 'y\t-\tFile explorer'
     echo -e 'yt-dlp\t-\tDownload YouTube videos'
+}
+
+# This is just copied from https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
 }
 
 # It's apparently important to set up zoxide at the end of the file
