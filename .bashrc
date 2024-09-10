@@ -13,6 +13,8 @@ alias nv='nvim' # On Windows I use Neovide and that's long to type so I shortene
 alias bat='bat --theme=gruvbox-dark'
 alias icat='kitty +kitten icat'
 alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
+alias ls='eza -a --icons auto --group-directories-first' # "--icons auto" should not be necessary according to "eza --help", and yet it is for some reason
+alias tree='ls --tree' # This ls uses the ls alias above. The normal ls command doesn't have a --tree option, eza does
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
@@ -67,6 +69,7 @@ function h() {
     echo -e 'my_public_ip\t-\tPrint public ip'
     echo -e 'my_ip\t-\tPrint local & public ip'
     echo -e 'nv\t-\tNeovim'
+    echo -e 'tree\t-\tRecursive directory tree'
     echo -e 'yt-dlp\t-\tDownload YouTube videos'
 }
 
