@@ -64,6 +64,7 @@ function h() {
     echo -e 'difft\t-\tdiff alternative'
     echo -e 'dust\t-\tdu alternative (disk usage)'
     echo -e 'fetch\t-\tSystem info'
+    echo -e 'G\t-\tlazygit'
     echo -e 'icat\t-\tView image'
     echo -e 'jless\t-\tJSON viewer'
     echo -e 'h\t-\tthis'
