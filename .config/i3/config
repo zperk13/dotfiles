@@ -36,9 +36,9 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
-set $up h
+set $left h
 set $down j
-set $left k
+set $up k
 set $right l
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
@@ -224,6 +224,7 @@ bindsym $mod+d exec rofi -show drun -theme gruvbox-dark -font "JetBrainsMono 16"
 # bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
 
 focus_follows_mouse no
+mouse_warping none
 
 # copied from https://unix.stackexchange.com/a/397270/479257 and the modified
 # move focused workspace between monitors
