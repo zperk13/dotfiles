@@ -230,3 +230,6 @@ mouse_warping none
 # move focused workspace between monitors
 bindsym $mod+greater move workspace to output right
 bindsym $mod+less move workspace to output left
+
+for_window [class="livecaptions"] floating enable
+bindsym $mod+Ctrl+l exec flatpak run net.sapples.LiveCaptions
