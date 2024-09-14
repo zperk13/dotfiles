@@ -239,3 +239,5 @@ for_window [class="Gnome-screenshot"] floating enable
 bindsym $mod+Shift+S exec gnome-screenshot -ic
 # Modified version of https://askubuntu.com/a/1212806
 bindsym Print exec gnome-screenshot -pf /tmp/screenshot && cat /tmp/screenshot | xclip -i -selection clipboard -target image/png
+
+exec_always setxkbmap -option compose:menu
