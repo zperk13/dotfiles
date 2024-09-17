@@ -58,10 +58,14 @@ function my_ip() {
     my_public_ip
 }
 
+function mount() {
+    sudo mount /dev/nvme0n1p6 '/home/zperk/mount/Linux Extra'
+    sudo mount /dev/nvme0n1p2 '/home/zperk/mount/Windows Extra'
+}
+
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
-    echo -e 'difft\t\tdiff alternative'
     echo -e 'dust\t\tdu alternative (disk usage)'
     echo -e 'fetch\t\tSystem info'
     echo -e 'G\t\tlazygit'

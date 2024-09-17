@@ -5,11 +5,6 @@
 [user]
 	email = 46951331+zperk13@users.noreply.github.com
     name = zperk13
-[diff]
-    tool = difftastic
-[difftool]
-    prompt = false
-[difftool "difftastic"]
-    cmd = difft "$LOCAL" "$REMOTE"
-[pager]
-    difftool = true
+[safe]
+	directory = /mount/Windows Extra
+	directory = /mount/Windows Extra
