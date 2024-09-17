@@ -187,12 +187,12 @@
 <Multi_key> <r> <n> <x> : "ⅹ"
 
 <Multi_key> <s> <q> <r> <t> : "√"
-<Multi_key> <r> <o> <o> <t> <2> : "√"
-<Multi_key> <r> <o> <o> <t> <KP_2> : "√"
-<Multi_key> <r> <o> <o> <t> <3> : "∛"
-<Multi_key> <r> <o> <o> <t> <KP_3> : "∛"
-<Multi_key> <r> <o> <o> <t> <4> : "∜"
-<Multi_key> <r> <o> <o> <t> <KP_4> : "∜"
+<Multi_key> <2> <r> <o> <o> <t> : "√"
+<Multi_key> <KP_2> <r> <o> <o> <t>  : "√"
+<Multi_key> <3> <r> <o> <o> <t> : "∛"
+<Multi_key> <KP_3> <r> <o> <o> <t> : "∛"
+<Multi_key> <4> <r> <o> <o> <t> : "∜"
+<Multi_key> <KP_4> <r> <o> <o> <t> : "∜"
 
 <Multi_key> <i> <n> <f> : "∞"
 <Multi_key> <I> <N> <F> : "∞"
