@@ -43,7 +43,7 @@ fi
 
 # Custom Prompt
 # Default is PS1='[\u@\h \W]\$ '
-PS1="${bold}${red}\@ ${blue}\w${reset}\n$ "
+PS1="${bold}${blue}\w${white} $ ${reset}"
 
 function my_local_ip() {
     ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[1-9.]\+'
