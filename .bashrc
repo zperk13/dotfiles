@@ -71,6 +71,7 @@ function h() {
     echo -e 'my_public_ip\tPrint public ip'
     echo -e 'my_ip\t\tPrint local & public ip'
     echo -e 'nv\t\tNeovim'
+    echo -e 'tokei\t\tLines of code counter'
     echo -e 'tree\t\tRecursive directory tree'
     echo -e 'y\t\tFile explorer'
     echo -e 'yt-dlp\t\tDownload YouTube videos'
