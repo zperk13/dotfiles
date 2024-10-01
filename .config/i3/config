@@ -241,7 +241,7 @@ bindsym $mod+Ctrl+l exec flatpak run net.sapples.LiveCaptions
 
 for_window [class="Gnome-screenshot"] floating enable
 # Same keybinding I had in Windows
-bindsym $mod+Shift+S exec gnome-screenshot -ic
+bindsym $mod+Shift+S exec flameshot gui
 # Modified version of https://askubuntu.com/a/1212806
 bindsym Print exec gnome-screenshot -pf /tmp/screenshot && cat /tmp/screenshot | xclip -i -selection clipboard -target image/png
 
