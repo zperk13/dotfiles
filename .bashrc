@@ -18,6 +18,8 @@ alias tree='ls --tree -I .git' # This ls uses the ls alias above. The normal ls 
 alias G='lazygit' # Mimicking the :G command I have in nvim from tpope's vim-fugitive plugin
 alias s="source ~/.bashrc"
 
+export PATH="~/.cargo/bin:$PATH"
+
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
 if test -t 1; then
@@ -59,12 +61,31 @@ function my_ip() {
     my_public_ip
 }
 
+function fps() {
+    ffmpeg -i "$1" 2>&1 | grep -Go '[0-9]\+ fps' | grep --color=never -Go '[1-9]\+'
+}
+
+function gif() {
+    if [ -z "$1" ]; then echo 'need one parameter (the input file)'; else
+        local fps_variable="$(fps $1)"
+        local timestamp="$(date +%s)"
+        local dir="/tmp/gif$timestamp"
+        mkdir "$dir"
+        ffmpeg -i "$1" "${dir}/frame%04d.png"
+        # gifski: https://gif.ski/
+        # I installed it with `cargo install gifski` then added ~/.cargo/bin to the path towards a few dozen lines above this
+        gifski -o "${timestamp}.gif" --fps ${fps_variable} ${dir}/frame*.png
+    fi
+}
+
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
     echo -e 'dust\t\tdu alternative (disk usage)'
     echo -e 'fetch\t\tSystem info'
+    echo -e 'fps\t\tGet the fps of a video'
     echo -e 'G\t\tlazygit'
+    echo -e 'gif\t\tTurn a video into a gif'
     echo -e 'icat\t\tView image'
     echo -e 'jless\t\tJSON viewer'
     echo -e 'h\t\tthis'
