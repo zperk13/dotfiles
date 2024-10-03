@@ -10,7 +10,6 @@
         "packages",
         "shell",
         "editor",
-        "de",
         "wm",
         {
             "type": "cpu",
