@@ -35,8 +35,14 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
 - .inputrc
 - .Xcompose
 
+## Font
+Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly reccomend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font. Here's a list of files that reference JetBrains Mono:
+- .config/kitty/kitty.conf
+- .config/i3/config
+- .config/nvim/lua/neovide.lua
+
 ## userChrome.css
-userChrome.css is a file for modifying Firefox's user interface. [userchrome.org](https://www.userchrome.org/) has more information about it and some of the following stuff is based on information from it.
+userChrome.css is a file for modifying [Firefox](https://www.mozilla.org/firefox/)'s user interface. [userchrome.org](https://www.userchrome.org/) has more information about it and some of the following stuff is based on information from it.
 
 The location userChrome.css should go to is less standard than other stuff in this repo, so it's in the .stow-local-ignore file. If you want to use it, you'll need to manually symlink it (you could copy it instead if you want but symlink will let us keep it in a nice spot).
 
@@ -48,5 +54,11 @@ The location userChrome.css should go to is less standard than other stuff in th
     - I keep my version of this repo in the home directory. If you don't, you'll need to change the first path accordingly.
 6. [Set Firefox to look for userChrome.css at startup](https://www.userchrome.org/how-create-userchrome-css.html#aboutconfig)
 
-## Additional notes
-If you're using fastfetch and using a DE instead of a WM, you might want to tweak the fastfetch config as it doesn't have a DE module.
+## Colorscheme
+My preferred colorscheme is gruvbox. You don't need to do any steps other than installing this repo to use it, all the config files handle it. This section is just here for anyone wondering what color scheme I use but doesn't want to dig through the files. Also it's for this:
+### Things I have using gruvbox but not via config files
+- [Firefox](https://www.mozilla.org/firefox/)
+- [Thunderbird](https://www.thunderbird.net)
+
+## If you're using fastfetch and a Desktop Enviorment
+If you're using fastfetch and a Desktop Enviorment (DE) instead of a Window Manager (WM), you might want to tweak the fastfetch config as it doesn't have a DE module.
