@@ -47,3 +47,6 @@ The location userChrome.css should go to is less standard than other stuff in th
 5. `ln -s ~/dotfiles/userChrome.css ./userChrome.css`
     - I keep my version of this repo in the home directory. If you don't, you'll need to change the first path accordingly.
 6. [Set Firefox to look for userChrome.css at startup](https://www.userchrome.org/how-create-userchrome-css.html#aboutconfig)
+
+## Additional notes
+If you're using fastfetch and using a DE instead of a WM, you might want to tweak the fastfetch config as it doesn't have a DE module.
