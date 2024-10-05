@@ -27,6 +27,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [tmux](https://github.com/tmux/tmux) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | [✅](.config/tmux/tmux.conf) |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 
 - [1] For default options. (eg: `alias grep='grep --color=auto'`)
 - [2] [.bashrc](.bashrc) defines a custom function `h` (short for "help") which lists out some useful commands.
