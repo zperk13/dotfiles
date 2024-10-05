@@ -23,7 +23,7 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
 | [lazygit](https://github.com/jesseduffield/lazygit) | ❌ | ❌ | ❌ | G | ❌ | ✅ | ❌ |
 | [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [3] | ❌ | ✅ | ✅ [4] |
 | [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [tmux](https://github.com/tmux/tmux) | 
+| [tmux](https://github.com/tmux/tmux) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ✅ |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [5] | ✅ [5] | ✅ | ✅ |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |
 
