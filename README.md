@@ -12,7 +12,7 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
 The most "necessary" things here are the things with a common command aliased to it as those common commands won't work without them, but you can also just unalias them if you want. Everything else, you can pick and choose.
 | | Common command aliased to it | Replacement for common command | Has alias for itself [1] | Has shortening alias | Used in | In h [2] | Has dotfiles in this repo |
 |-|-|-|-|-|-|-|-|
-| [bat](https://github.com/sharkdp/bat) | ❌ | cat | --theme=gruvbox-dark | ❌ | ❌ | ✅ | ❌ | 
+| [bat](https://github.com/sharkdp/bat) | ❌ | cat | ✅ | ❌ | ❌ | ✅ | ❌ | 
 | [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [curl](https://github.com/curl/curl) | ❌ | ❌ | ❌ | ❌ | my_ip my_public_ip | ❌ | ❌ |
 | [eza](https://github.com/eza-community/eza) | ls | ls | ❌ | ❌ | tree | ❌ | ❌ |
