@@ -25,7 +25,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] | ❌ | ✅ | [✅](https://github.com/zperk13/nvim/) [6] |
 | [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [tmux](https://github.com/tmux/tmux) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | [✅](.config/tmux/tmux.conf) |
-| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | ✅ [7] | ✅ | [✅](.config/yazi/yazi.toml) |
+| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 - [1] For default options. (eg: `alias grep='grep --color=auto'`)
