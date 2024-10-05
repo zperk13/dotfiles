@@ -5,32 +5,38 @@ My dotfiles. Managed with GNU Stow. Feel free to use this as inspiration for you
 Use `--recursive` when git cloning since this repo has a submodule. If you already cloned non-recursively, that's ok, just run `git submodule init && git submodule update`
 
 ## What needs to be installed
+### Stow
 - [GNU Stow](https://www.gnu.org/software/stow/)
     - symlink manager this entire repo is based off having
-### Things won't work well in Bash if you don't unalias stuff
-- [eza](https://github.com/eza-community/eza)
-    - I have `ls` aliased to it
-- [zoxide](https://github.com/ajeetdsouza/zoxide)
-    - I have `cd` aliased to it
-### Things used by a Bash function/alias but if you don't use those, things will be fine
-- [bat](https://github.com/sharkdp/bat)
-- [curl](https://github.com/curl/curl)
-- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
-- [ffmpeg](https://ffmpeg.org/)
-- [gifski](https://github.com/ImageOptim/gifski)
-- [kitty](https://github.com/kovidgoyal/kitty)
-    - Terminal emulator. One of the bash aliases will only work in kitty (see [icat](https://sw.kovidgoyal.net/kitty/kittens/icat/))
-- [lazygit](https://github.com/jesseduffield/lazygit)
-- [neovim](https://github.com/neovim/neovim)
-- [yazi](https://github.com/sxyazi/yazi)
-### Useful tools referenced in the Bash h() function but aren't needed (and weren't mentioned above)
-- [dust](https://github.com/bootandy/dust)
-- [jless](https://github.com/PaulJuliusMartinez/jless)
-- [tokei](https://github.com/XAMPPRocky/tokei)
-### Things with dotfiles (that weren't already mentioned) but it's fine if you don't have them installed
+### Commands
+| | Common command aliased to it | Replacement for common command | Has alias for itself for default options  | Has shortening alias | Used in custom bash function(s) or different alias | In h | Has dotfiles in this repo |
+|-|-|-|-|-|-|-|-|
+| [bat](https://github.com/sharkdp/bat) | ❌ | cat | --theme=gruvbox-dark | ❌ | ❌ | ✅ | ❌ | 
+| [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [curl](https://github.com/curl/curl) | ❌ | ❌ | ❌ | ❌ | my_ip my_public_ip | ❌ | ❌ |
+| [eza](https://github.com/eza-community/eza) | ls | ls | ❌ | ❌ | tree | ❌ | ❌ |
+| [fastfetch](https://github.com/fastfetch-cli/fastfetch) [1] | ❌ | ❌ | ❌ | fetch | ❌ | ✅ | ✅ |
+| [ffmpeg](https://ffmpeg.org/) | ❌ | ❌ | ❌ | ❌ | fps gif | ❌ | ❌ |
+| [gifski](https://github.com/ImageOptim/gifski) | ❌ | ❌ | ❌ | ❌ | gif | ❌ | ❌ |
+| [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [kitty](https://github.com/kovidgoyal/kitty) [2] | ❌ | ❌ | ❌ |  ❌ | icat [2] | ❌ | ✅ |
+| [lazygit](https://github.com/jesseduffield/lazygit) | ❌ | ❌ | ❌ | G | ❌ | ✅ | ❌ |
+| [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [3] | ❌ | ✅ | ✅ [4] |
+| [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [tmux](https://github.com/tmux/tmux) | 
+| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [5] | ✅ [5] | ✅ | ✅ |
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |
+
+- [1] If you're using fastfetch and a Desktop Enviorment (DE) instead of a Window Manager (WM), you might want to tweak the fastfetch config as it doesn't have a DE module.
+- [2] Terminal emulator. One of the bash aliases will only work in kitty (see [icat](https://sw.kovidgoyal.net/kitty/kittens/icat/))
+- [3] On Windows I use [Neovide](https://github.com/neovide/neovide) and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias
+- [4] As a submodule
+- [5] [Shortened to `y` but it's a function for the ability to leave it and the CWD be where it left
+](https://yazi-rs.github.io/docs/quick-start#shell-wrapper)
+
+### Things with dotfiles but it's fine if you don't have them installed
 - [i3wm](https://i3wm.org/)
 - [i3blocks](https://github.com/vivien/i3blocks)
-- [tmux](https://github.com/tmux/tmux)
 ### Dotfiles that I'm assuming you won't need/want to do any installations for
 - .inputrc
 - .Xcompose
@@ -59,6 +65,3 @@ My preferred colorscheme is gruvbox. You don't need to do any steps other than i
 ### Things I have using gruvbox but not via config files
 - [Firefox](https://www.mozilla.org/firefox/)
 - [Thunderbird](https://www.thunderbird.net)
-
-## If you're using fastfetch and a Desktop Enviorment
-If you're using fastfetch and a Desktop Enviorment (DE) instead of a Window Manager (WM), you might want to tweak the fastfetch config as it doesn't have a DE module.
