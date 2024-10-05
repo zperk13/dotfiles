@@ -10,7 +10,7 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
     - symlink manager this entire repo is based off having
 ### Commands
 The most "necessary" things here are the things with a common command aliased to it as those common commands won't work without them, but you can also just unalias them if you want. Everything else, you can pick and choose.
-| | Common command aliased to it | Replacement for common command | Has alias for itself [1] | Has shortening alias | Used in | In h [2] | Has dotfiles in this repo |
+| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | Used in | In h [2] | Has dotfiles in repo |
 |-|-|-|-|-|-|-|-|
 | [bat](https://github.com/sharkdp/bat) | ❌ | cat | ✅ | ❌ | ❌ | ✅ | ❌ | 
 | [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ❌ | ✅ | ❌ |
@@ -28,7 +28,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | ✅ [7] | ✅ | [✅](.config/yazi/yazi.toml) |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |
 
-- [1] For default options.
+- [1] For default options. (eg: `alias grep='grep --color=auto'`)
 - [2] [.bashrc](.bashrc) defines a custom function `h` (short for "help") which lists out some useful commands.
 - [3] If you're using fastfetch and a Desktop Enviorment (DE) instead of a Window Manager (WM), you might want to tweak the [fastfetch config](.config/fastfetch/config.jsonc) as it doesn't have a DE module.
 - [4] Terminal emulator. One of the bash aliases will only work in kitty (see [icat](https://sw.kovidgoyal.net/kitty/kittens/icat/)).
