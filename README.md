@@ -45,6 +45,24 @@ The most "necessary" things here are the things with a common command aliased to
 - [.inputrc](.inputrc)
 - [.XCompose](.XCompose)
 
+### Things that can be launched by i3wm (Only relevant if you use i3wm)
+#### Required for basic functionality if you don't change the config
+- [kitty](https://github.com/kovidgoyal/kitty)
+    - super+enter
+- [rofi](https://github.com/davatorium/rofi)
+    - super+d
+#### Extra rofi things that can be launched with keybinds (not required)
+- [rofi-emoji](https://github.com/Mange/rofi-emoji)
+    - super+/
+- [rofi-calc](https://github.com/svenstaro/rofi-calc)
+    - super+c
+#### Other things that can be launched with keybinds (not required)
+- [LiveCaptions](https://github.com/abb128/LiveCaptions)
+    - super+ctrl+l
+- [flameshot](https://github.com/flameshot-org/flameshot)
+    - super+shift+c
+
+
 ## Font
 Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly reccomend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font. Here's a list of files that reference JetBrains Mono:
 - [.config/kitty/kitty.conf](.config/kitty/kitty.conf)
