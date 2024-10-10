@@ -17,7 +17,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [curl](https://github.com/curl/curl) | ❌ | ❌ | ❌ | ❌ | my_ip my_public_ip | ❌ | ❌ |
 | [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | tree | ❌ | ❌ |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | ❌ | ✅ | [✅](.config/fastfetch/config.jsonc) |
-| [ffmpeg](https://ffmpeg.org/) | ❌ | ❌ | ❌ | ❌ | fps gif | ❌ | ❌ |
+| [ffmpeg](https://ffmpeg.org/) | ❌ | ❌ | ❌ | ❌ | fps gif duration | ❌ | ❌ |
 | [gifski](https://github.com/ImageOptim/gifski) | ❌ | ❌ | ❌ | ❌ | gif | ❌ | ❌ |
 | [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | icat [4] | ❌ | [✅](.config/kitty/kitty.conf) |

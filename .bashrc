@@ -58,6 +58,10 @@ function my_ip() {
     my_public_ip
 }
 
+function duration() {
+    ffmpeg -i "$1" 2>&1 | grep -Go 'Duration: [0-9.:]\+' | grep -Go ' [0-9.:]\+' | grep --color=never -Go '[0-9.:]\+'
+}
+
 function fps() {
     ffmpeg -i "$1" 2>&1 | grep -Go '[0-9.]\+ fps' | grep --color=never -Go '[1-9.]\+'
 }
@@ -78,6 +82,7 @@ function gif() {
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
+    echo -e 'duration\tGet the duration of a file'
     echo -e 'dust\t\tdu alternative (disk usage)'
     echo -e 'fetch\t\tSystem info'
     echo -e 'fps\t\tGet the fps of a video'
