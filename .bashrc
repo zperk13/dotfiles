@@ -84,6 +84,7 @@ function h() {
     echo -e 'bat\t\tcat alternative'
     echo -e 'duration\tGet the duration of a file'
     echo -e 'dust\t\tdu alternative (disk usage)'
+    echo -e 'exiftool\tFile metadata'
     echo -e 'fetch\t\tSystem info'
     echo -e 'fps\t\tGet the fps of a video'
     echo -e 'G\t\tlazygit'
