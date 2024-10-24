@@ -82,6 +82,8 @@ My preferred colorscheme is gruvbox. You don't need to do any steps other than i
 ### Things I have using gruvbox but not via config files
 - [Firefox](https://www.mozilla.org/firefox/)
 - [Thunderbird](https://www.thunderbird.net)
+### usercss
+I have Gruvbox (and other small tweaks) applied to websites on Firefox using CSS. That stuff is in https://github.com/zperk13/usercss
 
 ## userChrome.css
 [userChrome.css](userChrome.css) is a file for modifying Firefox's user interface. [userchrome.org](https://www.userchrome.org/) has more information about it and some of the following stuff is based on information from it.
