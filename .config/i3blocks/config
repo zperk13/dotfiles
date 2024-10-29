@@ -11,5 +11,6 @@ separator=true
 separator_block_width=15
 
 [time]
+color=#ebdbb2
 command=date '+%a %Y-%m-%d %H:%M:%S '
 interval=1
