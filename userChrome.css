@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 #alltabs-button {
     display: none !important;
+}
+
+#navigator-toolbox {
+    font: 13px "JetBrains Mono" !important;
+}
+
+#PersonalToolbar {
+  --toolbarbutton-inner-padding: 0px !important;
+  --toolbarbutton-outer-padding: 0px !important;
+  --tab-min-height: 13px !important;
+  --urlbar-container-height: 13px !important;
+}
+
+.toolbar-menupopup {
+    min-height: 13px;
+    --arrowpanel-menuitem-padding: 0px;
+}
+
+.menu-iconic-icon {
+    /* Bookmark Icons */
+    width: 13px;
+    height: 13px;
 }
