@@ -236,6 +236,8 @@ mouse_warping none
 bindsym $mod+greater move workspace to output right
 bindsym $mod+less move workspace to output left
 
+bindsym $mod+b bar mode toggle 
+
 for_window [class="livecaptions"] floating enable
 bindsym $mod+Ctrl+l exec flatpak run net.sapples.LiveCaptions
 
