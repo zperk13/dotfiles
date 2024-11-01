@@ -203,6 +203,7 @@ hide_edge_borders both
 # Start i3bar to display a workspace bar
 bar {
     status_command i3blocks
+    tray_output primary
     colors {
         background $bg
         #                  border             background         text
