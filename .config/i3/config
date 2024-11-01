@@ -206,10 +206,10 @@ bar {
     tray_output primary
     colors {
         background $bg
-        #                  border             background         text
-        focused_workspace  $fg0          $bg $fg
-        inactive_workspace $bg $bg $fg
-        active_workspace $fg4 $bg $fg # Workspace that is active but not focused. AKA the workspace that is being shown on a non-focused monitors
+        #                  border bg   txt
+        focused_workspace  $fg0   $bg  $fg0
+        inactive_workspace $bg    $bg  $fg
+        active_workspace   $fg4   $bg  $fg # Workspace that is active but not focused. AKA the workspace that is being shown on a non-focused monitors
         urgent_workspace   $red   $red $fg
     }
     position top
