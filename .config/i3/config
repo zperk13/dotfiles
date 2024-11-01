@@ -184,19 +184,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Color settings layout copied from https://github.com/bookercodes/dotfiles/blob/ubuntu/.i3/config with the actual hex codes changed to gruvbox https://github.com/morhetz/gruvbox
-set $bg-color 	         #282828 
-set $inactive-bg-color   #282828
-set $text-color          #ebdbb2
-set $inactive-text-color #a89984
-set $urgent-bg-color     #cc241d
+
+set $bg  #282828 
+set $fg  #ebdbb2
+set $fg0 #fbf1c7
+set $fg4 #a89984
+set $red #cc241d
 
 # window colors
-#                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #d65d0e
-client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color #d65d0e
-client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color #d65d0e
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #d65d0e
+#                       border bg   txt
+client.focused          $bg    $bg  $fg
+client.unfocused        $bg    $bg  $fg
+client.focused_inactive $bg    $bg  $fg
+client.urgent           $red   $red $fg
 
 hide_edge_borders both
 
@@ -205,12 +205,12 @@ hide_edge_borders both
 bar {
     status_command i3blocks
     colors {
-        background $bg-color
-        separator  #7c6f64
+        background $bg
         #                  border             background         text
-        focused_workspace  $bg-color          $bg-color          $text-color
-        inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-        urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+        focused_workspace  $fg0          $bg $fg
+        inactive_workspace $bg $bg $fg
+        active_workspace $fg4 $bg $fg # Workspace that is active but not focused. AKA the workspace that is being shown on a non-focused monitors
+        urgent_workspace   $red   $red $fg
     }
     position top
 }
