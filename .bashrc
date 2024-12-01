@@ -14,6 +14,7 @@ alias ls='eza -a --icons auto --group-directories-first' # "--icons auto" should
 alias tree='ls --tree -I .git' # This ls uses the ls alias above. The normal ls command doesn't have a --tree option, eza does. -I .git is to ignore the .git folder (if there is one)
 alias G='lazygit' # Mimicking the :G command I have in nvim from tpope's vim-fugitive plugin
 alias s="source ~/.bashrc"
+alias c="clear"
 
 export PATH="~/.cargo/bin:$PATH"
 
