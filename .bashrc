@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export WEBKIT_DISABLE_DMABUF_RENDERER=1 # Makes Tauri apps work
+
 alias grep='grep --color=auto'
 alias nv='nvim' # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias
 alias bat='bat --theme=gruvbox-dark'
