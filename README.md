@@ -77,7 +77,7 @@ My preferred colorscheme is gruvbox. You don't need to do any steps other than i
 ### Files that set up gruvbox
 - [Bash](.bashrc)
 - [i3wm](.config/i3/config)
-- [Kitty](.config/tmux/tmux.conf)
+- [Kitty](.config/kitty/kitty.conf)
 - [Neovim](https://github.com/zperk13/nvim/blob/master/lua/plugins/colorscheme.lua)
     - [Neovim plugin: lualine](https://github.com/zperk13/nvim/blob/master/lua/plugins/lualine.lua)
 - [tmux](.config/tmux/tmux.conf)
