@@ -248,5 +248,6 @@ bindsym $mod+Ctrl+l exec flatpak run net.sapples.LiveCaptions
 
 # Same keybinding I had in Windows
 bindsym $mod+Shift+S exec flameshot gui
-
 exec_always setxkbmap -option compose:menu
+
+exec --no-startup-id ~/.screenlayout/monitor.sh
