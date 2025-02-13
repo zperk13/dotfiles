@@ -97,7 +97,6 @@ function h() {
     echo -e 'my_public_ip\tPrint public ip'
     echo -e 'my_ip\t\tPrint local & public ip'
     echo -e 'nv\t\tNeovim'
-    echo -e 'tmux\t\tTerminal Multiplexer'
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tree\t\tRecursive directory tree'
     echo -e 'rg\t\tRipgrep'

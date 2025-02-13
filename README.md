@@ -25,7 +25,6 @@ The most "necessary" things here are the things with a common command aliased to
 | [lazygit](https://github.com/jesseduffield/lazygit) | ❌ | ❌ | ❌ | G | ❌ | ✅ | ❌ |
 | [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] | ❌ | ✅ | [✅](https://github.com/zperk13/nvim/) [6] |
 | [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [tmux](https://github.com/tmux/tmux) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | [✅](.config/tmux/tmux.conf) |
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | ❌ | grep | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) |
@@ -80,7 +79,6 @@ My preferred colorscheme is gruvbox. You don't need to do any steps other than i
 - [Kitty](.config/kitty/kitty.conf)
 - [Neovim](https://github.com/zperk13/nvim/blob/master/lua/plugins/colorscheme.lua)
     - [Neovim plugin: lualine](https://github.com/zperk13/nvim/blob/master/lua/plugins/lualine.lua)
-- [tmux](.config/tmux/tmux.conf)
 ### Things I have using gruvbox but not via config files
 - [Firefox](https://www.mozilla.org/firefox/)
 - [Thunderbird](https://www.thunderbird.net)
