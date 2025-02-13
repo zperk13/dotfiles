@@ -100,6 +100,8 @@ function h() {
     echo -e 'tmux\t\tTerminal Multiplexer'
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tree\t\tRecursive directory tree'
+    echo -e 'rg\t\tRipgrep'
+    echo -e 'rgr\t\tRepgrep (ripgrep + replace)'
     echo -e 'y\t\tFile explorer'
     echo -e 'yt-dlp\t\tDownload YouTube videos'
 }

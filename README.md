@@ -26,6 +26,8 @@ The most "necessary" things here are the things with a common command aliased to
 | [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] | ❌ | ✅ | [✅](https://github.com/zperk13/nvim/) [6] |
 | [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [tmux](https://github.com/tmux/tmux) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | [✅](.config/tmux/tmux.conf) |
+| [ripgrep](https://github.com/BurntSushi/ripgrep) | ❌ | grep | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |
