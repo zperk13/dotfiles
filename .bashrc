@@ -99,6 +99,7 @@ function h() {
     echo -e 'nv\t\tNeovim'
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tree\t\tRecursive directory tree'
+    echo -e 'regect\t\tregex 101 like cli tool'
     echo -e 'rg\t\tRipgrep'
     echo -e 'rgr\t\tRepgrep (ripgrep + replace)'
     echo -e 'y\t\tFile explorer'
