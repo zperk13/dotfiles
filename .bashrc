@@ -72,7 +72,7 @@ function duration() {
 }
 
 function fps() {
-    ffmpeg -i "$1" 2>&1 | grep -Go '[0-9.]\+ fps' | grep --color=never -Go '[1-9.]\+'
+    ffmpeg -i "$1" 2>&1 | grep -Go '[0-9.]\+ fps' | grep --color=never -Go '[0-9.]\+'
 }
 
 function gif() {
