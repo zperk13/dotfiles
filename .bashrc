@@ -17,6 +17,7 @@ alias tree='ls --tree -I .git' # This ls uses the ls alias above. The normal ls 
 alias G='lazygit' # Mimicking the :G command I have in nvim from tpope's vim-fugitive plugin
 alias s="source ~/.bashrc"
 alias c="clear"
+alias cwd="pwd"
 
 export PATH="~/.cargo/bin:$PATH"
 
