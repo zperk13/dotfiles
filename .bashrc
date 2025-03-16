@@ -89,6 +89,36 @@ function gif() {
     fi
 }
 
+# This thing isn't perfect, but I have spent hours improving it, it works good enough, I'm happy with it
+function isolate() {
+    # list all files, only get the ones that have a dot in them that isn't at the start, and only get everything before that first non-start dot
+    files_with_dots_without_dots=$(eza --only-files --no-quotes | rg -o "^(.+?)\." -r '$1');
+
+    # Go through all of those, remove duplicats ("abc.txt" and "abc.mp4" both become "abc")
+    echo "$files_with_dots_without_dots" | uniq | while read uniq_file_start ; do
+        # Make directory with that file-extension-less name
+        mkdir "$uniq_file_start";
+
+        # Save the length of that string for later
+        len=${#uniq_file_start};
+
+        # Get all files that have that file-extension-less name in it
+        files_with_start=$(eza --only-files --no-quotes | rg -F "$uniq_file_start");
+
+        # iterate through those
+        echo "$files_with_start" | while read file ; do
+
+            # make sure it actually starts with it
+            sliced=${file:0:$len};
+            if [ "$sliced" == "$uniq_file_start" ]; then
+
+                # Move the file into to created folder
+                mv "$file" "$uniq_file_start"
+            fi
+        done
+    done
+}
+
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
