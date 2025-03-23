@@ -36,25 +36,37 @@ if test -t 1; then
     ncolors=$(tput colors)
 
     if test -n "$ncolors" && test $ncolors -ge 8; then
-        bold="\[$(tput bold)\]"
-        underline="\[$(tput smul)\]"
-        standout="\[$(tput smso)\]"
-        reset="\[$(tput sgr0)\]"
-        black="\[$(tput setaf 0)\]"
-        red="\[$(tput setaf 1)\]"
-        green="\[$(tput setaf 2)\]"
-        yellow="\[$(tput setaf 3)\]"
-        blue="\[$(tput setaf 4)\]"
-        magenta="\[$(tput setaf 5)\]"
-        cyan="\[$(tput setaf 6)\]"
-        white="\[$(tput setaf 7)\]"
+        ps_bold="\[$(tput bold)\]"
+        bold="$(tput bold)"
+        ps_underline="\[$(tput smul)\]"
+        underline="$(tput smul)"
+        ps_standout="\[$(tput smso)\]"
+        standout="$(tput smso)"
+        ps_reset="\[$(tput sgr0)\]"
+        reset="$(tput sgr0)"
+        ps_black="\[$(tput setaf 0)\]"
+        black="$(tput setaf 0)"
+        ps_red="\[$(tput setaf 1)\]"
+        red="$(tput setaf 1)"
+        ps_green="\[$(tput setaf 2)\]"
+        green="$(tput setaf 2)"
+        ps_yellow="\[$(tput setaf 3)\]"
+        yellow="$(tput setaf 3)"
+        ps_blue="\[$(tput setaf 4)\]"
+        blue="$(tput setaf 4)"
+        ps_magenta="\[$(tput setaf 5)\]"
+        magenta="$(tput setaf 5)"
+        ps_cyan="\[$(tput setaf 6)\]"
+        cyan="$(tput setaf 6)"
+        ps_white="\[$(tput setaf 7)\]"
+        white="$(tput setaf 7)"
     fi
 fi
 
 
 # Custom Prompt
 # Default is PS1='[\u@\h \W]\$ '
-PS1="${bold}${blue}\w${white} $ ${reset}"
+PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 
 function my_local_ip() {
     ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[1-9.]\+'
@@ -98,6 +110,7 @@ function isolate() {
     # Go through all of those, remove duplicats ("abc.txt" and "abc.mp4" both become "abc")
     echo "$files_with_dots_without_dots" | uniq | while read uniq_file_start ; do
         # Make directory with that file-extension-less name
+        echo "Making directory ${blue}${bold}${uniq_file_start}${reset}";
         mkdir "$uniq_file_start";
 
         # Save the length of that string for later
@@ -114,6 +127,7 @@ function isolate() {
             if [ "$sliced" == "$uniq_file_start" ]; then
 
                 # Move the file into to created folder
+                echo "Moving ${magenta}${bold}${file}${reset} into ${blue}${bold}${uniq_file_start}${reset}"
                 mv "$file" "$uniq_file_start"
             fi
         done
