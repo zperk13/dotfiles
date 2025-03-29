@@ -55,6 +55,8 @@ The most "necessary" things here are the things with a common command aliased to
     - super+enter
 - [rofi](https://github.com/davatorium/rofi)
     - super+d
+- [xsetroot](https://archlinux.org/packages/extra/x86_64/xorg-xsetroot/)
+    - Runs automatically on login to set the background color to `#282828` (gruvbox bg color)
 #### Extra rofi things that can be launched with keybinds (not required)
 - [rofi-emoji](https://github.com/Mange/rofi-emoji)
     - super+/
