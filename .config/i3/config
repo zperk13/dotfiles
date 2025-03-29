@@ -171,10 +171,10 @@ mode "resize" {
         bindsym $right      resize grow width 10 px
 
         # same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+        bindsym Left        resize shrink width 10 px
+        bindsym Down        resize grow height 10 px
+        bindsym Up          resize shrink height 10 px
+        bindsym Right       resize grow width 10 px
 
         # back to normal: Enter or Escape or Mod1+r
         bindsym Return mode "default"
