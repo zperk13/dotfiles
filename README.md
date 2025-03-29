@@ -28,6 +28,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [regect](https://github.com/kloki/regect) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | ❌ | grep | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [whisper](https://github.com/openai/whisper) | ❌ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |

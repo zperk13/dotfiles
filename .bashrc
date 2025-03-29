@@ -21,11 +21,7 @@ alias cwd="pwd"
 
 export PATH="~/.cargo/bin:$PATH"
 
-alias whisper='echo "You want to use whisper-cpu or whisper-gpu"'
-# For when you want to run whisper in the background
-alias whisper-cpu='\whisper --language en --task transcribe --fp16 False --device cpu --model large --threads 1'
-# For when you want whisper to run fast
-alias whisper-gpu='\whisper --language en --task transcribe --fp16 False --device cuda --model turbo'
+alias whisper='whisper --language en --task transcribe --fp16 False --device cuda --model turbo'
 # I picked the models and the --fp16 flag based on my hardware and uses. Might not be the best thing for you to copy but feel free to take inspiration from it. Or just copy it, I'm not your boss.
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
@@ -156,6 +152,7 @@ function h() {
     echo -e 'regect\t\tregex 101 like cli tool'
     echo -e 'rg\t\tRipgrep'
     echo -e 'rgr\t\tRepgrep (ripgrep + replace)'
+    echo -e 'whisper\t\tTranscribe a video/audio file'
     echo -e 'y\t\tFile explorer'
     echo -e 'yt-dlp\t\tDownload YouTube videos'
 }
