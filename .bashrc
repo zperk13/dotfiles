@@ -130,6 +130,11 @@ function isolate() {
     done
 }
 
+function incognito() {
+    set +o history
+    PS1="${bold}${red}(incognito) ${blue}\w${white} $ ${reset}"
+}
+
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
@@ -141,6 +146,7 @@ function h() {
     echo -e 'G\t\tlazygit'
     echo -e 'gif\t\tTurn a video into a gif'
     echo -e 'icat\t\tView image'
+    echo -e 'incognito\tDisable terminal history'
     echo -e 'jless\t\tJSON viewer'
     echo -e 'h\t\tthis'
     echo -e 'my_local_ip\tPrint local ip'
