@@ -3,10 +3,17 @@
     "logo": {
         "type": "none"
     },
+    "display": {
+        "color": {
+            "keys":  "38;2;245;169;184",
+            "output": "38;2;255;255;255"
+        }
+    },
     "modules": [
         {
             "type": "custom",
-            "format": "Hardware:"
+            "key": "Hardware",
+            "keyColor": "38;2;91;206;250"
         },
         {
             "type": "cpu",
@@ -39,7 +46,8 @@
         },
         {
             "type": "custom",
-            "format": "Software:"
+            "key": "Software",
+            "keyColor": "38;2;91;206;250"
         },
         {
             "type": "os",
@@ -63,13 +71,6 @@
         "terminalfont",
         "terminalsize",
         "uptime",
-        "wm",
-        "break",
-        {
-            "type": "custom",
-            "key": "Color Scheme",
-            "format": "gruvbox"
-        },
-        "colors"
+        "wm"
     ]
 }
