@@ -64,6 +64,18 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 
+function rgb_fg() {
+    echo -en "\e[38;2;$1;$2;$3m"
+}
+
+function rgb_bg() {
+    echo -en "\e[48;2;$1;$2;$3m"
+}
+
+function pride() {
+    PS1="\[$(rgb_fg 91 206 250)\]\w\[$(rgb_fg 255 255 255)\] $ \[$(rgb_fg 245 169 184)\]"
+}
+
 function my_local_ip() {
     ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[1-9.]\+'
 }
