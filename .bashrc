@@ -16,10 +16,11 @@ alias ls='eza -a --icons auto --group-directories-first' # "--icons auto" should
 alias tree='ls --tree -I .git' # This ls uses the ls alias above. The normal ls command doesn't have a --tree option, eza does. -I .git is to ignore the .git folder (if there is one)
 alias G='lazygit' # Mimicking the :G command I have in nvim from tpope's vim-fugitive plugin
 alias s="source ~/.bashrc"
+alias tplay="tplay -c=█"
 alias c="clear"
 alias cwd="pwd"
+alias monitor="~/.screenlayout/monitor.sh"
 
-export PATH="~/.cargo/bin:$PATH"
 
 alias whisper='whisper --language en --task transcribe --fp16 False --device cuda --model turbo'
 # I picked the models and the --fp16 flag based on my hardware and uses. Might not be the best thing for you to copy but feel free to take inspiration from it. Or just copy it, I'm not your boss.
@@ -166,6 +167,7 @@ function h() {
     echo -e 'my_ip\t\tPrint local & public ip'
     echo -e 'nv\t\tNeovim'
     echo -e 'tokei\t\tLines of code counter'
+    echo -e 'tplay\t\tPlay video in the terminal'
     echo -e 'tree\t\tRecursive directory tree'
     echo -e 'regect\t\tregex 101 like cli tool'
     echo -e 'rg\t\tRipgrep'
@@ -177,12 +179,12 @@ function h() {
 
 # This is just copied from https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
 }
 
 # It's apparently important to set up zoxide at the end of the file
