@@ -5,16 +5,19 @@
     },
     "display": {
         "color": {
-            "keys":  "38;2;245;169;184",
-            "output": "38;2;255;255;255"
+            "keys": "38;2;91;206;250",
+            "output": "38;2;245;169;184",
+            "separator": "38;2;255;255;255"
+        },
+        "percent": {
+            "color": {
+                "red": "38;2;245;169;184",
+                "yellow": "38;2;245;169;184",
+                "green": "38;2;245;169;184"
+            }
         }
     },
     "modules": [
-        {
-            "type": "custom",
-            "key": "Hardware",
-            "keyColor": "38;2;91;206;250"
-        },
         {
             "type": "cpu",
             "format": "{1} ({6}, {3} cores)"
@@ -45,17 +48,8 @@
             "type": "break"
         },
         {
-            "type": "custom",
-            "key": "Software",
-            "keyColor": "38;2;91;206;250"
-        },
-        {
             "type": "os",
             "key": "Distro"
-        },
-        {
-            "type": "version",
-            "key": "fastfetch version"
         },
         "initsystem",
         "kernel",
