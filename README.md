@@ -47,8 +47,8 @@ The most "necessary" things here are the things with a common command aliased to
 - [6] As a submodule.
 - [7] [Shortened to `y` but it's a function for the ability to leave it and the CWD be where it left.
 ](https://yazi-rs.github.io/docs/quick-start#shell-wrapper)
-- [8] Installed with EndeavourOS. Used in the update command. Definitely not for non-arch based distros. Could maybe work on Arch-based Linux distros but I wouldn't reccomend it.
-- [9] My fastfetch config has a custom version of the "packages" module and it assumes you have certain package managers installed
+- [8] Installed with [EndeavourOS](https://endeavouros.com/). Used in the update command. Definitely not for non-arch based distros. Could maybe work on Arch-based Linux distros but I wouldn't reccomend it.
+- [9] My [fastfetch config](.config/fastfetch/config.jsonc) has a custom version of the "packages" module and it assumes you have certain package managers installed
 
 ### Things with dotfiles but it's fine if you don't have them installed
 - [i3wm](https://i3wm.org/)
