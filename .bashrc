@@ -148,6 +148,17 @@ function incognito() {
     PS1="${bold}${red}(incognito) ${blue}\w${white} $ ${reset}"
 }
 
+function update() {
+    eos-update
+    
+    rustup update stable
+
+    # https://stackoverflow.com/a/66049504/10821659 with `egrep` replaced with `grep -E`
+    cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ')
+
+    flatpak update
+}
+
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
@@ -169,6 +180,7 @@ function h() {
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tplay\t\tPlay video in the terminal'
     echo -e 'tree\t\tRecursive directory tree'
+    echo -e 'update\t\tUpdate everything, including rust, cargo packages, and flatpak packages'
     echo -e 'regect\t\tregex 101 like cli tool'
     echo -e 'rg\t\tRipgrep'
     echo -e 'rgr\t\tRepgrep (ripgrep + replace)'
