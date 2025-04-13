@@ -11,7 +11,7 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
 ### Commands
 The most "necessary" things here are the things with a common command aliased to it as those common commands won't work without them, but you can also just unalias them if you want. Everything else, you can pick and choose.
 | | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | Used in | In h [2] | Has dotfiles in repo | fastfectch config assumes you have it |
-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|
 | [bat](https://github.com/sharkdp/bat) | ❌ | cat | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [cargo](https://github.com/rust-lang/cargo) | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ✅ |
