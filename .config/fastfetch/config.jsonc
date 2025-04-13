@@ -58,13 +58,43 @@
             "key": "Login Manager",
             "format": "{1}"
         },
-        "packages",
         "processes",
         "shell",
         "terminal",
         "terminalfont",
         "terminalsize",
         "uptime",
-        "wm"
+        "wm",
+        "break",
+        {
+            "type": "command",
+            "key": "Native Explicit Arch Packages",
+            "text": "pacman -Qne | wc -l"
+        },
+        {
+            "type": "command",
+            "key": "Native Dependency Arch Packages",
+            "text": "pacman -Qnd | wc -l"
+        },
+        {
+            "type": "command",
+            "key": "AUR Packages",
+            "text": "pacman -Qm | wc -l"
+        },
+        {
+            "type": "command",
+            "key": "Flatpak Apps",
+            "text": "flatpak list --app | wc -l"
+        },
+        {
+            "type": "command",
+            "key": "Flatpak Runtimes",
+            "text": "flatpak list --runtime | wc -l"
+        },
+        {
+            "type": "command",
+            "key": "Cargo Packages",
+            "text": "cargo install --list | rg : | wc -l"
+        }
     ]
 }
