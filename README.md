@@ -16,7 +16,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [cargo](https://github.com/rust-lang/cargo) | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ✅ |
 | [curl](https://github.com/curl/curl) | ❌ | ❌ | ❌ | ❌ | my_ip my_public_ip | ❌ | ❌ | ❌ |
-| [eos-update](https://github.com/endeavouros-team/eos-bash-shared/blob/main/eos-update) [8] | ❌ | yay | ❌ | ❌ | update | ❌ | ❌ | ❌ |
+| [eos-update](https://github.com/endeavouros-team/eos-bash-shared/blob/main/eos-update) [8] | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ❌ |
 | [exiftool](https://github.com/exiftool/exiftool) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | tree | ❌ | ❌ | ❌ |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | ❌ | ✅ | [✅](.config/fastfetch/config.jsonc) | ❌ |
