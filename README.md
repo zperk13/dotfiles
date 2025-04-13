@@ -10,7 +10,7 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
     - symlink manager this entire repo is based off having
 ### Commands
 The most "necessary" things here are the things with a common command aliased to it as those common commands won't work without them, but you can also just unalias them if you want. Everything else, you can pick and choose.
-| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | Used in | In h [2] | Has dotfiles in repo | fastfectch config assumes you have it |
+| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | Used in | In h [2] | Has dotfiles in repo | fastfectch config assumes you have it [9] |
 |-|-|-|-|-|-|-|-|-|
 | [bat](https://github.com/sharkdp/bat) | ❌ | cat | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
@@ -48,6 +48,7 @@ The most "necessary" things here are the things with a common command aliased to
 - [7] [Shortened to `y` but it's a function for the ability to leave it and the CWD be where it left.
 ](https://yazi-rs.github.io/docs/quick-start#shell-wrapper)
 - [8] Installed with EndeavourOS. Used in the update command. Definitely not for non-arch based distros. Could maybe work on Arch-based Linux distros but I wouldn't reccomend it.
+- [9] My fastfetch config has a custom version of the "packages" module and it assumes you have certain package managers installed
 
 ### Things with dotfiles but it's fine if you don't have them installed
 - [i3wm](https://i3wm.org/)
