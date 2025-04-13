@@ -37,7 +37,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [whisper](https://github.com/openai/whisper) | ❌ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) | ❌ |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ |
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 - [1] For default options. (eg: `alias grep='grep --color=auto'`)
 - [2] [.bashrc](.bashrc) defines a custom function `h` (short for "help") which lists out some useful commands.
