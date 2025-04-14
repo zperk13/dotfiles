@@ -36,10 +36,6 @@
             "key": "Memory (Swap)"
         },
         {
-            "type": "monitor",
-            "format": "{2}x{3} @ {11} Hz"
-        },
-        {
             "type": "board",
             "key": "Motherboard",
             "format": "{2} {1}"
