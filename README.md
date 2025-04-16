@@ -20,7 +20,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [exiftool](https://github.com/exiftool/exiftool) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | tree | ❌ | ❌ | ❌ |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | ❌ | ✅ | [✅](.config/fastfetch/config.jsonc) | ❌ |
-| [flatpak](https://flatpak.org/) | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ✅ |
+| [flatpak](https://flatpak.org/) | ❌ | ❌ | ❌ | ❌ | update, clean | ❌ | ❌ | ✅ |
 | [ffmpeg](https://ffmpeg.org/) | ❌ | ❌ | ❌ | ❌ | fps gif duration | ❌ | ❌ | ❌ |
 | [gifski](https://github.com/ImageOptim/gifski) | ❌ | ❌ | ❌ | ❌ | gif | ❌ | ❌ | ❌ |
 | [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
@@ -35,6 +35,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [rustup](https://github.com/rust-lang/rustup) | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ❌ |
 | [whisper](https://github.com/openai/whisper) | ❌ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| [yay](https://github.com/Jguer/yay/) [8] | ❌ | ❌ | ❌ | ❌ | eos-update, clean | ❌ | ❌ | ❌ |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) | ❌ |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -47,7 +48,7 @@ The most "necessary" things here are the things with a common command aliased to
 - [6] As a submodule.
 - [7] [Shortened to `y` but it's a function for the ability to leave it and the CWD be where it left.
 ](https://yazi-rs.github.io/docs/quick-start#shell-wrapper)
-- [8] Installed with [EndeavourOS](https://endeavouros.com/). Used in the update command. Definitely not for non-arch based distros. Could maybe work on Arch-based Linux distros but I wouldn't reccomend it.
+- [8] Installed with [EndeavourOS](https://endeavouros.com/). Used in the update command. Definitely not for non-arch based distros.
 - [9] My [fastfetch config](.config/fastfetch/config.jsonc) has a custom version of the "packages" module and it assumes you have certain package managers installed
 
 ### Things with dotfiles but it's fine if you don't have them installed

@@ -159,6 +159,11 @@ function update() {
     flatpak update
 }
 
+function clean() {
+    yay -Yc
+    flatpak uninstall --unused
+}
+
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
