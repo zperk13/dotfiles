@@ -148,6 +148,7 @@ function incognito() {
     PS1="${bold}${red}(incognito) ${blue}\w${white} $ ${reset}"
 }
 
+
 function update() {
     eos-update
     
@@ -164,6 +165,20 @@ function clean() {
     flatpak uninstall --unused
 }
 
+function maintenance() {
+    sudo reflector --verbose --protocol https --latest 99 --sort rate --save /etc/pacman.d/mirrorlist
+
+    eos-rankmirrors
+
+    update
+
+    sudo journalctl --vacuum-time=4weeks
+
+    clean
+
+    paccache -ruk0
+}
+
 # List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
 function h() {
     echo -e 'bat\t\tcat alternative'
@@ -178,6 +193,7 @@ function h() {
     echo -e 'incognito\tDisable terminal history'
     echo -e 'jless\t\tJSON viewer'
     echo -e 'h\t\tthis'
+    echo -e 'maintenance\tUpdate mirrors, system, vacuum old log files, remove cache. Run this every month or two.'
     echo -e 'my_local_ip\tPrint local ip'
     echo -e 'my_public_ip\tPrint public ip'
     echo -e 'my_ip\t\tPrint local & public ip'
