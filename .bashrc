@@ -78,7 +78,7 @@ function pride() {
 }
 
 function my_local_ip() {
-    ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[1-9.]\+'
+    ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[0-9.]\+'
 }
 
 function my_public_ip() {
