@@ -148,6 +148,11 @@ function whisper() {
     fi
 }
 
+function archive() {
+    # the %/ removes the trailing slash
+    7z a -tzip -mx9 "${1%/}.zip" "${1}"
+}
+
 function incognito() {
     set +o history
     PS1="${bold}${red}(incognito) ${blue}\w${white} $ ${reset}"
