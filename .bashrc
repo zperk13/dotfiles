@@ -175,10 +175,14 @@ function clean() {
     flatpak uninstall --unused
 }
 
-function maintenance() {
-    sudo reflector --verbose --protocol https --latest 99 --sort rate --save /etc/pacman.d/mirrorlist
+function update_mirrors() {
+    sudo reflector --verbose --protocol https --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
 
     eos-rankmirrors
+}
+
+function maintenance() {
+    update_mirrors
 
     update
 
