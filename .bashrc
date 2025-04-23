@@ -21,10 +21,6 @@ alias c="clear"
 alias cwd="pwd"
 alias monitor="~/.screenlayout/monitor.sh"
 
-
-alias whisper='whisper --language en --task transcribe --fp16 False --device cuda --model turbo'
-# I picked the models and the --fp16 flag based on my hardware and uses. Might not be the best thing for you to copy but feel free to take inspiration from it. Or just copy it, I'm not your boss.
-
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
 if test -t 1; then
@@ -141,6 +137,15 @@ function isolate() {
             fi
         done
     done
+}
+
+function whisper() {
+    # Based on using whisper.cpp on arch linux on an AMD GPU
+    if [ "${1: -4}" == ".wav" ]; then 
+        whisper-cli --model "$HOME/whisper.cpp models/ggml-large-v3-turbo.bin" "$1" | tee "$1.transcript"
+    else
+        echo "Whisper needs a .wav file. Do ${standout}ffmpeg -i \"$1\" \"$1.wav\"${reset} or something";
+    fi
 }
 
 function incognito() {
