@@ -14,7 +14,7 @@ alias icat='kitty +kitten icat' # If using the Kitty terminal, shows the specifi
 alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
 alias ls='eza -a --icons auto --group-directories-first' # "--icons auto" should not be necessary according to "eza --help", and yet it is for some reason
 alias tree='ls --tree -I .git' # This ls uses the ls alias above. The normal ls command doesn't have a --tree option, eza does. -I .git is to ignore the .git folder (if there is one)
-alias G='lazygit' # Mimicking the :G command I have in nvim from tpope's vim-fugitive plugin
+alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
 alias s="source ~/.bashrc"
 alias tplay="tplay -c=█"
 alias c="clear"
