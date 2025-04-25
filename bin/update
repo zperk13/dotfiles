@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+eos-update
+
+rustup update stable
+
+# https://stackoverflow.com/a/66049504/10821659 with `egrep` replaced with `grep -E`
+cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ')
+
+flatpak update

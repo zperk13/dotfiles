@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+7z a -tzip -mx9 "${1%/}.zip" "${1}"

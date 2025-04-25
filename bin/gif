@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+if [ -z "$1" ]; then echo 'need one parameter (the input file)'; else
+    local fps_variable="$(fps $1)"
+    local timestamp="$(date +%s)"
+    local dir="/tmp/gif$timestamp"
+    mkdir "$dir"
+    ffmpeg -i "$1" "${dir}/frame%04d.png"
+    # gifski: https://gif.ski/
+    # I installed it with `cargo install gifski` then added ~/.cargo/bin to the path towards a few dozen lines above this
+    gifski -o "${timestamp}.gif" --fps ${fps_variable} ${dir}/frame*.png
+fi

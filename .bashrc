@@ -61,6 +61,14 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 
+# From https://wiki.archlinux.org/title/Environment_variables#Using_shell_initialization_files
+add_paths() {
+  for d in "$@"; do
+    [[ -d "$d" && ! "$PATH" =~ (^|:)$d(:|$) ]] && PATH="$PATH:$d"
+  done
+}
+add_paths ~/dotfiles/bin
+
 function rgb_fg() {
     echo -en "\e[38;2;$1;$2;$3m"
 }
@@ -73,179 +81,58 @@ function pride() {
     PS1="\[$(rgb_fg 91 206 250)\]\w\[$(rgb_fg 255 255 255)\] $ \[$(rgb_fg 245 169 184)\]"
 }
 
-function my_local_ip() {
-    ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[0-9.]\+'
-}
-
-function my_public_ip() {
-    curl -s https://checkip.amazonaws.com
-}
-
-function my_ip() {
-    my_local_ip
-    my_public_ip
-}
-
-function duration() {
-    ffmpeg -i "$1" 2>&1 | grep -Go 'Duration: [0-9.:]\+' | grep -Go ' [0-9.:]\+' | grep --color=never -Go '[0-9.:]\+'
-}
-
-function fps() {
-    ffmpeg -i "$1" 2>&1 | grep -Go '[0-9.]\+ fps' | grep --color=never -Go '[0-9.]\+'
-}
-
-function gif() {
-    if [ -z "$1" ]; then echo 'need one parameter (the input file)'; else
-        local fps_variable="$(fps $1)"
-        local timestamp="$(date +%s)"
-        local dir="/tmp/gif$timestamp"
-        mkdir "$dir"
-        ffmpeg -i "$1" "${dir}/frame%04d.png"
-        # gifski: https://gif.ski/
-        # I installed it with `cargo install gifski` then added ~/.cargo/bin to the path towards a few dozen lines above this
-        gifski -o "${timestamp}.gif" --fps ${fps_variable} ${dir}/frame*.png
-    fi
-}
-
-# This thing isn't perfect, but I have spent hours improving it, it works good enough, I'm happy with it
-function isolate() {
-    # list all files, only get the ones that have a dot in them that isn't at the start, and only get everything before that first non-start dot
-    files_with_dots_without_dots=$(eza --only-files --no-quotes | rg -o "^(.+?)\." -r '$1');
-
-    # Go through all of those, remove duplicats ("abc.txt" and "abc.mp4" both become "abc")
-    echo "$files_with_dots_without_dots" | uniq | while read uniq_file_start ; do
-        # Make directory with that file-extension-less name
-        echo "Making directory ${blue}${bold}${uniq_file_start}${reset}";
-        mkdir "$uniq_file_start";
-
-        # Save the length of that string for later
-        len=${#uniq_file_start};
-
-        # Get all files that have that file-extension-less name in it
-        files_with_start=$(eza --only-files --no-quotes | rg -F "$uniq_file_start");
-
-        # iterate through those
-        echo "$files_with_start" | while read file ; do
-
-            # make sure it actually starts with it
-            sliced=${file:0:$len};
-            if [ "$sliced" == "$uniq_file_start" ]; then
-
-                # Move the file into to created folder
-                echo "Moving ${magenta}${bold}${file}${reset} into ${blue}${bold}${uniq_file_start}${reset}"
-                mv "$file" "$uniq_file_start"
-            fi
-        done
-    done
-}
-
-function remove_last_extension() {
-    sed 's/\(.*\)\..*/\1/' 
-    # $ echo "abc.txt.bak" | remove_last_extension 
-    # abc.txt
-    # $ echo "abc.txt" | remove_last_extension 
-    # abc
-    # $ echo "abc" | remove_last_extension 
-    # abc
-}
-
-function transcribe() {
-    # Based on using whisper.cpp on Arch Linux on an AMD GPU
-
-    file_to_transcribe="$1"
-
-    # If last 4 characters aren't ".wav"
-    if [ "${1: -4}" != ".wav" ]; then
-        with_wav="$1.wav"
-        # -f checks if a file exists
-        if [ -f "$with_wav" ]; then
-            file_to_transcribe="$with_wav"
-        else
-            without_extension_with_wav="$(echo $1 | remove_last_extension).wav"
-            if [ -f "$without_extension_with_wav" ]; then
-                file_to_transcribe="$without_extension_with_wav"
-            else
-                ffmpeg -i "$1" "$with_wav"
-                file_to_transcribe="$with_wav"
-            fi
-        fi
-    fi
-    whisper-cli --model "$HOME/whisper.cpp models/ggml-large-v3-turbo.bin" "$file_to_transcribe" | tee "$file_to_transcribe.transcript"
-}
-
-function archive() {
-    # the %/ removes the trailing slash
-    7z a -tzip -mx9 "${1%/}.zip" "${1}"
-}
-
 function incognito() {
     set +o history
     PS1="${bold}${red}(incognito) ${blue}\w${white} $ ${reset}"
 }
 
-
-function update() {
-    eos-update
-    
-    rustup update stable
-
-    # https://stackoverflow.com/a/66049504/10821659 with `egrep` replaced with `grep -E`
-    cargo install $(cargo install --list | grep -E '^[a-z0-9_-]+ v[0-9.]+:$' | cut -f1 -d' ')
-
-    flatpak update
-}
-
-function clean() {
-    yay -Yc
-    flatpak uninstall --unused
-}
-
-function update_mirrors() {
-    sudo reflector --verbose --protocol https --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
-
-    eos-rankmirrors
-}
-
-function maintenance() {
-    update_mirrors
-
-    update
-
-    sudo journalctl --vacuum-time=4weeks
-
-    clean
-
-    paccache -ruk0
-}
-
-# List of useful programs I installed / bash functions I wrote in this file. "h" is short for "help"
+# List of useful programs I installed / scripts I wrote. "h" is short for "help"
 function h() {
-    echo -e 'bat\t\tcat alternative'
-    echo -e 'duration\tGet the duration of a file'
-    echo -e 'dust\t\tdu alternative (disk usage)'
-    echo -e 'exiftool\tFile metadata'
+    echo "${underline}Scripts:${reset}"
+    echo -e 'archive\t\t\tzip a folder with maximum compression'
+    echo -e 'clean\t\t\tUninstall unused dependencies'
+    echo -e 'duration\t\tGet the duration of a file'
+    echo -e 'fps\t\t\tGet the fps of a video'
+    echo -e 'gif\t\t\tTurn a video into a gif'
+    echo -e 'isolate\t\t\tGo through all files in this folder, group together ones that are the same before the first . into their own folder'
+    echo -e 'maintenance\t\tUpdate mirrors, system, vacuum old log files, remove cache. Run this every month or two.'
+    echo -e 'my_local_ip\t\tPrint local ip'
+    echo -e 'my_public_ip\t\tPrint public ip'
+    echo -e 'my_ip\t\t\tPrint local & public ip'
+    echo -e 'transcribe\t\tCreate a trascript for a .wav file. If file isn\'t a .wav file, one will be created from the provided file.
+    echo -e 'update\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
+    echo -e 'update_mirrors\t\tRerank pacman mirrors'
+    echo -e 'without_last_extension\tRemove the last extension of whatever is piped into it'
+
+    echo
+
+    echo "${underline}Functions/Aliases:${reset}"
+    echo -e 'c\t\tclear'
+    echo -e 'h\t\tthis'
     echo -e 'fetch\t\tSystem info'
-    echo -e 'fps\t\tGet the fps of a video'
     echo -e 'G\t\tlazygit'
-    echo -e 'gif\t\tTurn a video into a gif'
     echo -e 'icat\t\tView image'
     echo -e 'incognito\tDisable terminal history'
+    echo -e 'monitor\t\tFix monitors'
+    echo -e 'nv\t\tNeovim'
+    echo -e 'pride\t\tMakes the prompt have pride colors'
+    echo -e 's\t\tReload .bashrc'
+    echo -e 'tree\t\tRecursive directory tree'
+    echo -e 'y\t\tFile explorer'
+
+    echo
+
+    echo "${underline}Misc:${reset}"
+    echo -e 'bat\t\tcat alternative'
+    echo -e 'dust\t\tdu alternative (disk usage)'
+    echo -e 'exiftool\tFile metadata'
     echo -e 'jless\t\tJSON viewer'
-    echo -e 'h\t\tthis'
-    echo -e 'maintenance\tUpdate mirrors, system, vacuum old log files, remove cache. Run this every month or two.'
-    echo -e 'my_local_ip\tPrint local ip'
-    echo -e 'my_public_ip\tPrint public ip'
-    echo -e 'my_ip\t\tPrint local & public ip'
     echo -e 'nv\t\tNeovim'
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tplay\t\tPlay video in the terminal'
-    echo -e 'tree\t\tRecursive directory tree'
-    echo -e 'update\t\tUpdate everything, including rust, cargo packages, and flatpak packages'
     echo -e 'regect\t\tregex 101 like cli tool'
     echo -e 'rg\t\tRipgrep'
     echo -e 'rgr\t\tRepgrep (ripgrep + replace)'
-    echo -e 'whisper\t\tTranscribe a video/audio file'
-    echo -e 'y\t\tFile explorer'
     echo -e 'yt-dlp\t\tDownload YouTube videos'
 }
 

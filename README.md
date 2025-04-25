@@ -19,10 +19,10 @@ The most "necessary" things here are the things with a common command aliased to
 | [eos-rankmirrors](https://github.com/endeavouros-team/PKGBUILDS/blob/master/eos-rankmirrors/eos-rankmirrors) [8] | ❌ | ❌ | ❌ | ❌ | maintenance | ❌ | ❌ | ❌ |
 | [eos-update](https://github.com/endeavouros-team/eos-bash-shared/blob/main/eos-update) [8] | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ❌ |
 | [exiftool](https://github.com/exiftool/exiftool) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | tree | ❌ | ❌ | ❌ |
+| [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | tree isolate | ❌ | ❌ | ❌ |
 | [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | ❌ | ✅ | [✅](.config/fastfetch/config.jsonc) | ❌ |
 | [flatpak](https://flatpak.org/) | ❌ | ❌ | ❌ | ❌ | update, clean | ❌ | ❌ | ✅ |
-| [ffmpeg](https://ffmpeg.org/) | ❌ | ❌ | ❌ | ❌ | fps gif duration | ❌ | ❌ | ❌ |
+| [ffmpeg](https://ffmpeg.org/) | ❌ | ❌ | ❌ | ❌ | fps gif duration transcribe | ❌ | ❌ | ❌ |
 | [gifski](https://github.com/ImageOptim/gifski) | ❌ | ❌ | ❌ | ❌ | gif | ❌ | ❌ | ❌ |
 | [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | icat [4] | ❌ | [✅](.config/kitty/kitty.conf) | ❌ |
@@ -35,8 +35,8 @@ The most "necessary" things here are the things with a common command aliased to
 | [ripgrep](https://github.com/BurntSushi/ripgrep) | ❌ | grep | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [rustup](https://github.com/rust-lang/rustup) | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ❌ |
-| [whisper](https://github.com/openai/whisper) | ❌ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [yay](https://github.com/Jguer/yay/) [8] | ❌ | ❌ | ❌ | ❌ | eos-update, clean | ❌ | ❌ | ❌ |
+| [whisper.cpp](https://github.com/ggml-org/whisper.cpp) | ❌ | ❌ | ❌ | ❌ | transcribe | ❌ | ❌ | ❌ |
+| [yay](https://github.com/Jguer/yay/) [8] | ❌ | ❌ | ❌ | ❌ | eos-update clean | ❌ | ❌ | ❌ |
 | [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) | ❌ |
 | [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -77,6 +77,9 @@ The most "necessary" things here are the things with a common command aliased to
     - super+ctrl+l
 - [flameshot](https://github.com/flameshot-org/flameshot)
     - super+shift+c
+
+## bin
+I have the [bin](bin) folder which has various scripts. In [.bashrc](.bashrc), I have `~/dotfiles/bin` added to `$PATH` and `bin` in [.stow-local-ignore](stow-local-ignore) so I don't have to run stow every time I add a new script. If you have this git directory cloned somewhere that isn't your home directory, you'll need to change that path in [.bashrc](.bashrc).
 
 
 ## Font
