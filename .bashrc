@@ -139,13 +139,38 @@ function isolate() {
     done
 }
 
-function whisper() {
-    # Based on using whisper.cpp on arch linux on an AMD GPU
-    if [ "${1: -4}" == ".wav" ]; then 
-        whisper-cli --model "$HOME/whisper.cpp models/ggml-large-v3-turbo.bin" "$1" | tee "$1.transcript"
-    else
-        echo "Whisper needs a .wav file. Do ${standout}ffmpeg -i \"$1\" \"$1.wav\"${reset} or something";
+function remove_last_extension() {
+    sed 's/\(.*\)\..*/\1/' 
+    # $ echo "abc.txt.bak" | remove_last_extension 
+    # abc.txt
+    # $ echo "abc.txt" | remove_last_extension 
+    # abc
+    # $ echo "abc" | remove_last_extension 
+    # abc
+}
+
+function transcribe() {
+    # Based on using whisper.cpp on Arch Linux on an AMD GPU
+
+    file_to_transcribe="$1"
+
+    # If last 4 characters aren't ".wav"
+    if [ "${1: -4}" != ".wav" ]; then
+        with_wav="$1.wav"
+        # -f checks if a file exists
+        if [ -f "$with_wav" ]; then
+            file_to_transcribe="$with_wav"
+        else
+            without_extension_with_wav="$(echo $1 | remove_last_extension).wav"
+            if [ -f "$without_extension_with_wav" ]; then
+                file_to_transcribe="$without_extension_with_wav"
+            else
+                ffmpeg -i "$1" "$with_wav"
+                file_to_transcribe="$with_wav"
+            fi
+        fi
     fi
+    whisper-cli --model "$HOME/whisper.cpp models/ggml-large-v3-turbo.bin" "$file_to_transcribe" | tee "$file_to_transcribe.transcript"
 }
 
 function archive() {
