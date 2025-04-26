@@ -6,6 +6,6 @@ if [ -z "$1" ]; then echo 'need one parameter (the input file)'; else
     mkdir "$dir"
     ffmpeg -i "$1" "${dir}/frame%04d.png"
     # gifski: https://gif.ski/
-    # I installed it with `cargo install gifski` then added ~/.cargo/bin to the path towards a few dozen lines above this
-    gifski -o "${timestamp}.gif" --fps ${fps_variable} ${dir}/frame*.png
+    # I installed it with `cargo install gifski`
+    gifski -o "${timestap}.gif" --fps ${fps_variable} ${dir}/frame*.png
 fi
