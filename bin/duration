@@ -1,2 +1,13 @@
-#!/usr/bin/env sh
-ffmpeg -i "$1" 2>&1 | grep -Go 'Duration: [0-9.:]\+' | grep -Go ' [0-9.:]\+' | grep --color=never -Go '[0-9.:]\+'
+#!/usr/bin/env bash
+if (( $# == 0 )); then
+    >&2 echo "Expected a video or audio file as an argument but got zero arguments"
+    exit 1
+elif (( $# > 1 )); then
+    >&2 echo "Expected only one argument (a video or audio file) but got multiple"
+    exit 2
+elif [ ! -f "$1" ]; then
+    >&2 echo "$1 is not a valid file"
+    exit 3
+else
+    ffmpeg -i "$1" 2>&1 | grep -Go 'Duration: [0-9.:]\+' | grep -Go ' [0-9.:]\+' | grep --color=never -Go '[0-9.:]\+'
+fi
