@@ -1,8 +1,17 @@
-#!/usr/bin/env sh
-if [ -z "$1" ]; then echo 'need one parameter (the input file)'; else
-    local fps_variable="$(fps $1)"
-    local timestamp="$(date +%s)"
-    local dir="/tmp/gif$timestamp"
+#!/usr/bin/env bash
+if (( $# == 0 )); then
+    >&2 echo "Expected a video file as an argument but didn't get one"
+    exit 1
+elif (( $# > 1 )); then
+    >&2 echo "Expected only one argument (a video file) but got multiple"
+    exit 2
+elif [ ! -f "$1" ]; then
+    >&2 echo "$1 is not a valid file"
+    exit 3
+else
+    fps_variable="$(fps $1)"
+    timestamp="$(date +%s)"
+    dir="/tmp/gif$timestamp"
     mkdir "$dir"
     ffmpeg -i "$1" "${dir}/frame%04d.png"
     # gifski: https://gif.ski/
