@@ -20,6 +20,7 @@ alias tplay="tplay -c=█"
 alias c="clear"
 alias cwd="pwd"
 alias monitor="~/.screenlayout/monitor.sh"
+alias less="less -r"
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...

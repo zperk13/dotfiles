@@ -27,6 +27,7 @@ The most "necessary" things here are the things with a common command aliased to
 | [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
 | [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | icat [4] | ❌ | [✅](.config/kitty/kitty.conf) | ❌ |
 | [lazygit](https://github.com/jesseduffield/lazygit) | ❌ | ❌ | ❌ | G | ❌ | ✅ | ❌ | ❌ |
+| [less](https://en.wikipedia.org/wiki/Less_(Unix)) | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] | ❌ | ✅ | [✅](https://github.com/zperk13/nvim/) [6] | ❌ |
 | [pacman](https://wiki.archlinux.org/title/Pacman) | ❌ | ❌ | ❌ | ❌ | update | ❌ | ❌ | ✅ |
 | [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
