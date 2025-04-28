@@ -10,26 +10,16 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
     - symlink manager this entire repo is based off having
 ### Commands
 The most "necessary" things here are the things with a common command aliased to it as those common commands won't work without them, but you can also just unalias them if you want. Everything else, you can pick and choose.
-| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | In h [2] | Has dotfiles in repo |
-|-|-|-|-|-|-|-|
-| [bat](https://github.com/sharkdp/bat) | ❌ | cat | ✅ | ❌ | ✅ | ❌ |
-| [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ✅ | ❌ |
-| [exiftool](https://github.com/exiftool/exiftool) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | ❌ | ❌ |
-| [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | ✅ | [✅](.config/fastfetch/config.jsonc) |
-| [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | ❌ | [✅](.config/kitty/kitty.conf) |
-| [lazygit](https://github.com/jesseduffield/lazygit) | ❌ | ❌ | ❌ | G | ✅ | ❌ |
-| [less](https://en.wikipedia.org/wiki/Less_(Unix)) | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] |  ✅ | [✅](https://github.com/zperk13/nvim/) [6] |
-| [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [tplay](https://github.com/maxcurzi/tplay) | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ |
-| [regect](https://github.com/kloki/regect) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [ripgrep](https://github.com/BurntSushi/ripgrep) | ❌ | grep | ❌ | ❌ | ✅ | ❌ |
-| [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | ✅ | [✅](.config/yazi/yazi.toml) |
-| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ |
+| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | Has dotfiles in repo |
+|-|-|-|-|-|-|
+| [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | ❌ |
+| [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | [✅](.config/fastfetch/config.jsonc) |
+| [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | [✅](.config/kitty/kitty.conf) |
+| [less](https://en.wikipedia.org/wiki/Less_(Unix)) | ❌ | ❌ | ✅ | ❌ | ❌ |
+| [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] | [✅](https://github.com/zperk13/nvim/) [6] |
+| [tplay](https://github.com/maxcurzi/tplay) | ❌ | ❌ | ✅ | ❌ | ❌ |
+| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | [✅](.config/yazi/yazi.toml) |
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ |
 
 - [1] For default options. (eg: `alias grep='grep --color=auto'`)
 - [2] [.bashrc](.bashrc) defines a custom function `h` (short for "help") which lists out some useful commands.
