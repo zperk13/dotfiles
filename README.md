@@ -47,7 +47,7 @@ The `h` command will print out some useful tools, but you don't need to install 
 - [LiveCaptions](https://github.com/abb128/LiveCaptions)
     - super+ctrl+l
 - [flameshot](https://github.com/flameshot-org/flameshot)
-    - super+shift+c
+    - super+shift+s
 
 ## bin
 I have the [bin](bin) folder which has various scripts. In [.bashrc](.bashrc), I have `~/dotfiles/bin` added to `$PATH` and `bin` in [.stow-local-ignore](stow-local-ignore) so I don't have to run stow every time I add a new script. If you have this git directory cloned somewhere that isn't your home directory, you'll need to change that path in [.bashrc](.bashrc).
