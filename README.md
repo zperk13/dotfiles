@@ -9,31 +9,23 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
 - [GNU Stow](https://www.gnu.org/software/stow/)
     - symlink manager this entire repo is based off having
 ### Commands
-The most "necessary" things here are the things with a common command aliased to it as those common commands won't work without them, but you can also just unalias them if you want. Everything else, you can pick and choose.
-| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | Has dotfiles in repo |
-|-|-|-|-|-|-|
-| [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | ❌ |
-| [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | [✅](.config/fastfetch/config.jsonc) |
-| [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | [✅](.config/kitty/kitty.conf) |
-| [less](https://en.wikipedia.org/wiki/Less_(Unix)) | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] | [✅](https://github.com/zperk13/nvim/) [6] |
-| [tplay](https://github.com/maxcurzi/tplay) | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | [✅](.config/yazi/yazi.toml) |
-| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ |
+Some of the stuff the dotfiles expect you to have. Things that it expects but aren't here won't break if you don't have them.
+- [eza](https://github.com/eza-community/eza) is used for the `ls` alias.
+- [yazi](https://github.com/sxyazi/yazi) it's own bash function ('y') but it's fine if you don't install it.
+- [zoxide](https://github.com/ajeetdsouza/zoxide) is used for the `cd` alias.
 
-- [1] For default options. (eg: `alias grep='grep --color=auto'`)
-- [2] [.bashrc](.bashrc) defines a custom function `h` (short for "help") which lists out some useful commands.
-- [3] If you're using fastfetch and a Desktop Enviorment (DE) instead of a Window Manager (WM), you might want to tweak the [fastfetch config](.config/fastfetch/config.jsonc) as it doesn't have a DE module.
-- [4] Terminal emulator. One of the bash aliases (`icat`) will only work in kitty (see [icat](https://sw.kovidgoyal.net/kitty/kittens/icat/)).
-- [5] On Windows I use [Neovide](https://github.com/neovide/neovide) and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias.
-- [6] As a submodule.
-- [7] [Shortened to `y` but it's a function for the ability to leave it and the CWD be where it left.
-](https://yazi-rs.github.io/docs/quick-start#shell-wrapper)
-- [8] My [fastfetch config](.config/fastfetch/config.jsonc) has a custom version of the "packages" module and it assumes you have certain package managers installed
+The `h` command will print out some useful tools, but you don't need to install the stuff. Scripts that use executables that aren't on most Linux systems (eg: I assume grep, sed, and sudo are installed) have checks built to let you know if it needs stuff.
 
 ### Things with dotfiles but it's fine if you don't have them installed
+- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
+    - Aliased to `fetch`
 - [i3wm](https://i3wm.org/)
 - [i3blocks](https://github.com/vivien/i3blocks)
+- [kitty](https://github.com/kovidgoyal/kitty)
+    - Needed for the `icat` alias
+- [neovim](https://github.com/neovim/neovim)
+    - Aliased to `nv`
+
 ### Dotfiles that I'm assuming you won't need/want to do any installations for
 - [.inputrc](.inputrc)
 - [.XCompose](.XCompose)
