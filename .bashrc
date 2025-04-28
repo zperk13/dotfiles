@@ -68,7 +68,7 @@ add_paths() {
     [[ -d "$d" && ! "$PATH" =~ (^|:)$d(:|$) ]] && PATH="$PATH:$d"
   done
 }
-add_paths ~/dotfiles/bin
+add_paths ~/dotfiles/bin ~/.cargo/bin
 
 function rgb_fg() {
     echo -en "\e[38;2;$1;$2;$3m"
