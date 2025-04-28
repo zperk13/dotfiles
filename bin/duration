@@ -11,5 +11,5 @@ elif [ ! -f "$1" ]; then
 elif ! is_command ffmpeg; then
     >&2 echo "ffmpeg is not installed"
 else
-    ffmpeg -i "$1" 2>&1 | grep -Go 'Duration: [0-9.:]\+' | grep -Go ' [0-9.:]\+' | grep --color=never -Go '[0-9.:]\+'
+    ffmpeg -i "$1" 2>&1 | grep --basic-regexp --only-matching 'Duration: [0-9.:]\+' | grep --basic-regexp --only-matching ' [0-9.:]\+' | grep --color=never --basic-regexp --only-matching '[0-9.:]\+'
 fi

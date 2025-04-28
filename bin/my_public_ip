@@ -3,4 +3,4 @@ if ! is_command curl; then
     >&2 "This script requires curl to run"
     exit 1
 fi
-curl -s https://checkip.amazonaws.com
+curl --silent https://checkip.amazonaws.com

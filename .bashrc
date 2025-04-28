@@ -12,15 +12,15 @@ alias nv='nvim' # On Windows I use Neovide and that's long to type so I shortene
 alias bat='bat --theme=gruvbox-dark'
 alias icat='kitty +kitten icat' # If using the Kitty terminal, shows the specified image
 alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
-alias ls='eza -a --icons auto --group-directories-first' # "--icons auto" should not be necessary according to "eza --help", and yet it is for some reason
-alias tree='ls --tree -I .git' # This ls uses the ls alias above. The normal ls command doesn't have a --tree option, eza does. -I .git is to ignore the .git folder (if there is one)
+alias ls='eza --all --icons auto --group-directories-first' # "--icons auto" should not be necessary according to "eza --help", and yet it is for some reason
+alias tree='ls --tree --ignore-glob .git' # This ls uses the ls alias above. The normal ls command doesn't have a --tree option, eza does.
 alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
 alias s="source ~/.bashrc"
-alias tplay="tplay -c=█"
+alias tplay="tplay --char-map=█"
 alias c="clear"
 alias cwd="pwd"
 alias monitor="~/.screenlayout/monitor.sh"
-alias less="less -r"
+alias less="less --raw-control-chars"
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...

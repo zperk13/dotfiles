@@ -11,7 +11,7 @@ fi
 # This thing isn't perfect, but I have spent hours improving it, it works good enough, I'm happy with it
 
 # list all files, only get the ones that have a dot in them that isn't at the start, and only get everything before that first non-start dot
-files_with_dots_without_dots=$(eza --only-files --no-quotes | rg -o "^(.+?)\." -r '$1');
+files_with_dots_without_dots=$(eza --only-files --no-quotes | rg --only-matching "^(.+?)\." --replace='$1');
 
 # Go through all of those, remove duplicates ("abc.txt" and "abc.mp4" both become "abc")
 echo "$files_with_dots_without_dots" | uniq | while read uniq_file_start ; do
@@ -23,7 +23,7 @@ echo "$files_with_dots_without_dots" | uniq | while read uniq_file_start ; do
     len=${#uniq_file_start};
 
     # Get all files that have that file-extension-less name in it
-    files_with_start=$(eza --only-files --no-quotes | rg -F "$uniq_file_start");
+    files_with_start=$(eza --only-files --no-quotes | rg --fixed-strings "$uniq_file_start");
 
     # iterate through those
     echo "$files_with_start" | while read file ; do

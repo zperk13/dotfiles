@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-ip addr | grep -Go 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never -Go '[0-9.]\+'
+ip addr | grep --basic-regexp --only-matching 'inet 192.168.[0-9]\+.[0-9]\+' | grep --color=never --basic-regexp --only-matching '[0-9.]\+'
