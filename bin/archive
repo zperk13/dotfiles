@@ -8,6 +8,9 @@ elif (( $# > 1 )); then
 elif [ ! -f $1 ] && [ ! -d $1 ]; then
     >&2 echo "$1 is not a valid file or directory"
     exit 3;
+elif ! is_command 7z; then
+    >&2 echo "7z is not installed"
+    exit 4;
 else
     7z a -tzip -mx9 "${1%/}.zip" "${1}"
 fi

@@ -1,2 +1,6 @@
 #!/usr/bin/env sh
+if ! is_command curl; then
+    >&2 "This script requires curl to run"
+    exit 1
+fi
 curl -s https://checkip.amazonaws.com

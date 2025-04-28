@@ -5,12 +5,18 @@
 if (( $# == 0 )); then
     >&2 echo "Expected at least one video or audio file but got zero arguments"
     exit 1
+elif ! is_command whisper-cli; then
+    >&2 echo "This command requires whisper.cpp to run"
+    exit 3
 fi
 
 for arg in "$@"; do
     if [ ! -f "$arg" ]; then
         >&2 echo "\"$arg\" is not a valid file"
         exit 2
+    elif [ "${arg: -4}" != ".wav" ] && ! is_command ffmpeg; then
+        >&2 echo "To transcribe a file that isn't a .wav file, this script needs ffmpeg installed so it can convert it"
+        exit 4
     fi
 done
 

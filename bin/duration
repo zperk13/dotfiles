@@ -8,6 +8,8 @@ elif (( $# > 1 )); then
 elif [ ! -f "$1" ]; then
     >&2 echo "$1 is not a valid file"
     exit 3
+elif ! is_command ffmpeg; then
+    >&2 echo "ffmpeg is not installed"
 else
     ffmpeg -i "$1" 2>&1 | grep -Go 'Duration: [0-9.:]\+' | grep -Go ' [0-9.:]\+' | grep --color=never -Go '[0-9.:]\+'
 fi

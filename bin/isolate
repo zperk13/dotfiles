@@ -1,5 +1,13 @@
 #!/usr/bin/env sh
 
+if ! is_command eza; then
+    >&2 echo "This script requires eza to run (I know, it's not a very portable script)"
+    exit 1
+elif ! is_command rg; then
+   >&2 echo "This script requires ripgrep to run (I know, it's not a very portable script)"
+    exit 2
+fi
+
 # This thing isn't perfect, but I have spent hours improving it, it works good enough, I'm happy with it
 
 # list all files, only get the ones that have a dot in them that isn't at the start, and only get everything before that first non-start dot
