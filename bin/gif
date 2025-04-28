@@ -13,7 +13,7 @@ elif ! is_command ffmpeg; then
     exit 4
 elif ! is_command gifski; then
     >&2 echo "gifski (https://gif.ski) is not installed"
-    if is_command cargo
+    if is_command cargo; then
         >&2 echo "Perhaps do:"
         >&2 echo "cargo install gifski"
         exit 5
