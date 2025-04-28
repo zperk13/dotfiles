@@ -10,31 +10,31 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
     - symlink manager this entire repo is based off having
 ### Commands
 The most "necessary" things here are the things with a common command aliased to it as those common commands won't work without them, but you can also just unalias them if you want. Everything else, you can pick and choose.
-| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | Used in | In h [2] | Has dotfiles in repo | fastfectch config assumes you have it [8] |
-|-|-|-|-|-|-|-|-|-|
-| [bat](https://github.com/sharkdp/bat) | ❌ | cat | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [exiftool](https://github.com/exiftool/exiftool) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | tree isolate | ❌ | ❌ | ❌ |
-| [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | ❌ | ✅ | [✅](.config/fastfetch/config.jsonc) | ❌ |
-| [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | icat [4] | ❌ | [✅](.config/kitty/kitty.conf) | ❌ |
-| [lazygit](https://github.com/jesseduffield/lazygit) | ❌ | ❌ | ❌ | G | ❌ | ✅ | ❌ | ❌ |
-| [less](https://en.wikipedia.org/wiki/Less_(Unix)) | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] | ❌ | ✅ | [✅](https://github.com/zperk13/nvim/) [6] | ❌ |
-| [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [tplay](https://github.com/maxcurzi/tplay) | ❌ | ❌ | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [regect](https://github.com/kloki/regect) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [ripgrep](https://github.com/BurntSushi/ripgrep) | ❌ | grep | ❌ | ❌ | isolate | ✅ | ❌ | ❌ |
-| [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | y [7] | ✅ | [✅](.config/yazi/yazi.toml) | ❌ |
-| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
-| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| | Common cmd aliased to it | Replacement for common cmd | Has self alias [1] | Has shorter alias | In h [2] | Has dotfiles in repo |
+|-|-|-|-|-|-|-|
+| [bat](https://github.com/sharkdp/bat) | ❌ | cat | ✅ | ❌ | ✅ | ❌ |
+| [dust](https://github.com/bootandy/dust) | ❌ | du | ❌ | ❌ | ✅ | ❌ |
+| [exiftool](https://github.com/exiftool/exiftool) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [eza](https://github.com/eza-community/eza) | ls | ls | ✅ | ❌ | ❌ | ❌ |
+| [fastfetch](https://github.com/fastfetch-cli/fastfetch) [3] | ❌ | ❌ | ❌ | fetch | ✅ | [✅](.config/fastfetch/config.jsonc) |
+| [jless](https://github.com/PaulJuliusMartinez/jless) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [kitty](https://github.com/kovidgoyal/kitty) [4] | ❌ | ❌ | ❌ |  ❌ | ❌ | [✅](.config/kitty/kitty.conf) |
+| [lazygit](https://github.com/jesseduffield/lazygit) | ❌ | ❌ | ❌ | G | ✅ | ❌ |
+| [less](https://en.wikipedia.org/wiki/Less_(Unix)) | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ |
+| [neovim](https://github.com/neovim/neovim) | ❌ | ❌ | ❌ | nv [5] |  ✅ | [✅](https://github.com/zperk13/nvim/) [6] |
+| [tokei](https://github.com/XAMPPRocky/tokei) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [tplay](https://github.com/maxcurzi/tplay) | ❌ | ❌ | ✅ | ❌ | ✅ | ❌ |
+| [regect](https://github.com/kloki/regect) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [ripgrep](https://github.com/BurntSushi/ripgrep) | ❌ | grep | ❌ | ❌ | ✅ | ❌ |
+| [repgrep](https://github.com/acheronfail/repgrep) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [yazi](https://github.com/sxyazi/yazi) | ❌ | ❌ | ❌ | ❌ [7] | ✅ | [✅](.config/yazi/yazi.toml) |
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| [zoxide](https://github.com/ajeetdsouza/zoxide) | cd | cd | ❌ | ❌ | ❌ | ❌ |
 
 - [1] For default options. (eg: `alias grep='grep --color=auto'`)
 - [2] [.bashrc](.bashrc) defines a custom function `h` (short for "help") which lists out some useful commands.
 - [3] If you're using fastfetch and a Desktop Enviorment (DE) instead of a Window Manager (WM), you might want to tweak the [fastfetch config](.config/fastfetch/config.jsonc) as it doesn't have a DE module.
-- [4] Terminal emulator. One of the bash aliases will only work in kitty (see [icat](https://sw.kovidgoyal.net/kitty/kittens/icat/)).
+- [4] Terminal emulator. One of the bash aliases (`icat`) will only work in kitty (see [icat](https://sw.kovidgoyal.net/kitty/kittens/icat/)).
 - [5] On Windows I use [Neovide](https://github.com/neovide/neovide) and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias.
 - [6] As a submodule.
 - [7] [Shortened to `y` but it's a function for the ability to leave it and the CWD be where it left.
