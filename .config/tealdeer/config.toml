@@ -1,0 +1,9 @@
+[display]
+compact = true
+
+[style]
+description.foreground="red"
+example_text.foreground="blue"
+
+[updates]
+auto_update = true

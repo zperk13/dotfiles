@@ -129,6 +129,7 @@ function h() {
     echo -e 'dust\t\tdu alternative (disk usage)'
     echo -e 'exiftool\tFile metadata'
     echo -e 'jless\t\tJSON viewer'
+    echo -e 'tldr\t\tCollaborative cheatsheets for console commands'
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tplay\t\tPlay video in the terminal'
     echo -e 'regect\t\tregex 101 like cli tool'
