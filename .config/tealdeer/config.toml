@@ -2,8 +2,11 @@
 compact = true
 
 [style]
-description.foreground="red"
-example_text.foreground="blue"
+description.foreground.rgb={r=91, g=206, b=250}
+example_text.foreground.rgb={r=245, g=169, b=184}
+command_name.foreground.rgb={r=255,g=255,b=255}
+example_code.foreground.rgb={r=255,g=255,b=255}
+example_variable.foreground.rgb={r=255,g=255,b=255}
 
 [updates]
 auto_update = true
