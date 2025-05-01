@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-if [ $1 == "--help" ]; then
+if [ "$1" == "--help" ]; then
     echo "Pipe a command into with_count to count the lines as they appear. Counting starts at 1. An argument can be provided to pick a different starting number. A second argument can be provided to not print the number for all numbers below it"
     exit 2;
 fi
