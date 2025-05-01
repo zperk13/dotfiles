@@ -105,6 +105,7 @@ function h() {
     echo -e 'transcribe\t\tCreate a trascript for a .wav file. If file isn\'t a .wav file, one will be created from the provided file.
     echo -e 'update\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
     echo -e 'update_mirrors\t\tRerank pacman mirrors'
+    echo -e "with_count\t\tPipe a command to with_count to count the lines as you see them. ${standout}with_count --help${reset} for more info"
     echo -e 'without_last_extension\tRemove the last extension of whatever is piped into it'
 
     echo

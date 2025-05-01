@@ -6,5 +6,5 @@ elif ! is_command eos-rankmirrors; then
     >&2 echo "This script is made for EndeavourOS and eos-rankmirrors can't be found"
     exit 2
 fi
-sudo reflector --verbose --protocol https --latest 50 --sort rate --save /etc/pacman.d/mirrorlist
+sudo reflector --verbose --protocol https --latest 50 --sort rate --save /etc/pacman.d/mirrorlist 2>&1 | with_count -1 1
 eos-rankmirrors
