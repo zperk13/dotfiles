@@ -36,7 +36,7 @@ The `h` command will print out some useful tools, but you don't need to install 
     - super+enter
 - [rofi](https://github.com/davatorium/rofi)
     - super+d
-- [xsetroot](https://archlinux.org/packages/extra/x86_64/xorg-xsetroot/)
+- [hsetroot](https://archlinux.org/packages/extra/x86_64/hsetroot/)
     - Runs automatically on login to set the background color to `#282828` (gruvbox bg color)
 #### Extra rofi things that can be launched with keybinds (not required)
 - [rofi-emoji](https://github.com/Mange/rofi-emoji)
