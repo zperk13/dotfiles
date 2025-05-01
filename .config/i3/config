@@ -254,3 +254,4 @@ exec numlockx on
 
 exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id xsetroot -solid "#282828"
+exec --no-startup-id picom -b
