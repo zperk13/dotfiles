@@ -1,0 +1,69 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Getopt::Long;
+
+my $help;
+my $start = 1;
+my $increment_amount = 1;
+my $no_above;
+my $no_below;
+my $separator = "\t";
+my $total;
+
+GetOptions (               'h|help' => \$help,
+                        'start=i' => \$start,
+             'increment-amount=i' => \$increment_amount,
+                     'no-above=i' => \$no_above,
+                     'no-below=i' => \$no_below,
+                    'separator=s' => \$separator,
+                        'total=i' => \$total);
+if (defined $help) {
+    print STDERR "llc = Live Line Count
+Pipe a program's output into llc to number the lines as they are printed.
+eg: cat file | llc
+
+Options:
+    -h, --help            Prints what you're reading right now to stderr, then exits
+
+    --start=N             The number llc will start counting at (Default: 1)
+
+    --increment-amount=N  The amount the number will go up by each line (Default: 1)
+
+    --no-above=N          Don't print numbers above a given number.
+                          If not provided, there will not be an upper limit to numbers being printed.
+
+    --no-below=N          Don't print numbers below a given number.
+                          If not provided, there will not be a lower limit to numbers being printed.
+
+    --separator=STRING    What will between the number and the line (Default: \\t)
+
+    --total=N             A number to print after the current number, with a / between them
+";
+    exit;
+}
+
+my $i = $start;
+
+while (my $line = <STDIN>) {
+    my $should_print_i = 1;
+    if (defined $no_below) {
+        if ($i < $no_below) {
+            $should_print_i = 0;
+        }
+    }
+    if (defined $no_above) {
+        if ($i > $no_above) {
+            $should_print_i = 0;
+        }
+    }
+    if ($should_print_i) {
+        print $i;
+        if (defined $total) {
+            print '/', $total;
+        }
+        print $separator
+    }
+    print $line;
+    $i+=$increment_amount;
+}

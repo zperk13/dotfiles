@@ -98,6 +98,7 @@ function h() {
     echo -e 'fps\t\t\tGet the fps of a video'
     echo -e 'gif\t\t\tTurn a video into a gif'
     echo -e 'isolate\t\t\tGo through all files in this folder, group together ones that are the same before the first . into their own folder'
+    echo -e 'llc\t\t\tLive Line Count. Pipe output into it and count the lines as they appear. llc --help for more options'
     echo -e 'maintenance\t\tUpdate mirrors, system, vacuum old log files, remove cache. Run this every month or two.'
     echo -e 'my_local_ip\t\tPrint local ip'
     echo -e 'my_public_ip\t\tPrint public ip'
@@ -105,7 +106,6 @@ function h() {
     echo -e 'transcribe\t\tCreate a trascript for a .wav file. If file isn\'t a .wav file, one will be created from the provided file.
     echo -e 'update\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
     echo -e 'update_mirrors\t\tRerank pacman mirrors'
-    echo -e "with_count\t\tPipe a command to with_count to count the lines as you see them. ${standout}with_count --help${reset} for more info"
     echo -e 'without_last_extension\tRemove the last extension of whatever is piped into it'
 
     echo
