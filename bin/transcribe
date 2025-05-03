@@ -40,5 +40,5 @@ for arg in "$@"; do
             fi
         fi
     fi
-    whisper-cli --model "$HOME/whisper.cpp models/ggml-large-v3-turbo.bin" "$file_to_transcribe" | tee "$file_to_transcribe.transcript"
+    whisper-cli --model "$HOME/whisper.cpp models/ggml-large-v3-turbo.bin" "$file_to_transcribe" | whisper_transcript_to_srt | tee "$file_to_transcribe.srt"
 done

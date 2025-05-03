@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+import sys
+
+# [00:00:00.000 --> 00:00:09.080]   I am an example line of transcript from whisper.cpp
+index = 1
+duplicates_removed = 0
+prev_text = ""
+prev_start = ""
+prev_end = ""
+for line in sys.stdin:
+    line = line.strip()
+    if line == "":
+        continue
+    timecodes, _, text = line.partition("]   ")
+    timecodes = timecodes[1:] # Remove the opening bracket
+    timecodes = timecodes.replace(".", ",")
+    start, _, end = timecodes.partition(" --> ")
+    if text == prev_text:
+        prev_end = end
+        duplicates_removed+=1
+        continue
+    if prev_text != "":
+        print(index)
+        index += 1
+        print(prev_start, "-->", prev_end)
+        print(prev_text)
+        print(flush=True) # flush isn't necessary but I prefer how it looks over the buffering cutting the output off right after the printing of the index and stuff
+        
+    prev_start = start
+    prev_end = end
+    prev_text = text
+print(index)
+print(prev_start, "-->", prev_end)
+print(prev_text)
+
+print("Duplicates removed: ", duplicates_removed, file=sys.stderr)
