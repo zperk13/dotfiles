@@ -64,11 +64,12 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 
-# From https://wiki.archlinux.org/title/Environment_variables#Using_shell_initialization_files
+# From https://wiki.archlinux.org/title/Environment_variables#Using_shell_initialization_files and tweaked with local and indentation
 add_paths() {
-  for d in "$@"; do
+    local d;
+    for d in "$@"; do
     [[ -d "$d" && ! "$PATH" =~ (^|:)$d(:|$) ]] && PATH="$PATH:$d"
-  done
+    done
 }
 add_paths ~/dotfiles/bin ~/.cargo/bin
 
