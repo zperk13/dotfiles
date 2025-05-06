@@ -128,6 +128,7 @@ function h() {
     echo -e 'my_local_ip\t\tPrint local ip'
     echo -e 'my_public_ip\t\tPrint public ip'
     echo -e 'my_ip\t\t\tPrint local & public ip'
+    echo -e 'store\t\t\tzip a folder without any compression'
     echo -e 'transcribe\t\tCreate a trascript for a .wav file. If file isn\'t a .wav file, one will be created from the provided file.
     echo -e 'update\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
     echo -e 'update_mirrors\t\tRerank pacman mirrors'
