@@ -3,5 +3,3 @@ update_mirrors
 update
 sudo journalctl --vacuum-time=4weeks
 clean
-paccache --remove --uninstalled --keep 0
-paccache --remove --keep 1
