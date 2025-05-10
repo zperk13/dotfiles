@@ -158,6 +158,7 @@ function h() {
     echo "${underline}Misc:${reset}"
     echo -e 'bat\t\tcat alternative'
     echo -e 'dust\t\tdu alternative (disk usage)'
+    echo -e 'dysk\t\tdf alternative (disk free)'
     echo -e 'exiftool\tFile metadata'
     echo -e 'jless\t\tJSON viewer'
     echo -e 'tldr\t\tCollaborative cheatsheets for console commands'
