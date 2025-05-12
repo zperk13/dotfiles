@@ -126,6 +126,7 @@ function h() {
     echo -e 'isolate\t\t\tGo through all files in this folder, group together ones that are the same before the first . into their own folder'
     echo -e 'llc\t\t\tLive Line Count. Pipe output into it and count the lines as they appear. llc --help for more options'
     echo -e 'maintenance\t\tUpdate mirrors, system, vacuum old log files, remove cache. Run this every month or two.'
+    echo -e 'mcchat\t\t\tExtract all chat messages from minecraft log files in the current directory'
     echo -e 'my_local_ip\t\tPrint local ip'
     echo -e 'my_public_ip\t\tPrint public ip'
     echo -e 'my_ip\t\t\tPrint local & public ip'
@@ -138,6 +139,7 @@ function h() {
     echo
 
     echo "${underline}Functions/Aliases:${reset}"
+    echo -e '..\t\tcd ..'
     echo -e 'c\t\tclear'
     echo -e 'd\t\tOpen a fuzzy finder of dirs in the current dir, cd into selected one'
     echo -e 'h\t\tthis'
@@ -145,7 +147,6 @@ function h() {
     echo -e 'G\t\tlazygit'
     echo -e 'icat\t\tView image'
     echo -e 'incognito\tDisable terminal history'
-    echo -e 'mcchat\t\tExtract all chat messages from minecraft log files in the current directory'
     echo -e 'monitor\t\tFix monitors'
     echo -e 'nv\t\tNeovim'
     echo -e 'o\t\tFile explorer only for opening'
