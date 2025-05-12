@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+if (( $# == 0 )); then
+    >&2 echo "Expected a video or audio file as an argument but got zero arguments"
+    exit 1
+elif (( $# > 1 )); then
+    >&2 echo "Expected only one argument (a video or audio file) but got multiple"
+    exit 2
+elif [ ! -f "$1" ]; then
+    >&2 echo "$1 is not a valid file"
+    exit 3
+elif ! is_command ffmpeg; then
+    >&2 echo "ffmpeg is not installed"
+    exit 4
+else
+    # Just copied from https://superuser.com/a/841379 and changed the filename to "$1"
+    ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 "$1"
+fi
