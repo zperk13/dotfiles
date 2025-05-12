@@ -1,0 +1,58 @@
+#!/usr/bin/env python
+import os
+import gzip
+from datetime import datetime
+from string import ascii_letters
+
+logs_by_date = {}
+
+def add_log(contents: str, year: int, month: int, day: int):
+    if year not in logs_by_date:
+        logs_by_date[year] = {}
+    if month not in logs_by_date[year]:
+        logs_by_date[year][month] = {}
+    if day not in logs_by_date[year][month]:
+        logs_by_date[year][month][day] = []
+    logs_by_date[year][month][day].append(contents)
+
+for file_path in os.listdir(os.getcwd()):
+    if 'debug' in file_path:
+        continue
+    if file_path.endswith(".log.gz"):
+        with gzip.open(file_path, "rb") as f:
+            contents = f.read().decode("utf-8", errors='replace')
+            date = file_path.split('-')
+            year = int(date[0])
+            month = int(date[1])
+            day = int(date[2])
+            add_log(contents, year, month, day)
+    elif file_path == "latest.log":
+        with open(file_path, 'rb') as f:
+            contents = f.read().decode("utf-8", errors='replace')
+            date = datetime.fromtimestamp(os.path.getctime(file_path))
+            add_log(contents, date.year, date.month, date.day)
+
+for year in sorted(logs_by_date.keys()):
+    for month in sorted(logs_by_date[year].keys()):
+        for day in sorted(logs_by_date[year][month].keys()):
+            for log_file_content in logs_by_date[year][month][day]:
+                for line in log_file_content.splitlines():
+                    if "[CHAT]" in line:
+                        info, _, message = line.partition("[CHAT] ")
+                        index = 0
+                        split = info.split(' ')
+                        time = split[0]
+                        time_has_letters = False
+                        for letter in ascii_letters:
+                            if letter in time:
+                                time_has_letters = True
+                                break
+                        if time_has_letters:
+                            time = split[1][:-1]
+                        else:
+                            time = time[1:-1]
+                        print(f"{year}-{month}-{day} {time} {message}")
+                    elif "[Server thread/INFO]: <" in line:
+                        time_with_brackets, _, message = line.partition(" [Server thread/INFO]: ")
+                        time = time_with_brackets[1:-1]
+                        print(f"{year}-{month}-{day} {time} {message}")

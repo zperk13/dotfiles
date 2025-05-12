@@ -144,6 +144,7 @@ function h() {
     echo -e 'G\t\tlazygit'
     echo -e 'icat\t\tView image'
     echo -e 'incognito\tDisable terminal history'
+    echo -e 'mcchat\t\tExtract all chat messages from minecraft log files in the current directory'
     echo -e 'monitor\t\tFix monitors'
     echo -e 'nv\t\tNeovim'
     echo -e 'o\t\tFile explorer only for opening'
