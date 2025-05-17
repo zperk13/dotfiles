@@ -24,7 +24,7 @@
         },
         {
             "type": "gpu",
-            "format": "{1} {2}"
+            "format": "{2}"
         },
         "host",
         {
