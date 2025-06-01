@@ -23,10 +23,9 @@ function socialmedia {
     firefox -new-tab 'https://www.facebook.com/?sk=h_chr' -new-tab 'https://mastodon.sdf.org/home' -new-tab 'https://bsky.app/' &
 }
 
-# alias rofi='rofi -theme gruvbox-dark -font "JetBrainsMonoNF 13"'
 case "$(echo -e "direwolf20\nSocial Media\nStartup" | menu)" in
     direwolf20) direwolf ;;
-    Startup) startup ;;
     'Social Media') socialmedia ;;
+    Startup) startup ;;
     *) exit 1
 esac
