@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+function menu {
+    rofi -dmenu -no-custom -i -theme gruvbox-dark -font "JetBrainsMonoNF 13" -p $1 || exit 0
+}
+
+left_monitor='output HDMI-A-1'
+right_monitor='output DisplayPort-1'
+
+function direwolf {
+    i3-msg "workspace number 2;move workspace to $right_monitor;exec firefox https://www.youtube.com/@direwolf20"
+    i3-msg "workspace number 3;move workspace to $left_monitor;exec prismlauncher --launch 'FTB OceanBlock 2'"
+}
+
+function startup {
+    i3-msg "workspace number 2;move workspace to $left_monitor"
+    i3-msg "workspace number 1;move workspace to output $right_monitor;exec discord;exec thunderbird"
+    i3-msg 'workspace number 2' # Workspace 2 is on the left, but the current workspace on the left monitor will be workspace 3. This makes workspace 2 the active workspace on the left monitor
+    i3-msg 'workspace number 1' # Focus workspace 1 so Discord opens in the correct workspace since it likes to launch a window, wait, close it, then launch another window
+}
+
+
+function socialmedia {
+    firefox -new-tab 'https://www.facebook.com/?sk=h_chr' -new-tab 'https://mastodon.sdf.org/home' -new-tab 'https://bsky.app/' &
+}
+
+# alias rofi='rofi -theme gruvbox-dark -font "JetBrainsMonoNF 13"'
+case "$(echo -e "direwolf20\nSocial Media\nStartup" | menu)" in
+    direwolf20) direwolf ;;
+    Startup) startup ;;
+    'Social Media') socialmedia ;;
+    *) exit 1
+esac
