@@ -43,6 +43,8 @@ The `h` command will print out some useful tools, but you don't need to install 
     - super+/
 - [rofi-calc](https://github.com/svenstaro/rofi-calc)
     - super+c
+- [menu scripts i wrote](./bin/menu_scripts)
+    - super+m
 #### Other things that can be launched with keybinds (not required)
 - [LiveCaptions](https://github.com/abb128/LiveCaptions)
     - super+ctrl+l
