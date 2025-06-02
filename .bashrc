@@ -119,24 +119,25 @@ function incognito() {
 # List of useful programs I installed / scripts I wrote. "h" is short for "help"
 function h() {
     echo "${underline}Scripts:${reset}"
-    echo -e 'archive\t\t\tzip a folder with maximum compression'
-    echo -e 'clean\t\t\tUninstall unused dependencies'
-    echo -e 'duration\t\tGet the duration of a file'
-    echo -e 'fps\t\t\tGet the fps of a video'
-    echo -e 'gif\t\t\tTurn a video into a gif'
-    echo -e 'isolate\t\t\tGo through all files in this folder, group together ones that are the same before the first . into their own folder'
-    echo -e 'llc\t\t\tLive Line Count. Pipe output into it and count the lines as they appear. llc --help for more options'
-    echo -e 'maintenance\t\tUpdate mirrors, system, vacuum old log files, remove cache. Run this every month or two.'
-    echo -e 'mcchat\t\t\tExtract all chat messages from minecraft log files in the current directory'
-    echo -e 'my_local_ip\t\tPrint local ip'
-    echo -e 'my_public_ip\t\tPrint public ip'
-    echo -e 'my_ip\t\t\tPrint local & public ip'
-    echo -e 'resolution\t\tGet the resolution of a video'
-    echo -e 'store\t\t\tzip a folder without any compression'
-    echo -e 'transcribe\t\tCreate a trascript for a .wav file. If file isn\'t a .wav file, one will be created from the provided file.
-    echo -e 'update\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
-    echo -e 'update_mirrors\t\tRerank pacman mirrors'
-    echo -e 'without_last_extension\tRemove the last extension of whatever is piped into it'
+    echo -e 'archive\t\t\t\tzip a folder with maximum compression'
+    echo -e 'clean\t\t\t\tUninstall unused dependencies'
+    echo -e 'duration\t\t\tGet the duration of a file'
+    echo -e 'fps\t\t\t\tGet the fps of a video'
+    echo -e 'gif\t\t\t\tTurn a video into a gif'
+    echo -e 'isolate\t\t\t\tGo through all files in this folder, group together ones that are the same before the first . into their own folder'
+    echo -e 'llc\t\t\t\tLive Line Count. Pipe output into it and count the lines as they appear. llc --help for more options'
+    echo -e 'maintenance\t\t\tUpdate mirrors, system, vacuum old log files, remove cache. Run this every month or two.'
+    echo -e 'mcchat\t\t\t\tExtract all chat messages from minecraft log files in the current directory'
+    echo -e 'my_local_ip\t\t\tPrint local ip'
+    echo -e 'my_public_ip\t\t\tPrint public ip'
+    echo -e 'my_ip\t\t\t\tPrint local & public ip'
+    echo -e 'resolution\t\t\tGet the resolution of a video'
+    echo -e 'store\t\t\t\tzip a folder without any compression'
+    echo -e 'transcribe\t\t\tCreate a trascript for a .wav file. If file isn\'t a .wav file, one will be created from the provided file.
+    echo -e 'update\t\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
+    echo -e 'update_minecraft_menu_icons\tUpdate the icons for the Minecraft menu script'
+    echo -e 'update_mirrors\t\t\tRerank pacman mirrors'
+    echo -e 'without_last_extension\t\tRemove the last extension of whatever is piped into it'
 
     echo
 

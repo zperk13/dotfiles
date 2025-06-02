@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 function menu {
-    rofi -dmenu -no-custom -i -theme gruvbox-dark -font "JetBrainsMonoNF 13" -p $1 || exit 0
+    rofi -dmenu -show-icons -no-custom -i -theme gruvbox-dark -font "JetBrainsMonoNF 13" -p $1 || exit 0
 }
 
 left_monitor='output HDMI-A-1'
@@ -11,8 +11,15 @@ function direwolf {
     i3-msg "workspace number 3;move workspace to $left_monitor;exec prismlauncher --launch 'FTB OceanBlock 2'"
 }
 
+# the update_minecraft_menu_icons script exists to copy the instance icons from prism to where rofi will look
 function minecraft {
-    prismlauncher --launch "$(ls -d ~/.local/share/PrismLauncher/instances/*/ | sed 's/.\+instances\///' | sed 's/\/$//' | menu)"
+    local instance="$(ls -d ~/.local/share/PrismLauncher/instances/*/ | while IF= read -r dir; do
+        local name="$(echo $dir | sed 's/.\+instances\///' | sed 's/\/$//')"
+        printf "$name"
+        printf "\0icon\x1f$(echo "prisminstance_$name" | sed 's/\W//g' )\n" "$name"
+    done | menu)"
+    if [[ -z "$instance" ]]; then exit 0; fi
+    prismlauncher --launch "$instance"
 }
 
 function startup {
