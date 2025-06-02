@@ -24,6 +24,7 @@ alias less="less --raw-control-chars"
 alias rg="rg --hidden --no-ignore --glob='!.git/'"
 alias toclip="xclip -selection clipboard"
 alias ..='cd ..'
+alias uptime='uptime --pretty'
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
