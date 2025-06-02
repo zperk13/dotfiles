@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-for dir in ~/.local/share/PrismLauncher/instances/*/; do
-    name="$(echo $dir | sed 's/.\+instances\///' | sed 's/\/$//' | sed 's/\W//g')"
-    sudo cp "$dir/minecraft/icon.png" "/usr/share/icons/hicolor/128x128/apps/prisminstance_$name.png"
-done
