@@ -11,7 +11,6 @@ function direwolf {
     i3-msg "workspace number 3;move workspace to $left_monitor;exec prismlauncher --launch 'FTB OceanBlock 2'"
 }
 
-# the update_minecraft_menu_icons script exists to copy the instance icons from prism to where rofi will look
 function minecraft {
     local instance="$(ls -d ~/.local/share/PrismLauncher/instances/*/ | while IF= read -r dir; do
         local name="$(echo $dir | sed 's/.\+instances\///' | sed 's/\/$//')"
