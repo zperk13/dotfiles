@@ -6,6 +6,15 @@ function menu {
 left_monitor='output HDMI-A-1'
 right_monitor='output DisplayPort-1'
 
+function balatro_mod {
+    local dir="$HOME/.local/share/Steam/steamapps/common/Balatro"
+    case "$(echo -e "Enable\nDisable" | menu "Balatro Modloader")" in
+        Enable) mv "$dir/version.dll.disabled" "$dir/version.dll" ;;
+        Disable) mv "$dir/version.dll" "$dir/version.dll.disabled" ;;
+        *) exit 1
+    esac
+}
+
 function direwolf {
     i3-msg "workspace number 2;move workspace to $right_monitor;exec firefox https://www.youtube.com/@direwolf20/videos"
     i3-msg "workspace number 3;move workspace to $left_monitor;exec prismlauncher --launch 'FTB OceanBlock 2'"
@@ -33,7 +42,8 @@ function socialmedia {
     firefox -new-tab 'https://www.facebook.com/?sk=h_chr' -new-tab 'https://mastodon.sdf.org/home' -new-tab 'https://bsky.app/' &
 }
 
-case "$(echo -e "direwolf20\nMinecraft\nSocial Media\nStartup" | menu)" in
+case "$(echo -e "Balatro Modloader\ndirewolf20\nMinecraft\nSocial Media\nStartup" | menu)" in
+    'Balatro Modloader') balatro_mod ;;
     direwolf20) direwolf ;;
     Minecraft) minecraft ;;
     'Social Media') socialmedia ;;
