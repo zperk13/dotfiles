@@ -134,7 +134,7 @@ function h() {
     echo -e 'my_ip\t\t\tPrint local & public ip'
     echo -e 'resolution\t\tGet the resolution of a video'
     echo -e 'store\t\t\tzip a folder without any compression'
-    echo -e 'transcribe\t\tCreate a trascript for a .wav file. If file isn\'t a .wav file, one will be created from the provided file.
+    echo -e "transcribe\t\tCreate a trascript for a .wav file. If file isn't a .wav file, one will be created from the provided file."
     echo -e 'update\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
     echo -e 'update_mirrors\t\tRerank pacman mirrors'
     echo -e 'without_last_extension\tRemove the last extension of whatever is piped into it'
