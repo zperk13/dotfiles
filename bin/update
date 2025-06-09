@@ -21,6 +21,6 @@ fi
 
 balatro_steamodded_dir="$HOME/.local/share/Steam/steamapps/compatdata/2379780/pfx/drive_c/users/steamuser/AppData/Roaming/Balatro/Mods/smods/"
 if [ -d "$balatro_steamodded_dir" ]; then
-    echo "Updating Steamodded (Balatro modding framework)"
+    echo -e "\nUpdating Steamodded (Balatro modding framework)"
     git -C "$balatro_steamodded_dir" pull
 fi
