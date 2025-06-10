@@ -17,7 +17,7 @@ function balatro_mod {
 
 function direwolf {
     i3-msg "workspace number 2;move workspace to $right_monitor;exec firefox https://www.youtube.com/@direwolf20/videos"
-    i3-msg "workspace number 3;move workspace to $left_monitor;exec prismlauncher --launch 'FTB OceanBlock 2'"
+    i3-msg "workspace number 3;move workspace to $left_monitor;exec prismlauncher --launch 'FTB Evolution'"
 }
 
 function minecraft {
