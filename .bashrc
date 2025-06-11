@@ -171,6 +171,7 @@ function h() {
     echo -e 'tldr\t\tCollaborative cheatsheets for console commands'
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tplay\t\tPlay video in the terminal'
+    echo -e 'trash\t\tMove file/directory to trash bin'
     echo -e 'regect\t\tregex 101 like cli tool'
     echo -e 'rg\t\tRipgrep'
     echo -e 'rgr\t\tRepgrep (ripgrep + replace)'

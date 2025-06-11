@@ -18,14 +18,14 @@ function update_steamodded {
     if [ "$current_installed_version" != "$latest_released_version" ]; then
         echo "Versions are different"
         echo "Deleting old version"
-        rm -r "./smods"
+        trash "./smods"
         echo "Downloading new version"
         local download_asset_name="$latest_released_version.zip"
         curl -LO "https://github.com/$repo/archive/refs/tags/$download_asset_name"
         echo "Extracting"
         7z x -y "./$download_asset_name"
         echo "Deleting $download_asset_name"
-        rm "$download_asset_name"
+        trash "$download_asset_name"
         echo "Done"
     else
         echo "Versions are the same"
@@ -54,20 +54,20 @@ function update_lovely {
         echo "Deleting old version"
         local to_rename_to="$enabled_file_name"
         if [ -f "$enabled_file_name" ]; then
-            rm "$enabled_file_name"
+            trash "$enabled_file_name"
         elif [ -f "$disabled_file_name" ]; then
-            rm "$disabled_file_name"
+            trash "$disabled_file_name"
             to_rename_to="$disabled_file_name"
             echo "Modloader was disabled so I'll make sure to disable it again after installing the new version"
         else
             echo "Old version not found"
         fi
-        rm "./version.dll.disabled"
+        trash "./version.dll.disabled"
         echo "Downloading new version"
         curl -LO "https://github.com/$repo/releases/latest/download/$download_asset_name"
         7z x -y "./$download_asset_name"
         echo "Deleting $download_asset_name"
-        rm "$download_asset_name"
+        trash "$download_asset_name"
         echo "Writing new version number to file"
         echo "$latest_released_version" > "./lovelyversion.txt"
         if [ "$to_rename_to" == "$disabled_file_name" ]; then
@@ -97,14 +97,14 @@ function update_multiplayer {
     if [ "$current_installed_version" != "$latest_released_version" ]; then
         echo "Versions are different"
         echo "Deleting old version"
-        rm -r "./BalatroMultiplayer"
+        trash "./BalatroMultiplayer"
         echo "Downloading new version"
         curl -LO "https://github.com/$repo/releases/latest/download/$download_asset_name"
         local extract_folder="$(echo "$download_asset_name" | without_last_extension)"
         echo "Extracting into $extract_folder"
         7z x -y "./$download_asset_name" -o"./$extract_folder"
         echo "Deleting $download_asset_name"
-        rm "$download_asset_name"
+        trash "$download_asset_name"
         echo "Done"
     else
         echo "Versions are the same"
