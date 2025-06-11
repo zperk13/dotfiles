@@ -8,9 +8,9 @@ function update_steamodded {
 
     cd "$mod_dir"
     local current_installed_version="$(ls | rg smods | sed 's/smods-//')"
-    echo "Currently installed version of the multiplayer mod: $current_installed_version"
+    echo "Currently installed version of steamodded: $current_installed_version"
     local latest_released_version="$(github_latest_released_version "$repo")"
-    echo "Latest released version of the multiplayer mod: $latest_released_version"
+    echo "Latest released version of steamodded: $latest_released_version"
     if [[ "$latest_released_version" == "null" ]]; then
         echo "Failed to get latest released version. Qutting..."
         return
@@ -41,10 +41,10 @@ function update_lovely {
 
     cd "$lovely_dir"
     local current_installed_version="$(cat ./lovelyversion.txt)"
-    echo "Currently installed version of the lovely: $current_installed_version"
+    echo "Currently installed version of lovely: $current_installed_version"
     local latest_released_version="$(github_latest_released_version "$repo")"
     local latest_released_version="${latest_released_version:1}" # Removing the starting v
-    echo "Latest released version of the multiplayer mod: $latest_released_version"
+    echo "Latest released version of lovely: $latest_released_version"
     if [[ ! "$latest_released_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
         echo "Failed to get latest released version. Quitting..."
         return
