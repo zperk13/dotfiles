@@ -136,6 +136,7 @@ function h() {
     echo -e 'store\t\t\tzip a folder without any compression'
     echo -e "transcribe\t\tCreate a trascript for a .wav file. If file isn't a .wav file, one will be created from the provided file."
     echo -e 'update\t\t\tUpdate Arch packages, Rust, Cargo packages, and Flatpak packages'
+    echo -e 'update_baltro_mods\tUpdate lovely injector, steamodded, and Balatro multiplayer mod'
     echo -e 'update_mirrors\t\tRerank pacman mirrors'
     echo -e 'without_last_extension\tRemove the last extension of whatever is piped into it'
 

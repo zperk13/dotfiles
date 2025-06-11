@@ -1,0 +1,116 @@
+#!/usr/bin/env bash
+
+mod_dir="$HOME/.local/share/Steam/steamapps/compatdata/2379780/pfx/drive_c/users/steamuser/AppData/Roaming/Balatro/Mods"
+lovely_dir="$HOME/.local/share/Steam/steamapps/common/Balatro"
+
+function update_steamodded {
+    local repo='Steamodded/smods'
+
+    cd "$mod_dir"
+    local current_installed_version="$(ls | rg smods | sed 's/smods-//')"
+    echo "Currently installed version of the multiplayer mod: $current_installed_version"
+    local latest_released_version="$(github_latest_released_version "$repo")"
+    echo "Latest released version of the multiplayer mod: $latest_released_version"
+    if [[ "$latest_released_version" == "null" ]]; then
+        echo "Failed to get latest released version. Qutting..."
+        return
+    fi
+    if [ "$current_installed_version" != "$latest_released_version" ]; then
+        echo "Versions are different"
+        echo "Deleting old version"
+        rm -r "./smods"
+        echo "Downloading new version"
+        local download_asset_name="$latest_released_version.zip"
+        curl -LO "https://github.com/$repo/archive/refs/tags/$download_asset_name"
+        echo "Extracting"
+        7z x -y "./$download_asset_name"
+        echo "Deleting $download_asset_name"
+        rm "$download_asset_name"
+        echo "Done"
+    else
+        echo "Versions are the same"
+    fi
+}
+
+function update_lovely {
+    local repo='ethangreen-dev/lovely-injector'
+    local download_asset_name='lovely-x86_64-pc-windows-msvc.zip'
+
+    local enabled_file_name='version.dll'
+    local disabled_file_name='version.dll.disabled'
+
+    cd "$lovely_dir"
+    local current_installed_version="$(cat ./lovelyversion.txt)"
+    echo "Currently installed version of the lovely: $current_installed_version"
+    local latest_released_version="$(github_latest_released_version "$repo")"
+    local latest_released_version="${latest_released_version:1}" # Removing the starting v
+    echo "Latest released version of the multiplayer mod: $latest_released_version"
+    if [[ ! "$latest_released_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        echo "Failed to get latest released version. Quitting..."
+        return
+    fi
+    if [ "$current_installed_version" != "$latest_released_version" ]; then
+        echo "Versions are different"
+        echo "Deleting old version"
+        local to_rename_to="$enabled_file_name"
+        if [ -f "$enabled_file_name" ]; then
+            rm "$enabled_file_name"
+        elif [ -f "$disabled_file_name" ]; then
+            rm "$disabled_file_name"
+            to_rename_to="$disabled_file_name"
+            echo "Modloader was disabled so I'll make sure to disable it again after installing the new version"
+        else
+            echo "Old version not found"
+        fi
+        rm "./version.dll.disabled"
+        echo "Downloading new version"
+        curl -LO "https://github.com/$repo/releases/latest/download/$download_asset_name"
+        7z x -y "./$download_asset_name"
+        echo "Deleting $download_asset_name"
+        rm "$download_asset_name"
+        echo "Writing new version number to file"
+        echo "$latest_released_version" > "./lovelyversion.txt"
+        if [ "$to_rename_to" == "$disabled_file_name" ]; then
+            echo "Disabling modloader since it was disabled before"
+            mv "$enabled_file_name" "$disabled_file_name"
+        fi
+        echo "Done"
+    else
+        echo "Versions are the same"
+    fi
+}
+
+function update_multiplayer {
+    local repo='Balatro-Multiplayer/BalatroMultiplayer'
+    local download_asset_name='BalatroMultiplayer.zip'
+
+    cd "$mod_dir"
+    local current_installed_version="$(cat "./BalatroMultiplayer/Multiplayer.json" | jq -r '.version')"
+    echo "Currently installed version of the multiplayer mod: $current_installed_version"
+    local latest_released_version="$(github_latest_released_version "$repo")"
+    local latest_released_version="${latest_released_version:1}" # Removing the starting v
+    echo "Latest released version of the multiplayer mod: $latest_released_version"
+    if [[ ! "$latest_released_version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+        echo "Failed to get latest released version. Quitting..."
+        return
+    fi
+    if [ "$current_installed_version" != "$latest_released_version" ]; then
+        echo "Versions are different"
+        echo "Deleting old version"
+        rm -r "./BalatroMultiplayer"
+        echo "Downloading new version"
+        curl -LO "https://github.com/$repo/releases/latest/download/$download_asset_name"
+        local extract_folder="$(echo "$download_asset_name" | without_last_extension)"
+        echo "Extracting into $extract_folder"
+        7z x -y "./$download_asset_name" -o"./$extract_folder"
+        echo "Deleting $download_asset_name"
+        rm "$download_asset_name"
+        echo "Done"
+    else
+        echo "Versions are the same"
+    fi
+}
+
+update_lovely
+update_steamodded
+update_multiplayer

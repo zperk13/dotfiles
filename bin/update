@@ -18,9 +18,3 @@ fi
 if is_command flatpak; then
     flatpak update
 fi
-
-balatro_steamodded_dir="$HOME/.local/share/Steam/steamapps/compatdata/2379780/pfx/drive_c/users/steamuser/AppData/Roaming/Balatro/Mods/smods/"
-if [ -d "$balatro_steamodded_dir" ]; then
-    echo -e "\nUpdating Steamodded (Balatro modding framework)"
-    git -C "$balatro_steamodded_dir" pull
-fi
