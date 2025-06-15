@@ -14,7 +14,7 @@ Some of the stuff the dotfiles expect you to have. Things that it expects but ar
 - [yazi](https://github.com/sxyazi/yazi) it's own bash function ('y') but it's fine if you don't install it.
 - [zoxide](https://github.com/ajeetdsouza/zoxide) is used for the `cd` alias.
 
-The `h` command will print out some useful tools, but you don't need to install the stuff. Scripts that use executables that aren't on most Linux systems (eg: I assume grep, sed, and sudo are installed) have checks built to let you know if it needs stuff.
+The `h` command will print out aliases and functions set up and some useful tools, but you don't need to install the stuff if you don't want to.
 
 ### Things with dotfiles but it's fine if you don't have them installed
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch)
@@ -43,18 +43,13 @@ The `h` command will print out some useful tools, but you don't need to install 
     - super+/
 - [rofi-calc](https://github.com/svenstaro/rofi-calc)
     - super+c
-- [menu scripts i wrote](./bin/menu_scripts)
+- [menu scripts i wrote](https://github.com/zperk13/toolbox/blob/master/shebang/menu_scripts)
     - super+m
 #### Other things that can be launched with keybinds (not required)
 - [LiveCaptions](https://github.com/abb128/LiveCaptions)
     - super+ctrl+l
 - [flameshot](https://github.com/flameshot-org/flameshot)
     - super+shift+s
-
-## bin
-I have the [bin](bin) folder which has various scripts. In [.bashrc](.bashrc), I have `~/dotfiles/bin` added to `$PATH` and `bin` in [.stow-local-ignore](stow-local-ignore) so I don't have to run stow every time I add a new script. If you have this git directory cloned somewhere that isn't your home directory, you'll need to change that path in [.bashrc](.bashrc).
-
-
 ## Font
 Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly reccomend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font. Here's a list of files that reference JetBrains Mono:
 - [.config/dunst/dunstrc](.config/dunst/dunstrc)
@@ -89,3 +84,5 @@ The location userChrome.css should go to is less standard than other stuff in th
 5. `ln -s ~/dotfiles/userChrome.css ./userChrome.css`
     - I keep my version of this repo in the home directory. If you don't, you'll need to change the first path accordingly.
 6. [Set Firefox to look for userChrome.css at startup](https://www.userchrome.org/how-create-userchrome-css.html#aboutconfig)
+## Toolbox
+This repo used to host all my scripts, but I've since moved them into [their own repo](https://github.com/zperk13/toolbox).
