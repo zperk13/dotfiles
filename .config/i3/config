@@ -228,7 +228,7 @@ bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort -theme gr
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+m exec ~/dotfiles/bin/menu_scripts
+bindsym $mod+m exec menu_scripts
 
 focus_follows_mouse no
 mouse_warping none
