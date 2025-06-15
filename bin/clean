@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-yay -Yc || exit 1
-if is_command flatpak; then
-    flatpak uninstall --unused
-fi
-paccache --remove --uninstalled --keep 0
-paccache --remove --keep 1

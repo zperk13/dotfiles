@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-update_mirrors
-update
-sudo journalctl --vacuum-time=4weeks
-clean

@@ -1,8 +1,0 @@
-#!/usr/bin/env -S sed -f
-s/\(.*\)\..*/\1/
-# $ echo "abc.txt.bak" | without_last_extension 
-# abc.txt
-# $ echo "abc.txt" | without_last_extension 
-# abc
-# $ echo "abc" | without_last_extension 
-# abc
