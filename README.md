@@ -16,16 +16,6 @@ Some of the stuff the dotfiles expect you to have. Things that it expects but ar
 
 The `h` command will print out aliases and functions set up and some useful tools, but you don't need to install the stuff if you don't want to.
 
-### Things with dotfiles but it's fine if you don't have them installed
-- [fastfetch](https://github.com/fastfetch-cli/fastfetch)
-    - Aliased to `fetch`
-- [i3wm](https://i3wm.org/)
-- [i3blocks](https://github.com/vivien/i3blocks)
-- [kitty](https://github.com/kovidgoyal/kitty)
-    - Needed for the `icat` alias
-- [neovim](https://github.com/neovim/neovim)
-    - Aliased to `nv`
-
 ### Dotfiles that I'm assuming you won't need/want to do any installations for
 - [.inputrc](.inputrc)
 - [.XCompose](.XCompose)
