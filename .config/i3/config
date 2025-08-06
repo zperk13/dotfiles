@@ -257,3 +257,5 @@ exec numlockx on
 exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id picom -b
 exec --no-startup-id hsetroot -solid "#282828"
+
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
