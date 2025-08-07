@@ -54,7 +54,6 @@
             "key": "Login Manager",
             "format": "{1}"
         },
-        "processes",
         "shell",
         "terminal",
         "terminalfont",
