@@ -71,7 +71,7 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 
-PATH="$PATH:~/.cargo/bin"
+PATH="$PATH:~/.cargo/bin:~/.local/bin"
 
 function d() {
     local dir=$(ls --no-quotes --only-dirs | fzf)
