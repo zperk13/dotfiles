@@ -27,7 +27,7 @@ alias ..='cd ..'
 alias uptime='uptime --pretty'
 alias fc='fc -e nvim'
 alias rm='trash'
-alias net?='ping -c1 -w3 8.8.8.8'
+alias net?='nm-online --timeout=5'
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
