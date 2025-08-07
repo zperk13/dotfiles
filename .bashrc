@@ -146,7 +146,7 @@ function h() {
     echo -e 'dysk\t\tdf alternative (disk free)'
     echo -e 'exiftool\tFile metadata'
     echo -e 'jless\t\tJSON viewer'
-    echo -e 'tldr\t\tCollaborative cheatsheets for console commands'
+    echo -e 'tldr\t\tCollaborative cheatsheets for console commands (actually tealdeer)'
     echo -e 'tokei\t\tLines of code counter'
     echo -e 'tplay\t\tPlay video in the terminal'
     echo -e 'trash\t\tMove file/directory to trash bin'
