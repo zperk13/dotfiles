@@ -62,6 +62,9 @@ My preferred colorscheme is gruvbox. You don't need to do any steps other than i
 ### usercss
 I have Gruvbox (and other small tweaks) applied to websites on Firefox using CSS. That stuff is in https://github.com/zperk13/usercss
 
+## systemd
+I have some user systemd services/timers set up in this repo. Downloading and stowing them will not make them start automatically, you need to do `systemctl --user enable <insert service/timer here> --now` for them to actually do stuff. Right now, the only ones I have checks every minute if [Elite Dangerous](https://en.wikipedia.org/wiki/Elite_Dangerous) is running but not [EDMC](https://github.com/EDCD/EDMarketConnector) and alerts me with TTS and a notification pop-up if so.
+
 ## userChrome.css
 [userChrome.css](userChrome.css) is a file for modifying Firefox's user interface. [userchrome.org](https://www.userchrome.org/) has more information about it and some of the following stuff is based on information from it.
 
