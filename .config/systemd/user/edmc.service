@@ -1,0 +1,10 @@
+[Unit]
+Description=todo
+
+[Service]
+Type=oneshot
+ExecStart=bash -c "if pgrep EliteDangerous && ! pgrep -ifA edmarketc; then notify-send 'Elite Dangerous is running without EDMC'; spd-say 'Elite Dangerous is running without E D M C'; fi"
+; ExecStart=bash -c "if pgrep EliteDangerous && ! pgrep -ifA edmarketc; then i3-msg 'workspace edmc; exec edmarketconnector.sh'; fi"
+
+[Install]
+WantedBy=default.target

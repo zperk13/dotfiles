@@ -1,0 +1,9 @@
+[Unit]
+Description="Checks if Elite Dangerous is running without Elite Dangerous Market Connector"
+
+[Timer]
+OnCalendar=*:0/1
+Unit=edmc.unit
+
+[Install]
+WantedBy=timers.target
