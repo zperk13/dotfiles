@@ -10,8 +10,6 @@ Use `--recursive` when git cloning since this repo has a submodule. If you alrea
     - symlink manager this entire repo is based off having
 ### Commands
 Some of the stuff the dotfiles expect you to have. Things that it expects but aren't here won't break if you don't have them.
-- [eza](https://github.com/eza-community/eza) is used for the `ls` alias.
-- [yazi](https://github.com/sxyazi/yazi) it's own bash function ('y') but it's fine if you don't install it.
 - [zoxide](https://github.com/ajeetdsouza/zoxide) is used for the `cd` alias.
 
 The `h` command will print out aliases and functions set up and some useful tools, but you don't need to install the stuff if you don't want to.
