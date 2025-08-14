@@ -154,7 +154,18 @@ function h() {
     echo -e 'rg\t\tRipgrep'
     echo -e 'rgr\t\tRepgrep (ripgrep + replace)'
     echo -e 'yt-dlp\t\tDownload YouTube videos'
+
+    echo
+
+    echo "${underline}fzf:${reset}"
+    echo -e 'ctrl+r\t\tHistory'
+    echo -e 'ctrl+t\t\tFiles'
+    echo -e 'alt+c\t\tcd'
+    echo -e "**<TAB>\t\tPattern mathching. Can be extended. eg: ${bold}../**${reset}, ${bold}.mp4**${reset}, ${bold}~/**${reset}"
 }
+
+export FZF_CTRL_R_OPTS="--reverse"
+eval "$(fzf --bash)"
 
 # This is just copied from https://yazi-rs.github.io/docs/quick-start#shell-wrapper
 function y() {
