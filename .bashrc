@@ -13,8 +13,8 @@ alias grep='grep --color=auto'
 alias nv='nvim' # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias
 alias icat='kitty +kitten icat' # If using the Kitty terminal, shows the specified image
 alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
-alias ls='ls --color=auto --almost-all -p'
-alias lsl='ls -l --human-readable'
+alias ls='eza --all --icons auto --group-directories-first'
+alias tree='ls --tree --ignore-glob .git'
 alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
 alias s="source ~/.bashrc"
 alias tplay="tplay --char-map=█"
