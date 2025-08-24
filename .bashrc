@@ -114,6 +114,10 @@ function incognito() {
     PS1="${bold}${red}(incognito) ${blue}\w${white} $ ${reset}"
 }
 
+function smallprompt() {
+    PS1="${bold}${white}$ ${reset}"
+}
+
 # List of useful programs I installed / scripts I wrote. "h" is short for "help"
 function h() {
     echo "${underline}Functions/Aliases:${reset}"
