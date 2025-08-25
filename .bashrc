@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+# shellcheck shell=bash
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -28,7 +30,7 @@ alias ..='cd ..'
 alias uptime='uptime --pretty'
 alias fc='fc -e nvim'
 alias rm='trash'
-alias net?='nm-online --timeout=5'
+alias net\?='nm-online --timeout=5'
 alias man='batman'
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
@@ -38,7 +40,9 @@ if test -t 1; then
     # see if it supports colors...
     ncolors=$(tput colors)
 
-    if test -n "$ncolors" && test $ncolors -ge 8; then
+    # Disable unused variable check
+    # shellcheck disable=SC2034
+    if test -n "$ncolors" && test "$ncolors" -ge 8; then
         ps_bold="\[$(tput bold)\]"
         bold="$(tput bold)"
         ps_underline="\[$(tput smul)\]"
@@ -76,6 +80,8 @@ PATH="$PATH:~/.cargo/bin:~/.local/bin"
 function d() {
     local dir=$(ls --no-quotes --only-dirs | fzf)
     if [ -n "$dir" ]; then
+        # This is basically the end of the function and it's not going to be called by other functions, so it's ok if cd fails here, if it even can
+        # shellcheck disable=SC2164
         cd "$dir"
     fi
 }
@@ -89,6 +95,8 @@ function o() {
         fi
         if [ -n "$thing_to_open" ]; then
             if [ -d "$thing_to_open" ]; then
+                # This is basically the end of the function and it's not going to be called by other functions, so it's ok if cd fails here, if it even can
+                # shellcheck disable=SC2164
                 cd "$thing_to_open"
             elif [ -f "$thing_to_open" ]; then
                 xdg-open "$thing_to_open"
@@ -171,7 +179,8 @@ function h() {
 export FZF_CTRL_R_OPTS="--reverse"
 eval "$(fzf --bash)"
 
-# This is just copied from https://yazi-rs.github.io/docs/quick-start#shell-wrapper
+# shellcheck disable=all
+# This is just copied from https://yazi-rs.github.io/docs/quick-start#shell-wrapper, with the shellcheck comments add in by me
 function y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
     yazi "$@" --cwd-file="$tmp"
