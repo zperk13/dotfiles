@@ -33,6 +33,7 @@ alias rm='trash'
 alias net\?='nm-online --timeout=5'
 alias man='batman'
 alias fd='fd --hidden'
+alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
