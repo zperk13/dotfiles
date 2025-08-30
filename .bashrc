@@ -35,6 +35,8 @@ alias man='batman'
 alias fd='fd --hidden'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
 
+alias funcat='figlet | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
+
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
 if test -t 1; then
