@@ -79,6 +79,10 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 
+function bathelp() {
+    "$@" --help 2>&1 | bat --plain --language=help
+}
+
 function rgb_fg() {
     echo -en "\e[38;2;$1;$2;$3m"
 }
@@ -100,10 +104,12 @@ function smallprompt() {
     PS1="${bold}${white}$ ${reset}"
 }
 
+
 # List of useful programs I installed / scripts I wrote. "h" is short for "help"
 function h() {
     echo "${underline}Functions/Aliases:${reset}"
     echo -e '..\t\tcd ..'
+    echo -e 'bathelp\t\t--help + bat'
     echo -e 'c\t\tclear'
     echo -e 'h\t\tthis'
     echo -e 'fetch\t\tSystem info'
