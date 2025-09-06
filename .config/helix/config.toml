@@ -1,0 +1,9 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+mouse = false
+cursor-shape.insert = "bar"
+
+[keys.insert]
+"C-space" = "completion"
