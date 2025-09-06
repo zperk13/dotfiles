@@ -79,34 +79,6 @@ fi
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 
-function d() {
-    local dir=$(ls --no-quotes --only-dirs | fzf)
-    if [ -n "$dir" ]; then
-        # This is basically the end of the function and it's not going to be called by other functions, so it's ok if cd fails here, if it even can
-        # shellcheck disable=SC2164
-        cd "$dir"
-    fi
-}
-
-function o() {
-    while true; do
-        local thing_to_open
-        thing_to_open=$(ls -a | fzf --preview 'batpipe {}')
-        if (( $? != 0 )); then
-            break;
-        fi
-        if [ -n "$thing_to_open" ]; then
-            if [ -d "$thing_to_open" ]; then
-                # This is basically the end of the function and it's not going to be called by other functions, so it's ok if cd fails here, if it even can
-                # shellcheck disable=SC2164
-                cd "$thing_to_open"
-            elif [ -f "$thing_to_open" ]; then
-                xdg-open "$thing_to_open"
-            fi
-        fi
-    done
-}
-
 function rgb_fg() {
     echo -en "\e[38;2;$1;$2;$3m"
 }
@@ -133,7 +105,6 @@ function h() {
     echo "${underline}Functions/Aliases:${reset}"
     echo -e '..\t\tcd ..'
     echo -e 'c\t\tclear'
-    echo -e 'd\t\tOpen a fuzzy finder of dirs in the current dir, cd into selected one'
     echo -e 'h\t\tthis'
     echo -e 'fetch\t\tSystem info'
     echo -e 'G\t\tlazygit'
@@ -142,7 +113,6 @@ function h() {
     echo -e 'monitor\t\tFix monitors'
     echo -e 'net?\t\tCheck if you have internet access by pinging Google once, and waiting up to 3 seconds'
     echo -e 'nv\t\tNeovim'
-    echo -e 'o\t\tFile explorer only for opening'
     echo -e 'pride\t\tMakes the prompt have pride colors'
     echo -e 's\t\tReload .bashrc'
     echo -e 'toclip\t\tPipe to toclip to send output to clipboard'
