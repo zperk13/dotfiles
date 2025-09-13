@@ -14,6 +14,7 @@ ignore = [
     "D106",
     "D107",
     "PLR2004", # Magic values in comparisons
+    "I001", # Unsorted import. Ruff formatting handles this and is less picky than the lint
 
     "ERA", # Commented out code
     "PLW2901", # Redefining a loop variable. Eg: for line in sys.stdin: line=line.strip()
