@@ -13,6 +13,7 @@ ignore = [
     "D105",
     "D106",
     "D107",
+    "PLR2004", # Magic values in comparisons
 
     "ERA", # Commented out code
     "PLW2901", # Redefining a loop variable. Eg: for line in sys.stdin: line=line.strip()
