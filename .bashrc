@@ -34,6 +34,7 @@ alias net\?='nm-online --timeout=5'
 alias man='batman'
 alias fd='fd --hidden'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
+alias cp='cp -i' # Prompt before overwrite
 
 alias funcat='figlet | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 
