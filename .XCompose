@@ -255,3 +255,6 @@
 
 <Multi_key> <i> <n> <f> : "∞"
 <Multi_key> <I> <N> <F> : "∞"
+
+<Multi_key> <e> <m> <d> <a> <s> <h> : "—"
+<Multi_key> <e> <n> <d> <a> <s> <h> : "–"
