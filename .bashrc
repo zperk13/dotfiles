@@ -34,6 +34,7 @@ alias net\?='nm-online --timeout=5'
 alias man='batman'
 alias fd='fd --hidden'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
+alias pcp='rsync --archive --partial --info=progress2,stats1,name'
 alias cp='cp -i' # Prompt before overwrite
 
 alias funcat='figlet | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
@@ -120,6 +121,7 @@ function h() {
     echo -e 'monitor\t\tFix monitors'
     echo -e 'net?\t\tCheck if you have internet access by pinging Google once, and waiting up to 3 seconds'
     echo -e 'nv\t\tNeovim'
+    echo -e 'pcp\t\tprogress cp'
     echo -e 'pride\t\tMakes the prompt have pride colors'
     echo -e 's\t\tReload .bashrc'
     echo -e 'toclip\t\tPipe to toclip to send output to clipboard'
