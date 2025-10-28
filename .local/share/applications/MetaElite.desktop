@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=MetaElite
+Path=/home/z/.local/share/Steam/steamapps/compatdata/359320/pfx/drive_c/Program Files/MetaElite/
+Exec=protontricks-launch --appid 359320 ./MetaElite.exe
+Terminal=false
