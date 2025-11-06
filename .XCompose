@@ -1,3 +1,4 @@
+# Key symbol names: https://www.x.org/releases/current/doc/libX11/i18n/compose/en_US.UTF-8.html
 <Multi_key> <underscore> <a> : "ā"
 <Multi_key> <underscore> <A> : "Ā"
 <Multi_key> <underscore> <e> : "ē"
