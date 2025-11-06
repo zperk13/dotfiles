@@ -258,3 +258,10 @@
 
 <Multi_key> <e> <m> <d> <a> <s> <h> : "—"
 <Multi_key> <e> <n> <d> <a> <s> <h> : "–"
+
+<Multi_key> <f> <l> <a> <t> : "♭"
+<Multi_key> <s> <h> <a> <r> <p> : "♯"
+<Multi_key> <d> <o> <u> <b> <l> <e> <f> <l> <a> <t> : "𝄫"
+<Multi_key> <b> <b> : "𝄫"
+<Multi_key> <d> <o> <u> <b> <l> <e> <s> <h> <a> <r> <p> : "𝄪"
+<Multi_key> <numbersign> <numbersign> : "𝄪"
