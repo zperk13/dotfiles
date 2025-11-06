@@ -24,5 +24,7 @@ ignore = [
 
     "PTH123", # Checks for uses of the open() builtin instead of Path.open()
 
+    "S607", # Running a command with subprocess without a path (eg: cat instead of /usr/bin/cat)
+
     "T20",     # Usage of print/pprint
 ]
