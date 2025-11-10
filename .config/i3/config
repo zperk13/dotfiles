@@ -239,6 +239,7 @@ bindsym $mod+greater move workspace to output right
 bindsym $mod+less move workspace to output left
 
 bindsym $mod+b bar mode toggle
+default_border none
 bindsym $mod+n border none
 bindsym $mod+t border normal
 bindsym $mod+Shift+n [class="^.*"] border none
