@@ -37,7 +37,7 @@ alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
 alias pcp='rsync --archive --partial --info=progress2,stats1,name'
 alias cp='cp -i' # Prompt before overwrite
 
-alias funcat='figlet -w "$(tput cols)" | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
+alias funcat='figlet -t" | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 
 # Setting up color variables. Just copied and pasted this from https://unix.stackexchange.com/a/10065, and then added \[ and \] and renamed "normal" to "reset"
 # check if stdout is a terminal...
