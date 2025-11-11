@@ -286,3 +286,5 @@ for_window [class="livecaptions"] floating enable
 bindsym $mod+Ctrl+l exec flatpak run net.sapples.LiveCaptions
 
 bindsym $mod+Shift+S exec flameshot gui
+
+for_window [title="MetaElite"] floating disable
