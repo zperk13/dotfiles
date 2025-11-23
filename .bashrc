@@ -36,6 +36,7 @@ alias fd='fd --hidden'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
 alias pcp='rsync --archive --partial --info=progress2,stats1,name'
 alias cp='cp -i' # Prompt before overwrite
+alias gz='gzip'
 
 alias funcat='figlet -t | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 
