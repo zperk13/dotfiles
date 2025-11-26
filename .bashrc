@@ -7,6 +7,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+HISTSIZE=10000
+HISTFILESIZE=10000
+
 export WEBKIT_DISABLE_DMABUF_RENDERER=1 # Makes Tauri apps work
 export BAT_THEME='gruvbox-dark'
 eval "$(batman --export-env)"
