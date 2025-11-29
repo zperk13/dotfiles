@@ -15,7 +15,6 @@ export BAT_THEME='gruvbox-dark'
 eval "$(batman --export-env)"
 
 alias grep='grep --color=auto'
-alias nv='nvim' # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias
 alias icat='kitty +kitten icat' # If using the Kitty terminal, shows the specified image
 alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
 alias ls='eza --all --icons auto --group-directories-first'
@@ -92,6 +91,20 @@ fi
 # Custom Prompt
 # Default is PS1='[\u@\h \W]\$ '
 PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
+
+function nv() {
+    # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias.
+    # Also I got annoyed by forgetting to do sudoedit instead of nv in certain situations, so this just checks that for me
+    local perm_to_check="."
+    if [ -f "$1" ]; then
+        perm_to_check="$1"
+    fi
+    if [ -w "$perm_to_check" ]; then
+        nvim "$1"
+    else
+        sudoedit "$1"
+    fi
+}
 
 function bathelp() {
     "$@" --help 2>&1 | bat --plain --language=help
