@@ -95,6 +95,10 @@ PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
 function nv() {
     # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias.
     # Also I got annoyed by forgetting to do sudoedit instead of nv in certain situations, so this just checks that for me
+    if [ -z "$1" ]; then
+        nvim
+        return
+    fi
     local perm_to_check="."
     if [ -f "$1" ]; then
         perm_to_check="$1"
