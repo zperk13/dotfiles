@@ -14,6 +14,9 @@ ignore = [
     "D106",
     "D107",
 
+    "EM101", # Raw string in exception
+    "EM102", # f string in exception
+
     "ERA", # Commented out code
 
     "I001", # Unsorted import. Ruff formatting handles this and is less picky than the lint
@@ -27,4 +30,7 @@ ignore = [
     "S607", # Running a command with subprocess without a path (eg: cat instead of /usr/bin/cat)
 
     "T20",     # Usage of print/pprint
+
+    "TRY002", # raising a base Exception instead of a custom one
+    "TRY003", # custom "long" exception messages 
 ]
