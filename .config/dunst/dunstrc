@@ -428,6 +428,8 @@
 #[fullscreen_show_critical]
 #    msg_urgency = critical
 #    fullscreen = show
+[fullscreen_show_everything]
+    fullscreen = show
 
 #[espeak]
 #    summary = "*"
