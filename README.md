@@ -38,8 +38,6 @@ The `h` command will print out aliases and functions set up and some useful tool
     - super+ctrl+l
 - [flameshot](https://github.com/flameshot-org/flameshot)
     - super+shift+s
-## Desktop files
-I do have desktop files in here too. They won't work for you unless you have the same username as me because they use absolute paths, but that's easily fixed. Feel free to take inspiration for how to do protontricks stuff with them.
 ## Font
 Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly reccomend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font. Here's a list of files that reference JetBrains Mono:
 - [.config/dunst/dunstrc](.config/dunst/dunstrc)
