@@ -39,23 +39,10 @@ The `h` command will print out aliases and functions set up and some useful tool
 - [flameshot](https://github.com/flameshot-org/flameshot)
     - super+shift+s
 ## Font
-Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly reccomend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font. Here's a list of files that reference JetBrains Mono:
-- [.config/dunst/dunstrc](.config/dunst/dunstrc)
-- [.config/i3/config](.config/i3/config)
-- [.config/kitty/kitty.conf](.config/kitty/kitty.conf)
-- [.config/nvim/lua/neovide.lua](https://github.com/zperk13/nvim/blob/master/lua/neovide.lua)
+Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly recommend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font.
 
 ## Colorscheme
 My preferred colorscheme is gruvbox. You don't need to do any steps other than installing this repo to use it, all the config files handle it.
-### Files that set up gruvbox
-- [Bash](.bashrc)
-- [.config/dunst/dunstrc](.config/dunst/dunstrc)
-- [.icons/default/index.theme](.icons/default/index.theme)
-- [i3wm](.config/i3/config)
-- [Kitty](.config/kitty/kitty.conf)
-- [Neovim](https://github.com/zperk13/nvim/blob/master/lua/plugins/colorscheme.lua)
-    - [Neovim plugin: lualine](https://github.com/zperk13/nvim/blob/master/lua/plugins/lualine.lua)
-- [.Xresources](.Xresources)
 ### Things I have using gruvbox but not via config files
 - [Firefox](https://www.mozilla.org/firefox/)
 - [Thunderbird](https://www.thunderbird.net)
