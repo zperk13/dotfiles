@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=SrvSurvey
+Exec=SrvSurvey
+Terminal=false
