@@ -38,6 +38,8 @@ The `h` command will print out aliases and functions set up and some useful tool
     - super+ctrl+l
 - [flameshot](https://github.com/flameshot-org/flameshot)
     - super+shift+s
+- [Mission Center](https://missioncenter.io/)
+    - ctrl+shift+escape
 ## Font
 Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly recommend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font.
 
