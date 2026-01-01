@@ -14,33 +14,33 @@ export WEBKIT_DISABLE_DMABUF_RENDERER=1 # Makes Tauri apps work
 export BAT_THEME='gruvbox-dark'
 eval "$(batman --export-env)"
 
+alias ..='cd ..'
+alias c="clear"
+alias cp='cp -i' # Prompt before overwrite
+alias cwd="pwd"
+alias fc='fc -e nvim'
+alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
+alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
+alias gz='gzip'
+alias fd='fd --hidden'
+alias funcat='figlet -t | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 alias grep='grep --color=auto'
 alias icat='kitty +kitten icat' # If using the Kitty terminal, shows the specified image
-alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
-alias ls='eza --all --icons auto --group-directories-first'
-alias tree='ls --tree --ignore-glob .git'
-alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
-alias s="source ~/.bashrc"
-alias tplay="tplay --char-map=█"
-alias c="clear"
-alias cwd="pwd"
-alias monitor="~/.screenlayout/monitor.sh"
 alias less="less --raw-control-chars"
-alias rg="rg --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'"
-alias toclip="xclip -selection clipboard 1> /dev/null 2> /dev/null" # https://github.com/kovidgoyal/kitty/issues/828#issuecomment-1537144685 for explanation of why I'm piping to /dev/null
-alias ..='cd ..'
-alias uptime='uptime --pretty'
-alias fc='fc -e nvim'
-alias rm='trash'
-alias net\?='ping -c 1 -W 3 8.8.8.8'
+alias ls='eza --all --icons auto --group-directories-first'
 alias man='batman'
-alias fd='fd --hidden'
-alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
+alias monitor="~/.screenlayout/monitor.sh"
+alias net\?='ping -c 1 -W 3 8.8.8.8'
 alias pcp='rsync --archive --partial --info=progress2,stats1,name'
-alias cp='cp -i' # Prompt before overwrite
-alias gz='gzip'
+alias rg="rg --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'"
+alias rm='trash'
+alias s="source ~/.bashrc"
+alias toclip="xclip -selection clipboard 1> /dev/null 2> /dev/null" # https://github.com/kovidgoyal/kitty/issues/828#issuecomment-1537144685 for explanation of why I'm piping to /dev/null
+alias tplay="tplay --char-map=█"
+alias tree='ls --tree --ignore-glob .git'
+alias uptime='uptime --pretty'
+alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
 
-alias funcat='figlet -t | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
