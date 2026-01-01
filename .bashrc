@@ -37,7 +37,7 @@ alias rm='trash'
 alias s="source ~/.bashrc"
 alias toclip="xclip -selection clipboard 1> /dev/null 2> /dev/null" # https://github.com/kovidgoyal/kitty/issues/828#issuecomment-1537144685 for explanation of why I'm piping to /dev/null
 alias tplay="tplay --char-map=█"
-alias tree='ls --tree --ignore-glob .git'
+alias tree='eza --tree --ignore-glob .git'
 alias uptime='uptime --pretty'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
 
