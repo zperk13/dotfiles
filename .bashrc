@@ -136,46 +136,56 @@ function smallprompt() {
 }
 
 
-# List of useful programs I installed / scripts I wrote. "h" is short for "help"
+# List of some aliases / programs I installed / functions I wrote. "h" is short for "help"
 function h() {
     echo "${underline}Functions/Aliases:${reset}"
     echo -e '..\t\tcd ..'
-    echo -e 'bathelp\t\t--help + bat'
+    echo -e 'bathelp\t\t--help + bat' # https://github.com/eth-p/bat-extras
     echo -e 'c\t\tclear'
+    echo -e 'cwd\t\tpwd'
     echo -e 'h\t\tthis'
     echo -e 'fetch\t\tSystem info'
-    echo -e 'G\t\tlazygit'
+    echo -e 'funcat\t\tPipe into this for fun'
+    echo -e 'G\t\tlazygit' # https://github.com/jesseduffield/lazygit
+    echo -e 'gz\t\tgzip'
     echo -e 'icat\t\tView image'
     echo -e 'incognito\tDisable terminal history'
     echo -e 'monitor\t\tFix monitors'
     echo -e 'net?\t\tCheck if you have internet access by pinging Google once, and waiting up to 3 seconds'
-    echo -e 'nv\t\tNeovim'
+    echo -e 'nv\t\tNeovim (checks if needs sudo too)'
     echo -e 'pcp\t\tprogress cp'
     echo -e 'pride\t\tMakes the prompt have pride colors'
     echo -e 's\t\tReload .bashrc'
+    echo -e 'smallprompt\tRemoves the directory from your prompt'
     echo -e 'toclip\t\tPipe to toclip to send output to clipboard'
     echo -e 'tree\t\tRecursive directory tree'
-    echo -e 'y\t\tFile explorer'
+    echo -e 'y\t\tYazi. TUI File explorer'
 
     echo
 
     echo "${underline}Misc:${reset}"
-    echo -e 'bat\t\tcat alternative'
-    echo -e 'batdiff\t\tbat+diff'
-    echo -e 'batgrep\t\tbat+ripgrep'
-    echo -e 'batwatch\tWatch for changes in files or command output, and print them with bat'
-    echo -e 'dust\t\tdu alternative (disk usage)'
-    echo -e 'dysk\t\tdf alternative (disk free)'
-    echo -e 'exiftool\tFile metadata'
-    echo -e 'jless\t\tJSON viewer'
-    echo -e 'tldr\t\tCollaborative cheatsheets for console commands (actually tealdeer)'
-    echo -e 'tokei\t\tLines of code counter'
-    echo -e 'tplay\t\tPlay video in the terminal'
-    echo -e 'trash\t\tMove file/directory to trash bin'
-    echo -e 'regect\t\tregex 101 like cli tool'
-    echo -e 'rg\t\tRipgrep'
-    echo -e 'rgr\t\tRepgrep (ripgrep + replace)'
-    echo -e 'yt-dlp\t\tDownload YouTube videos'
+    echo -e 'bat\t\tcat alternative' # https://github.com/sharkdp/bat
+    echo -e 'batdiff\t\tbat+diff' # https://github.com/eth-p/bat-extras
+    echo -e 'batgrep\t\tbat+ripgrep' # https://github.com/eth-p/bat-extras
+    echo -e 'batwatch\tWatch for changes in files or command output, and print them with bat' # https://github.com/eth-p/bat-extras
+    echo -e 'chat_downloader\tDownload live chat from YouTube/Twitch' # https://github.com/Indigo128/chat-downloader/
+    echo -e 'dust\t\tdu alternative (disk usage)' # https://github.com/bootandy/dust
+    echo -e 'dysk\t\tdf alternative (disk free)' # https://github.com/Canop/dysk
+    echo -e 'exiftool\tFile metadata' # https://github.com/exiftool/exiftool
+    echo -e 'fc\t\tEdit the most recent command'
+    echo -e 'fd\t\tfind alternative' # https://github.com/sharkdp/fd
+    echo -e 'jless\t\tJSON viewer' # https://github.com/PaulJuliusMartinez/jless
+    echo -e 'L_bash_profile\tBash script profiler' # https://github.com/Kamilcuk/L_bash_profile
+    echo -e 'scenedetect\tSplit video up into scenes' # https://github.com/Breakthrough/PySceneDetect
+    echo -e 'tte\t\tTerminalTextEffects' # https://github.com/ChrisBuilds/terminaltexteffects
+    echo -e 'tldr\t\tCollaborative cheatsheets for console commands (actually tealdeer)' # https://github.com/tealdeer-rs/tealdeer
+    echo -e 'tokei\t\tLines of code counter' # https://github.com/XAMPPRocky/tokei
+    echo -e 'tplay\t\tPlay video in the terminal' # https://github.com/maxcurzi/tplay
+    echo -e 'trash\t\tMove file/directory to trash bin (rm is aliased to it)' # https://github.com/andreafrancia/trash-cli
+    echo -e 'regect\t\tregex 101 like cli tool' # https://github.com/kloki/regect
+    echo -e 'rg\t\tRipgrep. Grep alternative' # https://github.com/BurntSushi/ripgrep
+    echo -e 'rgr\t\tRepgrep (ripgrep + replace)' # https://github.com/acheronfail/repgrep
+    echo -e 'yt-dlp\t\tDownload videos' # https://github.com/yt-dlp/yt-dlp
 
     echo
 
