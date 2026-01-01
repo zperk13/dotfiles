@@ -10,6 +10,11 @@
 separator=true
 separator_block_width=15
 
+[stats]
+color=#ebdbb2
+interval=5
+command=scripts/stats
+
 [time]
 color=#ebdbb2
 command=date '+%a %b %d %H:%M:%S '
