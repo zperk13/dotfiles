@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
-mem_percentage="$(free -m | awk '/Mem/ {printf "%.2f%", (($2 - $7) * 100 / $2)}')"
-cpu_percentage="$(mpstat | awk '/all/ {print 100-$NF "%"}')"
-read -ra max_mem < <(ps -eo 'comm,%mem' --sort='-%mem' --cols=250 | head -n2 | tail -n1)
-read -ra max_cpu < <(top -b -n1 --sort-override='%CPU' -w250 | head -n8 | tail -n1)
-max_cpu_percent="$(echo "scale=2; ${max_cpu[8]} / $(nproc)" | bc)"
-nvt="$(nvtop -s | jq .[1])"
-gpu="$(echo "$nvt" | jq -r .gpu_util)"
-gpu_mem="$(echo "$nvt" | jq -r .mem_util)"
 
-echo "CPU: $cpu_percentage (${max_cpu[*]:11} ${max_cpu_percent}%) | GPU: $gpu VRAM: $gpu_mem | RAM: $mem_percentage (${max_mem[*]}%)"
+while true; do
+    cpu_percentage="$(mpstat 5 1 | awk '/Average/ {print 100-$NF "%"}')"
+    mem_percentage="$(free -m | awk '/Mem/ {printf "%.2f%", (($2 - $7) * 100 / $2)}')"
+    read -ra max_mem < <(ps -eo 'comm,%mem' --sort='-%mem' --cols=250 | head -n2 | tail -n1)
+    read -ra max_cpu < <(top -b -n1 --sort-override='%CPU' -w250 | head -n8 | tail -n1)
+    max_cpu_percent="$(echo "scale=2; ${max_cpu[8]} / $(nproc)" | bc)"
+    nvt="$(nvtop -s | jq .[1])"
+    gpu="$(echo "$nvt" | jq -r .gpu_util)"
+    gpu_mem="$(echo "$nvt" | jq -r .mem_util)"
+
+    echo "CPU: ${cpu_percentage} (${max_cpu[*]:11} ${max_cpu_percent}%) | GPU: $gpu VRAM: $gpu_mem | RAM: $mem_percentage (${max_mem[*]}%)"
+done

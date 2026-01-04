@@ -12,7 +12,7 @@ separator_block_width=15
 
 [stats]
 color=#ebdbb2
-interval=5
+interval=persist
 command=scripts/stats
 
 [time]
