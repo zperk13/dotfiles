@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 
+processor_count="$(nproc)"
+
 while true; do
     cpu_percentage="$(mpstat 5 1 | awk '/Average/ {print 100-$NF "%"}')"
     mem_percentage="$(free -m | awk '/Mem/ {printf "%.2f%", (($2 - $7) * 100 / $2)}')"
     read -ra max_mem < <(ps -eo 'comm,%mem' --sort='-%mem' --cols=250 | head -n2 | tail -n1)
     read -ra max_cpu < <(top -b -n1 --sort-override='%CPU' -w250 | head -n8 | tail -n1)
-    max_cpu_percent="$(echo "scale=2; ${max_cpu[8]} / $(nproc)" | bc)"
+    max_cpu_percent="$(echo "scale=2; ${max_cpu[8]} / $processor_count" | bc)"
     nvt="$(nvtop -s | jq .[1])"
     gpu="$(echo "$nvt" | jq -r .gpu_util)"
     gpu_mem="$(echo "$nvt" | jq -r .mem_util)"
