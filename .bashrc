@@ -35,6 +35,7 @@ alias pcp='rsync --archive --partial --info=progress2,stats1,name'
 alias rg="rg --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'"
 alias rm='trash'
 alias s="source ~/.bashrc"
+alias stui='systemctl-tui'
 alias toclip="xclip -selection clipboard 1> /dev/null 2> /dev/null" # https://github.com/kovidgoyal/kitty/issues/828#issuecomment-1537144685 for explanation of why I'm piping to /dev/null
 alias tplay="tplay --char-map=█"
 alias tree='eza --tree --ignore-glob .git'
@@ -156,6 +157,7 @@ function h() {
     echo -e 'pcp\t\tprogress cp'
     echo -e 'pride\t\tMakes the prompt have pride colors'
     echo -e 's\t\tReload .bashrc'
+    echo -e 'stui\t\tsystemctl-tui' # https://github.com/rgwood/systemctl-tui
     echo -e 'smallprompt\tRemoves the directory from your prompt'
     echo -e 'toclip\t\tPipe to toclip to send output to clipboard'
     echo -e 'tree\t\tRecursive directory tree'
