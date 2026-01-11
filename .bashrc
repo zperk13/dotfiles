@@ -93,6 +93,7 @@ fi
 # Custom Prompt
 # Default is PS1='[\u@\h \W]\$ '
 function prompt_command {
+    local exit_code="$?"
     local now prev_command prev_command_timestamp ps
     ps=''
     if [ "$SECONDS" != 0 ]; then
@@ -108,10 +109,16 @@ function prompt_command {
             ps="$ps${ps_bold}${ps_red}(incognito) "
         fi
     elif [ "$SECONDS" != 0 ]; then
-        if [ "$diff" != 0 ]; then
-            ps="Elapsed: ${diff}s\n"
+        if [ "$exit_code" == 0 ]; then
+            exit_code="$ps_green(Exit Code: 0)"
+        else
+            exit_code="$ps_red(Exit Code: $exit_code)"
         fi
-        ps="$ps$(printf -- '─%.0s' $range)\n"
+        ps="$ps$exit_code$ps_reset"
+        if [ "$diff" != 0 ]; then
+            ps="$ps$ps_reset Elapsed: ${diff}s"
+        fi
+        ps="$ps\n$(printf -- '─%.0s' $range)\n"
     fi
     ps="$ps${ps_bold}${ps_blue}\w${ps_white}\n$ ${ps_reset}"
     PS1="$ps"
