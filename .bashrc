@@ -9,6 +9,7 @@
 
 HISTSIZE=10000
 HISTFILESIZE=10000
+HISTTIMEFORMAT="%s "
 
 export WEBKIT_DISABLE_DMABUF_RENDERER=1 # Makes Tauri apps work
 export BAT_THEME='gruvbox-dark'
@@ -91,7 +92,31 @@ fi
 
 # Custom Prompt
 # Default is PS1='[\u@\h \W]\$ '
-PS1="${ps_bold}${ps_blue}\w${ps_white} $ ${ps_reset}"
+function prompt_command {
+    local now prev_command prev_command_timestamp ps
+    ps=''
+    if [ "$SECONDS" != 0 ]; then
+        now="$(date +%s)"
+        readarray -d' ' prev_command <<< "$(history | tail -n1)"
+        prev_command_timestamp="${prev_command[3]}"
+        diff=$((now - prev_command_timestamp))
+    fi
+    range="$(seq 1 "$COLUMNS")"
+    if set -o | rg history | rg off >/dev/null; then
+        ps="$ps$(printf -- '─%.0s' $range)\n"
+        if [ "$SECONDS" != 0 ]; then
+            ps="$ps${ps_bold}${ps_red}(incognito) "
+        fi
+    elif [ "$SECONDS" != 0 ]; then
+        if [ "$diff" != 0 ]; then
+            ps="Elapsed: ${diff}s\n"
+        fi
+        ps="$ps$(printf -- '─%.0s' $range)\n"
+    fi
+    ps="$ps${ps_bold}${ps_blue}\w${ps_white}\n$ ${ps_reset}"
+    PS1="$ps"
+}
+PROMPT_COMMAND=prompt_command 
 
 function nv() {
     # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias.
@@ -115,27 +140,9 @@ function bathelp() {
     "$@" --help 2>&1 | bat --plain --language=help
 }
 
-function rgb_fg() {
-    echo -en "\e[38;2;$1;$2;$3m"
-}
-
-function rgb_bg() {
-    echo -en "\e[48;2;$1;$2;$3m"
-}
-
-function pride() {
-    PS1="\[$(rgb_fg 91 206 250)\]\w\[$(rgb_fg 255 255 255)\] $ \[$(rgb_fg 245 169 184)\]"
-}
-
 function incognito() {
     set +o history
-    PS1="${bold}${red}(incognito) ${blue}\w${white} $ ${reset}"
 }
-
-function smallprompt() {
-    PS1="${bold}${white}$ ${reset}"
-}
-
 
 # List of some aliases / programs I installed / functions I wrote. "h" is short for "help"
 function h() {
@@ -155,7 +162,6 @@ function h() {
     echo -e 'net?\t\tCheck if you have internet access by pinging Google once, and waiting up to 3 seconds'
     echo -e 'nv\t\tNeovim (checks if needs sudo too)'
     echo -e 'pcp\t\tprogress cp'
-    echo -e 'pride\t\tMakes the prompt have pride colors'
     echo -e 's\t\tReload .bashrc'
     echo -e 'stui\t\tsystemctl-tui' # https://github.com/rgwood/systemctl-tui
     echo -e 'smallprompt\tRemoves the directory from your prompt'
