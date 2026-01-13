@@ -206,11 +206,14 @@ function h() {
 
     echo
 
-    echo "${underline}fzf:${reset}"
+    echo "${underline}keybinds:${reset}"
     echo -e 'ctrl+r\t\tHistory'
     echo -e 'ctrl+t\t\tFiles'
     echo -e 'alt+c\t\tcd'
     echo -e "**<TAB>\t\tPattern mathching. Can be extended. eg: ${bold}../**${reset}, ${bold}.mp4**${reset}, ${bold}~/**${reset}"
+    echo -e 'ctrl+shift+h\tView scrollback in nvim'
+    echo -e 'ctrl+shift+g\tView output of previous command in nvim'
+    echo -e 'ctr+x ctrl+e\tView output of previous command in nvim'
 }
 
 export FZF_CTRL_R_OPTS="--reverse"
