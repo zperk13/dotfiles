@@ -23,7 +23,7 @@ alias fc='fc -e nvim'
 alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
 alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
 alias gz='gzip'
-alias fd='fd --hidden'
+alias fd='fd --hidden --no-ignore-vcs'
 alias funcat='figlet -t | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 alias grep='grep --color=auto'
 alias icat='kitty +kitten icat' # If using the Kitty terminal, shows the specified image
