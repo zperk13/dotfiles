@@ -16,6 +16,7 @@ export BAT_THEME='gruvbox-dark'
 eval "$(batman --export-env)"
 
 alias ..='cd ..'
+alias batgrep="batgrep --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'" # Same arguments as rg alias
 alias c="clear"
 alias cp='cp -i' # Prompt before overwrite
 alias cwd="pwd"
