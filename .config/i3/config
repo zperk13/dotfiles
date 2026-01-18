@@ -232,10 +232,12 @@ bindsym $mod+less move workspace to output left
 
 bindsym $mod+b bar mode toggle
 default_border none
-bindsym $mod+n border none
-bindsym $mod+t border normal
-bindsym $mod+Shift+n [class="^.*"] border none
-bindsym $mod+Shift+t [class="^.*"] border normal
+default_floating_border pixel 4
+bindsym $mod+n [con_id=__focused__ tiling] border none; [con_id=__focused__ floating] border pixel 4
+bindsym $mod+t [con_id=__focused__ tiling] border normal 0; [con_id=__focused__ floating] border normal 4
+for_window [floating] border pixel 4
+bindsym $mod+Shift+n [class="^.*" tiling] border none
+bindsym $mod+Shift+t [class="^.*" tiling] border normal
 
 exec_always setxkbmap -option compose:menu
 
