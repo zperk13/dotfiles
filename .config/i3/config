@@ -301,3 +301,5 @@ bindsym $mod+Shift+S exec flameshot gui
 bindsym Ctrl+Shift+Escape exec missioncenter
 
 for_window [title="MetaElite"] floating disable
+
+for_window [class="livecaptions"] border none
