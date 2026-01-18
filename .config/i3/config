@@ -55,8 +55,6 @@ floating_modifier $mod
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
-# start a terminal
-bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -248,6 +246,16 @@ exec --no-startup-id picom -b
 exec --no-startup-id hsetroot -solid "#282828"
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
+
+#  _____                   _             _ 
+# |_   _|__ _ __ _ __ ___ (_)_ __   __ _| |
+#   | |/ _ \ '__| '_ ` _ \| | '_ \ / _` | |
+#   | |  __/ |  | | | | | | | | | | (_| | |
+#   |_|\___|_|  |_| |_| |_|_|_| |_|\__,_|_|
+bindsym $mod+Return exec kitty
+bindsym $mod+Shift+Return exec kitty --class=scratch; scratchpad show
+for_window [class="scratch"] move to scratchpad
+for_window [class="scratch"] scratchpad show
 
 #      _                            
 #   __| |_ __ ___   ___ _ __  _   _ 
