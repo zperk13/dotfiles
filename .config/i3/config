@@ -199,11 +199,11 @@ set $fg4 #a89984
 set $red #cc241d
 
 # window colors
-#                       border bg   txt
-client.focused          $bg    $bg  $fg
-client.unfocused        $bg    $bg  $fg
-client.focused_inactive $bg    $bg  $fg
-client.urgent           $red   $red $fg
+# class                 border  backgr. text    indicator child_border
+client.focused          $bg     $bg     $fg     $fg       $fg
+client.unfocused        $bg     $bg     $fg     $fg       $fg
+client.focused_inactive $bg     $bg     $fg     $fg       $fg
+client.urgent           $red    $red    $fg     $red      $red
 
 hide_edge_borders both
 
