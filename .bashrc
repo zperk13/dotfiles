@@ -99,18 +99,17 @@ function prompt_command {
     ps=''
     if [ "$SECONDS" != 0 ]; then
         now="$(date +%s)"
-        readarray -d' ' prev_command <<< "$(history | tail -n1)"
+        readarray -d' ' prev_command <<< "$(history | tail -n1)" # I think this might have an issue with multiline commands?
         prev_command_timestamp="${prev_command[3]}"
         diff=$((now - prev_command_timestamp))
-    fi
-    if [ "$SECONDS" != 0 ]; then
         range="$(seq 1 "$COLUMNS")"
         if set -o | rg history | rg off >/dev/null; then
             ps="$ps$(printf -- '─%.0s' $range)\n"
             if [ "$SECONDS" != 0 ]; then
                 ps="$ps${ps_bold}${ps_red}(incognito) "
             fi
-        else
+        elif echo "${prev_command[@]}" | tr  '\n' ' ' | rg -v '\s*\d+\s+\d+\s+c(lear)?\s*$' > /dev/null; then
+            echo "start$(echo "${prev_command[@]}" | tr '\n' ' ')end"
             if [ "$exit_code" == 0 ]; then
                 exit_code="$ps_green(Exit Code: 0)"
             else
