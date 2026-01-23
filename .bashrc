@@ -109,7 +109,6 @@ function prompt_command {
                 ps="$ps${ps_bold}${ps_red}(incognito) "
             fi
         elif echo "${prev_command[@]}" | tr  '\n' ' ' | rg -v '\s*\d+\s+\d+\s+c(lear)?\s*$' > /dev/null; then
-            echo "start$(echo "${prev_command[@]}" | tr '\n' ' ')end"
             if [ "$exit_code" == 0 ]; then
                 exit_code="$ps_green(Exit Code: 0)"
             else
