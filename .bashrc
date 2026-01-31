@@ -39,7 +39,6 @@ alias rm='trash'
 alias s="source ~/.bashrc"
 alias stui='systemctl-tui'
 alias toclip="xclip -selection clipboard 1> /dev/null 2> /dev/null" # https://github.com/kovidgoyal/kitty/issues/828#issuecomment-1537144685 for explanation of why I'm piping to /dev/null
-alias tplay="tplay --char-map=█"
 alias tree='eza --tree --ignore-glob .git'
 alias uptime='uptime --pretty'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
@@ -196,7 +195,6 @@ function h() {
     echo -e 'tte\t\tTerminalTextEffects' # https://github.com/ChrisBuilds/terminaltexteffects
     echo -e 'tldr\t\tCollaborative cheatsheets for console commands (actually tealdeer)' # https://github.com/tealdeer-rs/tealdeer
     echo -e 'tokei\t\tLines of code counter' # https://github.com/XAMPPRocky/tokei
-    echo -e 'tplay\t\tPlay video in the terminal' # https://github.com/maxcurzi/tplay
     echo -e 'trash\t\tMove file/directory to trash bin (rm is aliased to it)' # https://github.com/andreafrancia/trash-cli
     echo -e 'regect\t\tregex 101 like cli tool' # https://github.com/kloki/regect
     echo -e 'rg\t\tRipgrep. Grep alternative' # https://github.com/BurntSushi/ripgrep
