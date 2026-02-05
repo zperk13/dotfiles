@@ -1,0 +1,8 @@
+[Unit]
+Description=Android 2 Linux Notifications Server
+
+[Service]
+ExecStart=/home/z/.local/bin/a2ln
+
+[Install]
+WantedBy=default.target
