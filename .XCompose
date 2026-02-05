@@ -1,268 +1,52 @@
 # Key symbol names: https://www.x.org/releases/current/doc/libX11/i18n/compose/en_US.UTF-8.html
-<Multi_key> <underscore> <a> : "ā"
-<Multi_key> <underscore> <A> : "Ā"
-<Multi_key> <underscore> <e> : "ē"
-<Multi_key> <underscore> <E> : "Ē"
-<Multi_key> <underscore> <i> : "ī"
-<Multi_key> <underscore> <I> : "Ī"
-<Multi_key> <underscore> <o> : "ō"
-<Multi_key> <underscore> <O> : "Ō"
-<Multi_key> <underscore> <u> : "ū"
-<Multi_key> <underscore> <U> : "Ū"
+<Multi_key> <exclam> <asciitilde> : "≉" # Not about equal to
 
-<Multi_key> <a> <underscore> : "ā"
-<Multi_key> <A> <underscore> : "Ā"
-<Multi_key> <e> <underscore> : "ē"
-<Multi_key> <E> <underscore> : "Ē"
-<Multi_key> <i> <underscore> : "ī"
-<Multi_key> <I> <underscore> : "Ī"
-<Multi_key> <o> <underscore> : "ō"
-<Multi_key> <O> <underscore> : "Ō"
-<Multi_key> <u> <underscore> : "ū"
-<Multi_key> <U> <underscore> : "Ū"
+<Multi_key> <p> <i> : "π" # Pi
+<Multi_key> <d> <e> <l> <t> <a> : "Δ" # Delta
+<Multi_key> <s> <i> <g> <m> <a> : "Σ" # Sigma
+<Multi_key> <o> <m> <e> <g> <a> : "Ω" # Omega
+<Multi_key> <l> <a> <m> <b> <a> : "λ" # Lambda
+<Multi_key> <l> <a> <m> <b> <d> <a> : "λ" # Lambda
 
-<Multi_key> <minus> <a> : "ā"
-<Multi_key> <minus> <A> : "Ā"
-<Multi_key> <minus> <e> : "ē"
-<Multi_key> <minus> <E> : "Ē"
-<Multi_key> <minus> <i> : "ī"
-<Multi_key> <minus> <I> : "Ī"
-<Multi_key> <minus> <o> : "ō"
-<Multi_key> <minus> <O> : "Ō"
-<Multi_key> <minus> <u> : "ū"
-<Multi_key> <minus> <U> : "Ū"
+<Multi_key> <R> <N> <1> : "Ⅰ" # Uppercase Roman Numeral One 1
+<Multi_key> <R> <N> <2> : "Ⅱ" # Uppercase Roman Numeral Two 2
+<Multi_key> <R> <N> <3> : "Ⅲ" # Uppercase Roman Numeral Three 3
+<Multi_key> <R> <N> <4> : "Ⅳ" # Uppercase Roman Numeral Four 4
+<Multi_key> <R> <N> <5> : "Ⅴ" # Uppercase Roman Numeral Five 5
+<Multi_key> <R> <N> <6> : "Ⅵ" # Uppercase Roman Numeral Six 6
+<Multi_key> <R> <N> <7> : "Ⅶ" # Uppercase Roman Numeral Seven 7
+<Multi_key> <R> <N> <8> : "Ⅷ" # Uppercase Roman Numeral Eight 8
+<Multi_key> <R> <N> <9> : "Ⅸ" # Uppercase Roman Numeral Nine 9
+<Multi_key> <R> <N> <x> : "Ⅹ" # Uppercase Roman Numeral Ten 10
+<Multi_key> <R> <N> <X> : "Ⅹ" # Uppercase Roman Numeral Ten 10
+<Multi_key> <R> <N> <l> : "Ⅼ" # Uppercase Roman Numeral Fifty 50
+<Multi_key> <R> <N> <L> : "Ⅼ" # Uppercase Roman Numeral Fifty 50
+<Multi_key> <R> <N> <c> : "Ⅽ" # Uppercase Roman Numeral One Hundred 100
+<Multi_key> <R> <N> <C> : "Ⅽ" # Uppercase Roman Numeral One Hundred 100
+<Multi_key> <R> <N> <d> : "Ⅾ" # Uppercase Roman Numeral Five Hundred 500
+<Multi_key> <R> <N> <D> : "Ⅾ" # Uppercase Roman Numeral Five Hundred 500
+<Multi_key> <R> <N> <m> : "Ⅿ" # Uppercase Roman Numeral One Thousand 1000
+<Multi_key> <R> <N> <M> : "Ⅿ" # Uppercase Roman Numeral One Thousand 1000
+<Multi_key> <r> <n> <1> : "ⅰ" # Lowercase Roman Numeral One 1
+<Multi_key> <r> <n> <2> : "ⅱ" # Lowercase Roman Numeral Two 2
+<Multi_key> <r> <n> <3> : "ⅲ" # Lowercase Roman Numeral Three 3
+<Multi_key> <r> <n> <4> : "ⅳ" # Lowercase Roman Numeral Four 4
+<Multi_key> <r> <n> <5> : "ⅴ" # Lowercase Roman Numeral Five 5
+<Multi_key> <r> <n> <6> : "ⅵ" # Lowercase Roman Numeral Six 6
+<Multi_key> <r> <n> <7> : "ⅶ" # Lowercase Roman Numeral Seven 7
+<Multi_key> <r> <n> <8> : "ⅷ" # Lowercase Roman Numeral Eight 8
+<Multi_key> <r> <n> <9> : "ⅸ" # Lowercase Roman Numeral Nine 9
+<Multi_key> <r> <n> <x> : "ⅹ" # Lowercase Roman Numeral Ten 10
 
-<Multi_key> <a> <minus> : "ā"
-<Multi_key> <A> <minus> : "Ā"
-<Multi_key> <e> <minus> : "ē"
-<Multi_key> <E> <minus> : "Ē"
-<Multi_key> <i> <minus> : "ī"
-<Multi_key> <I> <minus> : "Ī"
-<Multi_key> <o> <minus> : "ō"
-<Multi_key> <O> <minus> : "Ō"
-<Multi_key> <u> <minus> : "ū"
-<Multi_key> <U> <minus> : "Ū"
+<Multi_key> <s> <q> <r> <t> : "√" # Square Root 2
+<Multi_key> <2> <r> <o> <o> <t> : "√" # Square Root 2
+<Multi_key> <KP_2> <r> <o> <o> <t>  : "√" # Square Root 2
+<Multi_key> <3> <r> <o> <o> <t> : "∛" # Cube Root 3
+<Multi_key> <KP_3> <r> <o> <o> <t> : "∛" # Cube Root 3
+<Multi_key> <4> <r> <o> <o> <t> : "∜" # Root 4 
+<Multi_key> <KP_4> <r> <o> <o> <t> : "∜" # Root 4
 
-<Multi_key> <colon> <a> : "ä"
-<Multi_key> <colon> <A> : "Ä"
-<Multi_key> <colon> <e> : "ë"
-<Multi_key> <colon> <E> : "Ë"
-<Multi_key> <colon> <i> : "ï"
-<Multi_key> <colon> <I> : "Ï"
-<Multi_key> <colon> <o> : "ö"
-<Multi_key> <colon> <O> : "Ö"
-<Multi_key> <colon> <u> : "ü"
-<Multi_key> <colon> <U> : "Ü"
-<Multi_key> <colon> <y> : "ÿ"
-<Multi_key> <colon> <Y> : "Ÿ"
-
-<Multi_key> <a> <colon> : "ä"
-<Multi_key> <A> <colon> : "Ä"
-<Multi_key> <e> <colon> : "ë"
-<Multi_key> <E> <colon> : "Ë"
-<Multi_key> <i> <colon> : "ï"
-<Multi_key> <I> <colon> : "Ï"
-<Multi_key> <o> <colon> : "ö"
-<Multi_key> <O> <colon> : "Ö"
-<Multi_key> <u> <colon> : "ü"
-<Multi_key> <U> <colon> : "Ü"
-<Multi_key> <y> <colon> : "ÿ"
-<Multi_key> <Y> <colon> : "Ÿ"
-
-<Multi_key> <apostrophe> <a> : "á"
-<Multi_key> <apostrophe> <A> : "Á"
-<Multi_key> <apostrophe> <e> : "é"
-<Multi_key> <apostrophe> <E> : "É"
-<Multi_key> <apostrophe> <i> : "í"
-<Multi_key> <apostrophe> <I> : "Í"
-<Multi_key> <apostrophe> <o> : "ó"
-<Multi_key> <apostrophe> <O> : "Ó"
-<Multi_key> <apostrophe> <u> : "ú"
-<Multi_key> <apostrophe> <U> : "Ú"
-
-<Multi_key> <a> <apostrophe> : "á"
-<Multi_key> <A> <apostrophe> : "Á"
-<Multi_key> <e> <apostrophe> : "é"
-<Multi_key> <E> <apostrophe> : "É"
-<Multi_key> <i> <apostrophe> : "í"
-<Multi_key> <I> <apostrophe> : "Í"
-<Multi_key> <o> <apostrophe> : "ó"
-<Multi_key> <O> <apostrophe> : "Ó"
-<Multi_key> <u> <apostrophe> : "ú"
-<Multi_key> <U> <apostrophe> : "Ú"
-
-<Multi_key> <apostrophe> <underscore> <a> : "ā́"
-<Multi_key> <apostrophe> <underscore> <A> : "Ā́"
-<Multi_key> <apostrophe> <underscore> <e> : "ḗ"
-<Multi_key> <apostrophe> <underscore> <E> : "Ḗ"
-<Multi_key> <apostrophe> <underscore> <i> : "ī́"
-<Multi_key> <apostrophe> <underscore> <I> : "Ī́"
-<Multi_key> <apostrophe> <underscore> <o> : "ṓ"
-<Multi_key> <apostrophe> <underscore> <O> : "Ṓ"
-<Multi_key> <apostrophe> <underscore> <u> : "ū́"
-<Multi_key> <apostrophe> <underscore> <U> : "Ū́"
-
-<Multi_key> <underscore> <apostrophe> <a> : "ā́"
-<Multi_key> <underscore> <apostrophe> <A> : "Ā́"
-<Multi_key> <underscore> <apostrophe> <e> : "ḗ"
-<Multi_key> <underscore> <apostrophe> <E> : "Ḗ"
-<Multi_key> <underscore> <apostrophe> <i> : "ī́"
-<Multi_key> <underscore> <apostrophe> <I> : "Ī́"
-<Multi_key> <underscore> <apostrophe> <o> : "ṓ"
-<Multi_key> <underscore> <apostrophe> <O> : "Ṓ"
-<Multi_key> <underscore> <apostrophe> <u> : "ū́"
-<Multi_key> <underscore> <apostrophe> <U> : "Ū́"
-
-<Multi_key> <apostrophe> <minus> <a> : "ā́"
-<Multi_key> <apostrophe> <minus> <A> : "Ā́"
-<Multi_key> <apostrophe> <minus> <e> : "ḗ"
-<Multi_key> <apostrophe> <minus> <E> : "Ḗ"
-<Multi_key> <apostrophe> <minus> <i> : "ī́"
-<Multi_key> <apostrophe> <minus> <I> : "Ī́"
-<Multi_key> <apostrophe> <minus> <o> : "ṓ"
-<Multi_key> <apostrophe> <minus> <O> : "Ṓ"
-<Multi_key> <apostrophe> <minus> <u> : "ū́"
-<Multi_key> <apostrophe> <minus> <U> : "Ū́"
-
-<Multi_key> <minus> <apostrophe> <a> : "ā́"
-<Multi_key> <minus> <apostrophe> <A> : "Ā́"
-<Multi_key> <minus> <apostrophe> <e> : "ḗ"
-<Multi_key> <minus> <apostrophe> <E> : "Ḗ"
-<Multi_key> <minus> <apostrophe> <i> : "ī́"
-<Multi_key> <minus> <apostrophe> <I> : "Ī́"
-<Multi_key> <minus> <apostrophe> <o> : "ṓ"
-<Multi_key> <minus> <apostrophe> <O> : "Ṓ"
-<Multi_key> <minus> <apostrophe> <u> : "ū́"
-<Multi_key> <minus> <apostrophe> <U> : "Ū́"
-
-<Multi_key> <greater> <equal> : "≥"
-<Multi_key> <equal> <greater> : "≥"
-<Multi_key> <less> <equal> : "≤"
-<Multi_key> <equal> <less> : "≤"
-
-<Multi_key> <exclam> <equal> : "≠"
-
-<Multi_key> <asciitilde> <equal> : "≈"
-<Multi_key> <equal> <asciitilde> : "≈"
-<Multi_key> <asciitilde> <asciitilde> : "≈"
-
-<Multi_key> <exclam> <asciitilde> : "≉"
-
-<Multi_key> <c> <e> <n> <t> : "¢"
-<Multi_key> <p> <o> <u> <n> <d> : "£"
-<Multi_key> <e> <u> : "€"
-
-<Multi_key> <o> <c> : "©"
-<Multi_key> <c> <o> : "©"
-<Multi_key> <r> <o> : "®"
-<Multi_key> <o> <r> : "®"
-
-<Multi_key> <t> <m> : "™"
-
-<Multi_key> <1> <2> : "½"
-<Multi_key> <0> <3> : "↉"
-<Multi_key> <1> <3> : "⅓"
-<Multi_key> <2> <3> : "⅔"
-<Multi_key> <1> <4> : "¼"
-<Multi_key> <3> <4> : "¾"
-<Multi_key> <1> <5> : "⅕"
-<Multi_key> <2> <5> : "⅖"
-<Multi_key> <3> <5> : "⅗"
-<Multi_key> <4> <5> : "⅘"
-<Multi_key> <1> <6> : "⅙"
-<Multi_key> <5> <6> : "⅚"
-<Multi_key> <1> <7> : "⅐"
-<Multi_key> <1> <8> : "⅛"
-<Multi_key> <3> <8> : "⅜"
-<Multi_key> <5> <8> : "⅝"
-<Multi_key> <7> <8> : "⅞"
-<Multi_key> <1> <9> : "⅑"
-<Multi_key> <1> <9> : "⅑"
-<Multi_key> <1> <1> <0> : "⅒"
-
-<Multi_key> <KP_1> <KP_2> : "½"
-<Multi_key> <KP_0> <KP_3> : "↉"
-<Multi_key> <KP_1> <KP_3> : "⅓"
-<Multi_key> <KP_2> <KP_3> : "⅔"
-<Multi_key> <KP_1> <KP_4> : "¼"
-<Multi_key> <KP_3> <KP_4> : "¾"
-<Multi_key> <KP_1> <KP_5> : "⅕"
-<Multi_key> <KP_2> <KP_5> : "⅖"
-<Multi_key> <KP_3> <KP_5> : "⅗"
-<Multi_key> <KP_4> <KP_5> : "⅘"
-<Multi_key> <KP_1> <KP_6> : "⅙"
-<Multi_key> <KP_5> <KP_6> : "⅚"
-<Multi_key> <KP_1> <KP_7> : "⅐"
-<Multi_key> <KP_1> <KP_8> : "⅛"
-<Multi_key> <KP_3> <KP_8> : "⅜"
-<Multi_key> <KP_5> <KP_8> : "⅝"
-<Multi_key> <KP_7> <KP_8> : "⅞"
-<Multi_key> <KP_1> <KP_9> : "⅑"
-<Multi_key> <KP_1> <KP_9> : "⅑"
-<Multi_key> <KP_1> <KP_1> <KP_0> : "⅒"
-
-<Multi_key> <p> <i> : "π"
-<Multi_key> <d> <e> <l> <t> <a> : "Δ"
-<Multi_key> <s> <i> <g> <m> <a> : "Σ"
-<Multi_key> <o> <m> <e> <g> <a> : "Ω"
-<Multi_key> <l> <a> <m> <b> <a> : "λ"
-<Multi_key> <l> <a> <m> <b> <d> <a> : "λ"
-
-<Multi_key> <o> <o> : "°"
-<Multi_key> <d> <e> <g> : "°"
-
-<Multi_key> <m> <u> <l> : "×"
-<Multi_key> <x> <x> : "×"
-<Multi_key> <d> <i> <v> : "÷"
-<Multi_key> <slash> <slash> : "÷"
-
-<Multi_key> <R> <N> <1> : "Ⅰ"
-<Multi_key> <R> <N> <2> : "Ⅱ"
-<Multi_key> <R> <N> <3> : "Ⅲ"
-<Multi_key> <R> <N> <4> : "Ⅳ"
-<Multi_key> <R> <N> <5> : "Ⅴ"
-<Multi_key> <R> <N> <6> : "Ⅵ"
-<Multi_key> <R> <N> <7> : "Ⅶ"
-<Multi_key> <R> <N> <8> : "Ⅷ"
-<Multi_key> <R> <N> <9> : "Ⅸ"
-<Multi_key> <R> <N> <x> : "Ⅹ"
-<Multi_key> <R> <N> <X> : "Ⅹ"
-<Multi_key> <R> <N> <l> : "Ⅼ"
-<Multi_key> <R> <N> <L> : "Ⅼ"
-<Multi_key> <R> <N> <c> : "Ⅽ"
-<Multi_key> <R> <N> <C> : "Ⅽ"
-<Multi_key> <R> <N> <d> : "Ⅾ"
-<Multi_key> <R> <N> <D> : "Ⅾ"
-<Multi_key> <R> <N> <m> : "Ⅿ"
-<Multi_key> <R> <N> <M> : "Ⅿ"
-<Multi_key> <r> <n> <1> : "ⅰ"
-<Multi_key> <r> <n> <2> : "ⅱ"
-<Multi_key> <r> <n> <3> : "ⅲ"
-<Multi_key> <r> <n> <4> : "ⅳ"
-<Multi_key> <r> <n> <5> : "ⅴ"
-<Multi_key> <r> <n> <6> : "ⅵ"
-<Multi_key> <r> <n> <7> : "ⅶ"
-<Multi_key> <r> <n> <8> : "ⅷ"
-<Multi_key> <r> <n> <9> : "ⅸ"
-<Multi_key> <r> <n> <x> : "ⅹ"
-
-<Multi_key> <s> <q> <r> <t> : "√"
-<Multi_key> <2> <r> <o> <o> <t> : "√"
-<Multi_key> <KP_2> <r> <o> <o> <t>  : "√"
-<Multi_key> <3> <r> <o> <o> <t> : "∛"
-<Multi_key> <KP_3> <r> <o> <o> <t> : "∛"
-<Multi_key> <4> <r> <o> <o> <t> : "∜"
-<Multi_key> <KP_4> <r> <o> <o> <t> : "∜"
-
-<Multi_key> <i> <n> <f> : "∞"
-<Multi_key> <I> <N> <F> : "∞"
-
-<Multi_key> <e> <m> <d> <a> <s> <h> : "—"
-<Multi_key> <e> <n> <d> <a> <s> <h> : "–"
-
-<Multi_key> <f> <l> <a> <t> : "♭"
-<Multi_key> <s> <h> <a> <r> <p> : "♯"
-<Multi_key> <d> <o> <u> <b> <l> <e> <f> <l> <a> <t> : "𝄫"
-<Multi_key> <b> <b> : "𝄫"
-<Multi_key> <d> <o> <u> <b> <l> <e> <s> <h> <a> <r> <p> : "𝄪"
-<Multi_key> <numbersign> <numbersign> : "𝄪"
+<Multi_key> <d> <o> <u> <b> <l> <e> <f> <l> <a> <t> : "𝄫" # Double Flat
+<Multi_key> <b> <b> : "𝄫" # Double Flat
+<Multi_key> <d> <o> <u> <b> <l> <e> <s> <h> <a> <r> <p> : "𝄪" # Double Sharp
+<Multi_key> <numbersign> <numbersign> : "𝄪" # Double Sharp
