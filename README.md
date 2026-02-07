@@ -4,34 +4,6 @@ My dotfiles. Managed with GNU Stow. Feel free to use this as inspiration for you
 ## Git Cloning (ignore if you're not going to use neovim)
 Use `--recursive` when git cloning since this repo has a submodule. If you already cloned non-recursively, that's ok, just run `git submodule init && git submodule update`
 
-### Things that can be launched by i3wm (Only relevant if you use i3wm)
-#### Required for basic functionality if you don't change the config
-- [kitty](https://github.com/kovidgoyal/kitty)
-    - super+enter
-- [rofi](https://github.com/davatorium/rofi)
-    - super+d
-- [hsetroot](https://archlinux.org/packages/extra/x86_64/hsetroot/)
-    - Runs automatically on login to set the background color to `#282828` (gruvbox bg color)
-#### Extra rofi things that can be launched with keybinds (not required)
-- [rofi-emoji](https://github.com/Mange/rofi-emoji)
-    - super+/
-- [rofi-calc](https://github.com/svenstaro/rofi-calc)
-    - super+c
-- [menu scripts i wrote](https://github.com/zperk13/toolbox/blob/master/shebang/menu_scripts)
-    - super+m
-#### Other things that can be launched with keybinds (not required)
-- [LiveCaptions](https://github.com/abb128/LiveCaptions)
-    - super+ctrl+l
-- [flameshot](https://github.com/flameshot-org/flameshot)
-    - super+shift+s
-- [Mission Center](https://missioncenter.io/)
-    - ctrl+shift+escape
-## Font
-Multiple files assume you have [JetBrains Mono](https://www.jetbrains.com/lp/mono/) installed. If you don't have it, nothing will break, but I highly recommend you either use it or another [nerd font](https://www.nerdfonts.com/) and change the configs to use your preferred nerd font.
-
-## Colorscheme
-My preferred colorscheme is gruvbox. You don't need to do any steps other than installing this repo to use it, all the config files handle it.
-
 ## userChrome.css
 [userChrome.css](userChrome.css) is a file for modifying Firefox's user interface. [userchrome.org](https://www.userchrome.org/) has more information about it and some of the following stuff is based on information from it.
 
