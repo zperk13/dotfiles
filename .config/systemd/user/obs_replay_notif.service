@@ -1,0 +1,8 @@
+[Unit]
+Description=obs_replay_notif
+
+[Service]
+ExecStart=obs_replay_notif
+
+[Install]
+WantedBy=default.target
