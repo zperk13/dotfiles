@@ -16,3 +16,15 @@
   Output = ""
   Tag = []
   command = "curl ip-api.com/<ip>"
+
+[[Snippets]]
+  Description = "Encode a video for YouTube"
+  Output = ""
+  Tag = []
+  command = "ffmpeg -i <input file> -colorspace bt709 -c:v libx264 -preset slow -c:a aac -pix_fmt yuv420p -movflags +faststart <extra options> <output file>"
+
+[[Snippets]]
+  Description = "Get the keyframes of a video"
+  Output = ""
+  Tag = ["ffmpeg"]
+  command = "ffprobe -v error -of default=noprint_wrappers=1:nokey=1 -select_streams v -skip_frame nokey -show_frames -show_entries frame=pkt_dts_time <video file>"
