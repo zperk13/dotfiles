@@ -192,6 +192,7 @@ function h() {
     echo -e 'fd\t\tfind alternative' # https://github.com/sharkdp/fd
     echo -e 'jless\t\tJSON viewer' # https://github.com/PaulJuliusMartinez/jless
     echo -e 'L_bash_profile\tBash script profiler' # https://github.com/Kamilcuk/L_bash_profile
+    echo -e 'pet\t\tCommand-line snippet manager' # https://github.com/knqyf263/pet
     echo -e 'scenedetect\tSplit video up into scenes' # https://github.com/Breakthrough/PySceneDetect
     echo -e 'tte\t\tTerminalTextEffects' # https://github.com/ChrisBuilds/terminaltexteffects
     echo -e 'tldr\t\tCollaborative cheatsheets for console commands (actually tealdeer)' # https://github.com/tealdeer-rs/tealdeer

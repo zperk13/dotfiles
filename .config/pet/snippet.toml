@@ -1,0 +1,6 @@
+
+[[Snippets]]
+  Description = "Shrink a video file's size"
+  Output = ""
+  Tag = ["ffmpeg"]
+  command = "ffmpeg -i <input file> -vcodec libx265 -preset ultrafast <rescale=|_-vf \"scale=256:144\"_||_-vf \"scale=640:360\"_||_-vf \"scale=854:480\"_||_-vf \"scale=1280:720\"_||_-vf \"scale=1920:1080\"_|> <change framerate=-r 30> <extra options> <output file>"
