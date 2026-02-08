@@ -10,3 +10,9 @@
   Output = ""
   Tag = []
   command = "ffmpeg -i <input file> -an -r <output framerate=|_60_||_30_|> -filter:v 'setpts=PTS/<speed=|_2_||_4_||_8_||10_||_30_||_60_|>' -movflags +faststart <output file>"
+
+[[Snippets]]
+  Description = "Get information about an IP address"
+  Output = ""
+  Tag = []
+  command = "curl ip-api.com/<ip>"
