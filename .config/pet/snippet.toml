@@ -4,3 +4,9 @@
   Output = ""
   Tag = []
   command = "ffmpeg -i <input file> -vcodec libx265 -preset ultrafast <rescale=|_-vf \"scale=1920:1080\"_||_-vf \"scale=1280:720\"_||_-vf \"scale=854:480\"_||_-vf \"scale=640:360\"_||_-vf \"scale=256:144\"_|> <change framerate=-r 30> <extra options> <output file>"
+
+[[Snippets]]
+  Description = "Change the speed of a video, like if you want to make a timelapse or slo-mo. Removes audio."
+  Output = ""
+  Tag = []
+  command = "ffmpeg -i <input file> -an -r <output framerate=|_60_||_30_|> -filter:v 'setpts=PTS/<speed=|_2_||_4_||_8_||10_||_30_||_60_|>' -movflags +faststart <output file>"
