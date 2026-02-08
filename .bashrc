@@ -37,6 +37,7 @@ alias pcp='rsync --archive --partial --info=progress2,stats1,name'
 alias rg="rg --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'"
 alias rm='trash'
 alias s="source ~/.bashrc"
+alias stow='stow --verbose'
 alias stui='systemctl-tui'
 alias toclip="xclip -selection clipboard 1> /dev/null 2> /dev/null" # https://github.com/kovidgoyal/kitty/issues/828#issuecomment-1537144685 for explanation of why I'm piping to /dev/null
 alias tree='eza --tree --ignore-glob .git'
