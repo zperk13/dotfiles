@@ -20,6 +20,8 @@ alias batgrep="batgrep --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache
 alias c="clear"
 alias cp='cp -i' # Prompt before overwrite
 alias cwd="pwd"
+alias dadjoke="curl -w '\n' https://icanhazdadjoke.com"
+alias excuse='dig excuse @dns.toys +short'
 alias fc='fc -e nvim'
 alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was archived, I don't have to worry about which specific one I got, I just aliased it to "fetch" since that is a common word in a lot of the alternatives
 alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
@@ -159,6 +161,8 @@ function h() {
     echo -e 'bathelp\t\t--help + bat' # https://github.com/eth-p/bat-extras
     echo -e 'c\t\tclear'
     echo -e 'cwd\t\tpwd'
+    echo -e "dadjoke\t\tRandom dad joke. (Don't spam, it contacts a server)"
+    echo -e "excuse\t\treturn a developer excuse (Don't spam, it contacts a server)"
     echo -e 'h\t\tthis'
     echo -e 'fetch\t\tSystem info'
     echo -e 'funcat\t\tPipe into this for fun'
