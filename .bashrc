@@ -29,9 +29,12 @@ alias gz='gzip'
 alias fd='fd --hidden --no-ignore-vcs'
 alias funcat='figlet -t | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 alias grep='grep --color=auto'
-alias icat='kitty +kitten icat' # If using the Kitty terminal, shows the specified image
+alias klip='kitten clipboard'
+alias kdiff='kitten diff'
+alias khrg='kitten hyperlinked-grep'
+alias icat='kitten icat'
 alias less="less --raw-control-chars"
-alias ls='eza --all --icons auto --group-directories-first'
+alias ls='eza --all --icons auto --group-directories-first --hyperlink'
 alias man='batman'
 alias monitor="~/.screenlayout/monitor.sh"
 alias net\?='ping -c 1 -W 3 8.8.8.8'
@@ -41,7 +44,6 @@ alias rm='trash'
 alias s="source ~/.bashrc"
 alias stow='stow --verbose'
 alias stui='systemctl-tui'
-alias toclip="xclip -selection clipboard 1> /dev/null 2> /dev/null" # https://github.com/kovidgoyal/kitty/issues/828#issuecomment-1537144685 for explanation of why I'm piping to /dev/null
 alias tree='eza --tree --ignore-glob .git'
 alias uptime='uptime --pretty'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
@@ -168,7 +170,6 @@ function h() {
     echo -e 'funcat\t\tPipe into this for fun'
     echo -e 'G\t\tlazygit' # https://github.com/jesseduffield/lazygit
     echo -e 'gz\t\tgzip'
-    echo -e 'icat\t\tView image'
     echo -e 'incognito\tDisable terminal history'
     echo -e 'monitor\t\tFix monitors'
     echo -e 'net?\t\tCheck if you have internet access by pinging Google once, and waiting up to 3 seconds'
@@ -180,6 +181,26 @@ function h() {
     echo -e 'toclip\t\tPipe to toclip to send output to clipboard'
     echo -e 'tree\t\tRecursive directory tree'
     echo -e 'y\t\tYazi. TUI File explorer'
+
+    echo
+
+    echo "${underline}Kittens (Extra kitty terminal features):${reset}"
+
+    echo -e 'ctrl+shift+e\tChoose and open URL'
+    echo -e 'ctrl+shift+p f\tChoose and paste anything that looks like a path or filename'
+    echo -e 'ctrl+shift+p n\tChoose and edit anything that looks like a path or filename followed by a colon and a line number'
+    echo -e 'ctrl+shift+p y\tChoose and open hyperlinks'
+    echo -e 'ctrl+shift+u\tSearch for Unicode characters'
+    echo -e 'klip\t\tPipe to this to copy text to clipboard. Or you can do klip [image file]'
+    echo -e 'kdiff\t\tSide by side diff that works with images and over SSH'
+    echo -e 'khrg\t\trg + hyperlinks that can be opened in an editor'
+    echo -e 'icat\t\tView image'
+
+    echo
+
+    echo -e 'kitty has the ability to easily Edit, Open or Download files from a computer into which you are SSHed. In your SSH session run:
+ls --hyperlink
+Then hold down Ctrl+Shift and click the name of the file.'
 
     echo
 
