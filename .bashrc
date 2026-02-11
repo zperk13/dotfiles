@@ -101,28 +101,35 @@ function prompt_command {
     local exit_code="$?"
     local now prev_command prev_command_timestamp ps range diff exit_code
     ps=''
-    if [ "$SECONDS" != 0 ]; then
+
+    # If didn't just launch the shell, since we don't need a break and info about the previous command due to the lack of a previous command
+    if (( "$SECONDS" > 2 )); then
         now="$(date +%s)"
         readarray -d' ' prev_command <<< "$(history | tail -n1)" # I think this might have an issue with multiline commands?
         prev_command_timestamp="${prev_command[3]}"
         diff=$((now - prev_command_timestamp))
-        range="$(seq 1 "$COLUMNS")"
+
+         # If history is off
         if set -o | rg history | rg off >/dev/null; then
-            ps="$ps$(printf -- '─%.0s' $range)\n"
+            ps="$ps$(printf -- '─%.0s' $(seq 1 $COLUMNS))\n"
             if [ "$SECONDS" != 0 ]; then
                 ps="$ps${ps_bold}${ps_red}(incognito) "
             fi
+
+        # Else if the command was not c(lear)
         elif echo "${prev_command[@]}" | tr  '\n' ' ' | rg -v '\s*\d+\s+\d+\s+c(lear)?\s*$' > /dev/null; then
             if [ "$exit_code" == 0 ]; then
-                exit_code="$ps_green(Exit Code: 0)"
+                exit_code="┤Exit Code: 0├"
+                exit_color="$ps_green"
             else
-                exit_code="$ps_red(Exit Code: $exit_code)"
+                exit_code="┤Exit Code: $exit_code├"
+                exit_color="$ps_red";
             fi
-            ps="$ps$exit_code$ps_reset"
             if [ "$diff" != 0 ]; then
-                ps="$ps$ps_reset Elapsed: ${diff}s"
+                exit_code="$exit_code┤Elapsed: ${diff}s├"
             fi
-            ps="$ps\n$(printf -- '─%.0s' $range)\n"
+            ps="$ps$exit_color$exit_code"
+            ps="$ps$(printf -- '─%.0s' $(seq 1 $(( COLUMNS - ${#exit_code} )) ))\n"
         fi
     fi
     ps="$ps${ps_bold}${ps_blue}\w${ps_white}\n$ ${ps_reset}"
