@@ -118,6 +118,13 @@ function prompt_command {
 
         # Else if the command was not c(lear)
         elif echo "${prev_command[@]}" | tr  '\n' ' ' | rg -v '\s*\d+\s+\d+\s+c(lear)?\s*$' > /dev/null; then
+
+            # https://www.reddit.com/r/bash/comments/139hvju/comment/jj3gl2q/
+            IFS='[;' read -p $'\e[6n' -d R -rs _ _ current_cursor_column _
+            if (( current_cursor_column != 1 )); then
+                ps="$ps\n"
+            fi
+
             if [ "$exit_code" == 0 ]; then
                 exit_code="┤Exit Code: 0├"
                 exit_color="$ps_green"
