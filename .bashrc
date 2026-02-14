@@ -100,7 +100,7 @@ fi
 function prompt_command {
     local exit_code="$?"
     local now prev_command prev_command_timestamp ps range diff exit_code
-    ps=''
+    ps="${ps_reset}"
 
     # If didn't just launch the shell, since we don't need a break and info about the previous command due to the lack of a previous command
     if (( "$SECONDS" > 2 )); then
