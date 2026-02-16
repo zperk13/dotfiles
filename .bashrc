@@ -18,6 +18,7 @@ eval "$(batman --export-env)"
 alias ..='cd ..'
 alias batgrep="batgrep --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'" # Same arguments as rg alias
 alias c="clear"
+alias cat='bat --paging=never --plain'
 alias cp='cp -i' # Prompt before overwrite
 alias cwd="pwd"
 alias dadjoke="curl -w '\n' https://icanhazdadjoke.com"
@@ -176,6 +177,7 @@ function h() {
     echo -e '..\t\tcd ..'
     echo -e 'bathelp\t\t--help + bat' # https://github.com/eth-p/bat-extras
     echo -e 'c\t\tclear'
+    echo -e 'cat\t\tbat --paging=never --plain'
     echo -e 'cwd\t\tpwd'
     echo -e "dadjoke\t\tRandom dad joke. (Don't spam, it contacts a server)"
     echo -e "excuse\t\treturn a developer excuse (Don't spam, it contacts a server)"
