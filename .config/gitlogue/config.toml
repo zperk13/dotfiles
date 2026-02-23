@@ -1,0 +1,3 @@
+theme = "gruvbox"
+order="asc"
+ignore_patterms=["*.json", "Cargo.lock"]
