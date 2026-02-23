@@ -1,3 +1,6 @@
 theme = "gruvbox"
 order="asc"
-ignore_patterms=["*.json", "Cargo.lock"]
+ignore_patterns = [
+    "*.json",
+    "**/*.json",
+]
