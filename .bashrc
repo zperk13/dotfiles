@@ -106,8 +106,8 @@ function prompt_command {
     # If didn't just launch the shell, since we don't need a break and info about the previous command due to the lack of a previous command
     if (( "$SECONDS" > 2 )); then
         now="$(date +%s)"
-        readarray -d' ' prev_command <<< "$(history | tail -n1)" # I think this might have an issue with multiline commands?
-        prev_command_timestamp="${prev_command[3]}"
+        # I think this might have an issue with multiline commands?
+        prev_command_timestamp="$(history | tail -n1 | rg -o '\d+' | head -n2 | tail -n1)"
         diff=$((now - prev_command_timestamp))
 
          # If history is off
@@ -140,7 +140,7 @@ function prompt_command {
             ps="$ps$(printf -- '─%.0s' $(seq 1 $(( COLUMNS - ${#exit_code} )) ))\n"
         fi
     fi
-    ps="$ps${ps_bold}${ps_blue}\w${ps_white}\n$ ${ps_reset}"
+    ps="$ps${ps_bold}${ps_blue}\w\n${ps_white}$ ${ps_reset}"
     PS1="$ps"
 }
 PROMPT_COMMAND=prompt_command 
