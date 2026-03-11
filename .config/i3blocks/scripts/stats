@@ -15,9 +15,9 @@ while true; do
     gpu_mem="$(echo "$nvt" | jq -r .mem_util)"
     max_gpu="$(echo "$nvt" | jq '.processes | sort_by(.gpu_usage) | .[-1]')"
     max_gpu_mem="$(echo "$nvt" | jq '.processes | sort_by(.gpu_mem_usage) | .[-1]')"
-    max_gpu_name="$(echo "$max_gpu" | jq -r .cmdline)"
+    max_gpu_name="$(echo "$max_gpu" | jq -r .cmdline | awk '{print $1}' | awk -F '/' '{print $NF}')"
     max_gpu_percent="$(echo "$max_gpu" | jq -r .gpu_usage)"
-    max_gpu_mem_name="$(echo "$max_gpu_mem" | jq -r .cmdline)"
+    max_gpu_mem_name="$(echo "$max_gpu_mem" | jq -r .cmdline | awk '{print $1}' | awk -F '/' '{print $NF}')"
     max_gpu_mem_percent="$(echo "$max_gpu_mem" | jq -r .gpu_mem_usage)"
 
 
