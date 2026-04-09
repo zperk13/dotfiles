@@ -5,5 +5,18 @@ line-number = "relative"
 mouse = false
 cursor-shape.insert = "bar"
 
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+[editor.lsp]
+display-inlay-hints = true
+
 [keys.insert]
 "C-space" = "completion"
+
+[keys.normal]
+C = ["kill_to_line_end", "insert_at_line_end"]
+D = "kill_to_line_end"
+G = "goto_file_end"
+K = "hover"
+0 = "goto_line_start"
