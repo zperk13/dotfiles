@@ -5,8 +5,8 @@ echo "Stats will be displayed in 5 seconds"
 processor_count="$(nproc)"
 
 while true; do
-    cpu_percentage="$(mpstat 5 1 | awk '/Average/ {print 100-$NF "%"}')"
-    mem_percentage="$(free -m | awk '/Mem/ {printf "%.2f%", (($2 - $7) * 100 / $2)}')"
+    cpu_percentage="$(mpstat 5 1 | awk '/Average/ {print 100-$NF}')"
+    mem_percentage="$(free -m | awk '/Mem/ {printf "%.2f", (($2 - $7) * 100 / $2)}')"
     read -ra max_mem < <(ps -eo 'comm,%mem' --sort='-%mem' --cols=250 | head -n2 | tail -n1)
     read -ra max_cpu < <(top -b -n1 --sort-override='%CPU' -w250 | head -n8 | tail -n1)
     max_cpu_percent="$(echo "scale=2; ${max_cpu[8]} / $processor_count" | bc)"
@@ -20,6 +20,24 @@ while true; do
     max_gpu_mem_name="$(echo "$max_gpu_mem" | jq -r .cmdline | awk '{print $1}' | awk -F '/' '{print $NF}' | awk -F '\\' '{print $NF}')"
     max_gpu_mem_percent="$(echo "$max_gpu_mem" | jq -r .gpu_mem_usage)"
 
+    out=""
 
-    echo "CPU: ${cpu_percentage} (${max_cpu[*]:11} ${max_cpu_percent}%) | GPU: $gpu ($max_gpu_name $max_gpu_percent) VRAM: $gpu_mem ($max_gpu_mem_name $max_gpu_mem_percent) | RAM: $mem_percentage (${max_mem[*]}%)"
+    function append {
+        if [ -n "$out" ]; then
+            out="$out | ";
+        fi
+        out="$out$1"
+    }
+
+    if [ "$(echo "$cpu_percentage >= 50" | bc)" -eq 1 ]; then
+        append "CPU: ${cpu_percentage}% (${max_cpu[*]:11} ${max_cpu_percent}%)"
+    fi
+    if [ "$(echo "${gpu//%/} >= 50" | bc)" -eq 1 ] || [ "$(echo "${gpu_mem//%/} >= 50" | bc)" -eq 1 ]; then
+        append "GPU: $gpu ($max_gpu_name $max_gpu_percent) VRAM: $gpu_mem ($max_gpu_mem_name $max_gpu_mem_percent)"
+    fi
+    if [ "$(echo "$mem_percentage >= 50" | bc)" -eq 1 ]; then
+        append "RAM: $mem_percentage% (${max_mem[*]}%)"
+    fi
+
+    echo "$out"
 done
