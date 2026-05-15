@@ -106,8 +106,11 @@ function prompt_command {
     # If didn't just launch the shell, since we don't need a break and info about the previous command due to the lack of a previous command
     if (( "$SECONDS" > 2 )); then
         now="$(date +%s)"
+
         # I think this might have an issue with multiline commands?
-        prev_command_timestamp="$(history | tail -n1 | rg -o '\d+' | head -n2 | tail -n1)"
+        readarray -d' ' prev_command <<< "$(history | tail -n1)"
+        prev_command_timestamp="$(echo "${prev_command[@]}" | rg -o '\d+' | head -n2 | tail -n1)"
+
         diff=$((now - prev_command_timestamp))
 
          # If history is off
