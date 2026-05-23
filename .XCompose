@@ -49,4 +49,4 @@
 <Multi_key> <d> <o> <u> <b> <l> <e> <f> <l> <a> <t> : "𝄫" # Double Flat
 <Multi_key> <b> <b> : "𝄫" # Double Flat
 <Multi_key> <d> <o> <u> <b> <l> <e> <s> <h> <a> <r> <p> : "𝄪" # Double Sharp
-<Multi_key> <numbersign> <numbersign> : "𝄪" # Double Sharp
+<Multi_key> <numbersign> <2> : "𝄪" # Double Sharp
