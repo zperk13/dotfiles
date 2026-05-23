@@ -244,7 +244,7 @@ Then hold down Ctrl+Shift and click the name of the file.'
     echo -e 'trash\t\tMove file/directory to trash bin (rm is aliased to it)' # https://github.com/andreafrancia/trash-cli
     echo -e 'regect\t\tregex 101 like cli tool' # https://github.com/kloki/regect
     echo -e 'rg\t\tRipgrep. Grep alternative' # https://github.com/BurntSushi/ripgrep
-    echo -e 'rgr\t\tRepgrep (ripgrep + replace)' # https://github.com/acheronfail/repgrep
+    echo -e 'swp\t\tFind and replace (swap) TUI' # https://github.com/beeb/swpui
     echo -e 'yt-dlp\t\tDownload videos' # https://github.com/yt-dlp/yt-dlp
 
     echo
