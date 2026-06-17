@@ -308,7 +308,7 @@ bindsym $mod+m exec menu_scripts
 for_window [class="livecaptions"] floating enable
 bindsym $mod+Ctrl+l exec flatpak run net.sapples.LiveCaptions
 
-bindsym $mod+Shift+S exec flameshot gui
+bindsym $mod+Shift+S exec spectacle
 
 bindsym Ctrl+Shift+Escape exec missioncenter
 
