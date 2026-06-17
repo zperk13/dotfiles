@@ -17,6 +17,7 @@ eval "$(batman --export-env)"
 
 alias ..='cd ..'
 alias batgrep="batgrep --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'" # Same arguments as rg alias
+alias bios='systemctl reboot --firmware-setup'
 alias c="clear"
 alias cat='bat --paging=never --plain'
 alias cp='cp -i' # Prompt before overwrite
@@ -46,6 +47,7 @@ alias s="source ~/.bashrc"
 alias stow='stow --verbose'
 alias stui='systemctl-tui'
 alias tree='eza --tree --ignore-glob .git'
+alias uefi=bios
 alias uptime='uptime --pretty'
 alias yt-dlp='yt-dlp --write-auto-subs --write-subs'
 
@@ -179,6 +181,7 @@ function h() {
     echo "${underline}Functions/Aliases:${reset}"
     echo -e '..\t\tcd ..'
     echo -e 'bathelp\t\t--help + bat' # https://github.com/eth-p/bat-extras
+    echo -e 'bios\t\tBoot into UEFI/BIOS' # https://github.com/eth-p/bat-extras
     echo -e 'c\t\tclear'
     echo -e 'cat\t\tbat --paging=never --plain'
     echo -e 'cwd\t\tpwd'
@@ -199,6 +202,7 @@ function h() {
     echo -e 'smallprompt\tRemoves the directory from your prompt'
     echo -e 'toclip\t\tPipe to toclip to send output to clipboard'
     echo -e 'tree\t\tRecursive directory tree'
+    echo -e 'uefi\t\tBoot into UEFI/BIOS' # https://github.com/eth-p/bat-extras
     echo -e 'y\t\tYazi. TUI File explorer'
 
     echo
