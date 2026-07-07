@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Stats will be displayed in 5 seconds"
+# echo "Stats will be displayed in 5 seconds"
 
 processor_count="$(nproc)"
 
