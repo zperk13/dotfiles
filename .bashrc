@@ -39,7 +39,6 @@ alias less="less --raw-control-chars"
 alias ls='eza --all --icons auto --group-directories-first --hyperlink'
 alias man='batman'
 alias monitor="~/.screenlayout/monitor.sh"
-alias net\?='ping -c 1 -W 3 8.8.8.8'
 alias pcp='rsync --archive --partial --info=progress2,stats1,name'
 alias rg="rg --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'"
 alias rm='trash'
@@ -194,7 +193,6 @@ function h() {
     echo -e 'gz\t\tgzip'
     echo -e 'incognito\tDisable terminal history'
     echo -e 'monitor\t\tFix monitors'
-    echo -e 'net?\t\tCheck if you have internet access by pinging Google once, and waiting up to 3 seconds'
     echo -e 'nv\t\tNeovim (checks if needs sudo too)'
     echo -e 'pcp\t\tprogress cp'
     echo -e 's\t\tReload .bashrc'
