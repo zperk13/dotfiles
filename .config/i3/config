@@ -166,6 +166,11 @@ mode "resize" {
         bindsym Shift+$right resize grow width 50 px
 
 
+        bindsym Ctrl+$left  resize shrink width 1 px
+        bindsym Ctrl+$down  resize grow height 1 px
+        bindsym Ctrl+$up    resize shrink height 1 px
+        bindsym Ctrl+$right resize grow width 1 px
+
         # same bindings, but for the arrow keys
         bindsym Left         resize shrink width 10 px
         bindsym Down         resize grow height 10 px
@@ -177,6 +182,10 @@ mode "resize" {
         bindsym Shift+Up     resize shrink height 50 px
         bindsym Shift+Right  resize grow width 50 px
 
+        bindsym Ctrl+Left  resize shrink width 1 px
+        bindsym Ctrl+Down  resize grow height 1 px
+        bindsym Ctrl+Up    resize shrink height 1 px
+        bindsym Ctrl+Right resize grow width 1 px
 
         # back to normal: Enter or Escape or Mod1+r
         bindsym Return mode "default"
