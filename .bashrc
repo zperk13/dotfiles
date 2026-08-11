@@ -197,7 +197,6 @@ function h() {
     echo -e 'pcp\t\tprogress cp'
     echo -e 's\t\tReload .bashrc'
     echo -e 'stui\t\tsystemctl-tui' # https://github.com/rgwood/systemctl-tui
-    echo -e 'smallprompt\tRemoves the directory from your prompt'
     echo -e 'toclip\t\tPipe to toclip to send output to clipboard'
     echo -e 'tree\t\tRecursive directory tree'
     echo -e 'uefi\t\tBoot into UEFI/BIOS' # https://github.com/eth-p/bat-extras
