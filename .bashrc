@@ -224,32 +224,6 @@ Then hold down Ctrl+Shift and click the name of the file.'
 
     echo
 
-    echo "${underline}Misc:${reset}"
-    echo -e 'bat\t\tcat alternative' # https://github.com/sharkdp/bat
-    echo -e 'batdiff\t\tbat+diff' # https://github.com/eth-p/bat-extras
-    echo -e 'batgrep\t\tbat+ripgrep' # https://github.com/eth-p/bat-extras
-    echo -e 'batwatch\tWatch for changes in files or command output, and print them with bat' # https://github.com/eth-p/bat-extras
-    echo -e 'chat_downloader\tDownload live chat from YouTube/Twitch' # https://github.com/Indigo128/chat-downloader/
-    echo -e 'dust\t\tdu alternative (disk usage)' # https://github.com/bootandy/dust
-    echo -e 'dysk\t\tdf alternative (disk free)' # https://github.com/Canop/dysk
-    echo -e 'exiftool\tFile metadata' # https://github.com/exiftool/exiftool
-    echo -e 'fc\t\tEdit the most recent command'
-    echo -e 'fd\t\tfind alternative' # https://github.com/sharkdp/fd
-    echo -e 'jless\t\tJSON viewer' # https://github.com/PaulJuliusMartinez/jless
-    echo -e 'L_bash_profile\tBash script profiler' # https://github.com/Kamilcuk/L_bash_profile
-    echo -e 'pet\t\tCommand-line snippet manager' # https://github.com/knqyf263/pet
-    echo -e 'scenedetect\tSplit video up into scenes' # https://github.com/Breakthrough/PySceneDetect
-    echo -e 'tte\t\tTerminalTextEffects' # https://github.com/ChrisBuilds/terminaltexteffects
-    echo -e 'tldr\t\tCollaborative cheatsheets for console commands (actually tealdeer)' # https://github.com/tealdeer-rs/tealdeer
-    echo -e 'tokei\t\tLines of code counter' # https://github.com/XAMPPRocky/tokei
-    echo -e 'trash\t\tMove file/directory to trash bin (rm is aliased to it)' # https://github.com/andreafrancia/trash-cli
-    echo -e 'regect\t\tregex 101 like cli tool' # https://github.com/kloki/regect
-    echo -e 'rg\t\tRipgrep. Grep alternative' # https://github.com/BurntSushi/ripgrep
-    echo -e 'swp\t\tFind and replace (swap) TUI' # https://github.com/beeb/swpui
-    echo -e 'yt-dlp\t\tDownload videos' # https://github.com/yt-dlp/yt-dlp
-
-    echo
-
     echo "${underline}Keybinds:${reset}"
     echo -e 'ctrl+r\t\tHistory'
     echo -e 'ctrl+t\t\tFiles'
