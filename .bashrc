@@ -180,7 +180,7 @@ function h() {
     echo "${underline}Functions/Aliases:${reset}"
     echo -e '..\t\tcd ..'
     echo -e 'bathelp\t\t--help + bat' # https://github.com/eth-p/bat-extras
-    echo -e 'bios\t\tBoot into UEFI/BIOS' # https://github.com/eth-p/bat-extras
+    echo -e 'bios\t\tBoot into UEFI/BIOS'
     echo -e 'c\t\tclear'
     echo -e 'cat\t\tbat --paging=never --plain'
     echo -e 'cwd\t\tpwd'
