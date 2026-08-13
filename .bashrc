@@ -29,7 +29,6 @@ alias fetch='fastfetch' # A bunch of neofetch alternatives came out when it was 
 alias G='lazygit' # Mimicking the :G command I had in nvim from tpope's vim-fugitive plugin
 alias gz='gzip'
 alias fd='fd --hidden --no-ignore-vcs'
-alias funcat='figlet -t | cowsay -f sus -n | lolcat --force | tte --existing-color-handling always pour'
 alias grep='grep --color=auto'
 alias klip='kitten clipboard'
 alias kdiff='kitten diff'
@@ -188,7 +187,6 @@ function h() {
     echo -e "excuse\t\treturn a developer excuse (Don't spam, it contacts a server)"
     echo -e 'h\t\tthis'
     echo -e 'fetch\t\tSystem info'
-    echo -e 'funcat\t\tPipe into this for fun'
     echo -e 'G\t\tlazygit' # https://github.com/jesseduffield/lazygit
     echo -e 'gz\t\tgzip'
     echo -e 'incognito\tDisable terminal history'
