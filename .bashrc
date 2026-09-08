@@ -148,22 +148,30 @@ function prompt_command {
 }
 PROMPT_COMMAND=prompt_command 
 
-function nv() {
-    # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias.
-    # Also I got annoyed by forgetting to do sudoedit instead of nv in certain situations, so this just checks that for me
-    if [ -z "$1" ]; then
-        nvim
+function edit() {
+    if [ -z "$2" ]; then
+        $1
         return
     fi
     local perm_to_check="."
-    if [ -f "$1" ]; then
-        perm_to_check="$1"
+    if [ -f "$2" ]; then
+        perm_to_check="$2"
     fi
     if [ -w "$perm_to_check" ]; then
-        nvim "$1"
+        $1 "$2"
     else
-        sudoedit "$1"
+        SUDO_EDITOR="$1" sudoedit "$2"
     fi
+}
+
+function nv() {
+    # On Windows I use Neovide and that's long to type so I shortened it to nv. I don't use Neovide on Linux, but want to keep the alias.
+    # Also I got annoyed by forgetting to do sudoedit instead of nv in certain situations, so this just checks that for me
+    edit nvim "$1"
+}
+
+function hx() {
+    edit helix "$1"
 }
 
 function bathelp() {
