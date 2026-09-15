@@ -13,12 +13,12 @@ while true; do
     nvt="$(nvtop -s | jq .[1])"
     gpu="$(echo "$nvt" | jq -r .gpu_util)"
     gpu_mem="$(echo "$nvt" | jq -r .mem_util)"
-    max_gpu="$(echo "$nvt" | jq '.processes | sort_by(.gpu_usage) | .[-1]')"
-    max_gpu_mem="$(echo "$nvt" | jq '.processes | sort_by(.gpu_mem_usage) | .[-1]')"
-    max_gpu_name="$(echo "$max_gpu" | jq -r .cmdline | awk '{print $1}' | awk -F '/' '{print $NF}' | awk -F '\\' '{print $NF}')"
-    max_gpu_percent="$(echo "$max_gpu" | jq -r .gpu_usage)"
-    max_gpu_mem_name="$(echo "$max_gpu_mem" | jq -r .cmdline | awk '{print $1}' | awk -F '/' '{print $NF}' | awk -F '\\' '{print $NF}')"
-    max_gpu_mem_percent="$(echo "$max_gpu_mem" | jq -r .gpu_mem_usage)"
+    max_gpu="$(echo "$nvt" | jq '.processes | max_by((.gpu_usage // "0%") | sub("%"; "") | tonumber)')"
+    max_gpu_mem="$(echo "$nvt" | jq '.processes | max_by((.gpu_mem_bytes_alloc // "0") | tonumber)')"
+    max_gpu_name="$(echo "$max_gpu" | jq -r '.cmdline' | awk '{print $1}' | awk -F '/' '{print $NF}' | awk -F '\\' '{print $NF}')"
+    max_gpu_percent="$(echo "$max_gpu" | jq -r '.gpu_usage // "0%"')"
+    max_gpu_mem_name="$(echo "$max_gpu_mem" | jq -r '.cmdline' | awk '{print $1}' | awk -F '/' '{print $NF}' | awk -F '\\' '{print $NF}')"
+    max_gpu_mem_percent="$(echo "$max_gpu_mem" | jq -r '.gpu_mem_usage // "0%"')"
 
     out=""
 
