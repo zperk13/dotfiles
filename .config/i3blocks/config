@@ -15,6 +15,15 @@ color=#ebdbb2
 interval=persist
 command=scripts/stats
 
+[bandwidth]
+color=#ebdbb2
+command=scripts/bandwidth
+interval=5
+#INTERFACE=eth0
+#INLABEL=IN 
+#OUTLABEL=OUT 
+#TREAT_UNKNOWN_AS_UP=0
+
 [time]
 color=#ebdbb2
 command=date '+%a %b %d %H:%M:%S '
