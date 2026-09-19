@@ -9,6 +9,6 @@ wrap = "yes"
 edit = [
     { run = 'nvim "$@"', block = true, for = "unix" }
 ]
-play = [
-    {run = 'vlc "$@"', orphan = true}
-]
+# play = [
+    # {run = 'mpv "$@"', orphan = true}
+# ]
