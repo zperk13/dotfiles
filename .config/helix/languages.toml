@@ -1,0 +1,7 @@
+[[language]]
+name = "typst"
+language-servers = ["tinymist"]
+
+[language-server.tinymist]
+command = "tinymist"
+config = { preview.background.enabled = true }
