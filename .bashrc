@@ -35,7 +35,7 @@ alias kdiff='kitten diff'
 alias khrg='kitten hyperlinked-grep'
 alias icat='kitten icat'
 alias less="less --raw-control-chars"
-alias ls='eza --all --icons auto --group-directories-first --hyperlink'
+alias ls='eza --all --icons auto --group-directories-first --hyperlink auto'
 alias man='batman'
 alias monitor="~/.screenlayout/monitor.sh"
 alias pcp='rsync --archive --partial --info=progress2,stats1,name'
