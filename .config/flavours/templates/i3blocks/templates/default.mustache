@@ -1,0 +1,25 @@
+# Base16 {{scheme-name}}
+# Scheme Author: {{scheme-author}}
+
+separator=true
+separator_block_width=15
+
+[stats]
+color=#{{base05-hex}}
+interval=persist
+command=scripts/stats
+
+[bandwidth]
+color=#{{base05-hex}}
+command=scripts/bandwidth
+interval=5
+#INTERFACE=eth0
+#INLABEL=IN 
+#OUTLABEL=OUT 
+#TREAT_UNKNOWN_AS_UP=0
+
+[time]
+color=#{{base05-hex}}
+command=date '+%a %b %d %H:%M:%S '
+interval=1
+# There needs to be a newline after the above live and flavours doesn't seem to preserve me putting one here, so here's a comment

@@ -6,12 +6,6 @@
 # This config file uses keycodes (bindsym) and was written for the QWERTY
 # layout.
 
-#  _____                    _   _       _     
-# | ____|___ ___  ___ _ __ | |_(_) __ _| |___ 
-# |  _| / __/ __|/ _ \ '_ \| __| |/ _` | / __|
-# | |___\__ \__ \  __/ | | | |_| | (_| | \__ \
-# |_____|___/___/\___|_| |_|\__|_|\__,_|_|___/
-
 # Windows/Super Key
 set $mod Mod4
 
@@ -195,19 +189,37 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Start Flavours
+## Base16 Gruvbox dark, medium
+# Scheme author: Dawid Kurek (hello@dawikur.dev), morhetz (https://github.com/morhetz/gruvbox)
+# Template author: Tinted Theming (https://github.com/tinted-theming)
+#
+# You can use these variables anywhere in the i3 configuration file.
 
-set $bg  #282828 
-set $fg  #ebdbb2
-set $fg0 #fbf1c7
-set $fg4 #a89984
-set $red #cc241d
+set $base00 #282828
+set $base01 #3c3836
+set $base02 #504945
+set $base03 #665c54
+set $base04 #bdae93
+set $base05 #d5c4a1
+set $base06 #ebdbb2
+set $base07 #fbf1c7
+set $base08 #fb4934
+set $base09 #fe8019
+set $base0A #fabd2f
+set $base0B #b8bb26
+set $base0C #8ec07c
+set $base0D #83a598
+set $base0E #d3869b
+set $base0F #d65d0e
+# End Flavours
 
 # window colors
-# class                 border  backgr. text    indicator child_border
-client.focused          $bg     $bg     $fg     $fg       $fg
-client.unfocused        $bg     $bg     $fg     $fg       $fg
-client.focused_inactive $bg     $bg     $fg     $fg       $fg
-client.urgent           $red    $red    $fg     $red      $red
+# class                 border  background text    indicator child_border
+client.focused          $base00 $base00    $base05 $base05   $base05
+client.unfocused        $base00 $base00    $base05 $base05   $base05
+client.focused_inactive $base00 $base00    $base05 $base05   $base05
+client.urgent           $base08 $base08    $base05 $base08   $base08
 
 hide_edge_borders both
 
@@ -216,12 +228,12 @@ bar {
     status_command i3blocks
     tray_output none
     colors {
-        background $bg
-        #                  border bg   txt
-        focused_workspace  $fg0   $bg  $fg0
-        inactive_workspace $bg    $bg  $fg
-        active_workspace   $fg4   $bg  $fg # Workspaces that are active but not focused, AKA workspaces that are being shown on a non-focused monitor
-        urgent_workspace   $red   $red $fg
+        background $base00
+        #                  border  background txt
+        focused_workspace  $base07 $base00    $base05dark
+        inactive_workspace $base00 $base00    $base05
+        active_workspace   $base04 $base00    $base05 # Workspaces that are active but not focused, AKA workspaces that are being shown on a non-focused monitor
+        urgent_workspace   $base08 $base08    $base05
     }
     position top
 }
