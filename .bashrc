@@ -43,7 +43,7 @@ alias rg="rg --hidden --no-ignore --glob='!.git/' --glob='!.mypy_cache/'"
 alias rm='trash'
 alias s="source ~/.bashrc"
 alias stow='stow --verbose'
-alias stui='systemctl-tui'
+alias stui='systemctl-tui --log-order oldest-first'
 alias tree='eza --tree --ignore-glob .git'
 alias uefi=bios
 alias uptime='uptime --pretty'
