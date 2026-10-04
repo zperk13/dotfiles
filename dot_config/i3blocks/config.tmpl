@@ -11,12 +11,12 @@ separator=true
 separator_block_width=15
 
 [stats]
-color=#ebdbb2
+color={{ .color.fg }}
 interval=persist
 command=scripts/stats
 
 [bandwidth]
-color=#ebdbb2
+color={{ .color.fg }}
 command=scripts/bandwidth
 interval=5
 #INTERFACE=eth0
@@ -25,6 +25,6 @@ interval=5
 #TREAT_UNKNOWN_AS_UP=0
 
 [time]
-color=#ebdbb2
+color={{ .color.fg }}
 command=date '+%a %b %d %H:%M:%S '
 interval=1

@@ -196,18 +196,19 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 
-set $bg  #282828 
-set $fg  #ebdbb2
-set $fg0 #fbf1c7
-set $fg4 #a89984
-set $red #cc241d
+set $bg  {{ .color.bg }}
+set $fg  {{ .color.fg }}
+set $fg_bright {{ .color.fg_bright }}
+set $fg_dim {{ .color.fg_dim }}
+set $red_bg {{ .color.red_bg }}
+set $red_fg {{ .color.red_fg }}
 
 # window colors
-# class                 border  backgr. text    indicator child_border
-client.focused          $bg     $bg     $fg     $fg       $fg
-client.unfocused        $bg     $bg     $fg     $fg       $fg
-client.focused_inactive $bg     $bg     $fg     $fg       $fg
-client.urgent           $red    $red    $fg     $red      $red
+# class                 border  backgr. text indicator child_border
+client.focused          $bg     $bg     $fg  $fg       $fg
+client.unfocused        $bg     $bg     $fg  $fg       $fg
+client.focused_inactive $bg     $bg     $fg  $fg       $fg
+client.urgent           $red_bg $red_bg $fg  $red_bg   $red_bg
 
 hide_edge_borders both
 
@@ -217,11 +218,11 @@ bar {
     tray_output none
     colors {
         background $bg
-        #                  border bg   txt
-        focused_workspace  $fg0   $bg  $fg0
-        inactive_workspace $bg    $bg  $fg
-        active_workspace   $fg4   $bg  $fg # Workspaces that are active but not focused, AKA workspaces that are being shown on a non-focused monitor
-        urgent_workspace   $red   $red $fg
+        #                  border     bg      txt
+        focused_workspace  $fg_bright $bg     $fg_bright
+        inactive_workspace $bg        $bg     $fg_dim
+        active_workspace   $fg        $bg     $fg # Workspaces that are active but not focused, AKA workspaces that are being shown on a non-focused monitor
+        urgent_workspace   $red_bg    $red_bg $fg_bright
     }
     position top
 }
@@ -250,7 +251,7 @@ exec numlockx on
 
 exec --no-startup-id ~/.screenlayout/monitor.sh
 exec --no-startup-id picom -b
-exec --no-startup-id hsetroot -solid "#282828"
+exec --no-startup-id hsetroot -cover ~/Pictures/Wallpapers/current.png
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 

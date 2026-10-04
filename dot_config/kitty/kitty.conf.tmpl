@@ -31,57 +31,47 @@ mouse_map ctrl+shift+right press ungrabbed combine : mouse_select_command_output
 scrollback_pager_history 500
 scrollback_pager less --raw-control-chars
 
-# gruvbox. I just copied and pasted https://github.com/wdomitrz/kitty_gruvbox_theme/blob/master/gruvbox_dark.conf
+cursor            {{ .color.bg_bright }}
+cursor_text_color {{ .color.fg_dim }}
 
-cursor                  #928374
-cursor_text_color       background
+url_color {{ .color.blue_fg }}
 
-url_color               #83a598
+# visual_bell_color #8ec07c
+# bell_border_color #8ec07c
 
-visual_bell_color       #8ec07c
-bell_border_color       #8ec07c
+# active_border_color   #d3869b
+# inactive_border_color #665c54
 
-active_border_color     #d3869b
-inactive_border_color   #665c54
+foreground           {{ .color.fg }}
+background           {{ .color.bg }}
+selection_foreground {{ .color.fg_dim }}
+selection_background {{ .color.bg_bright }}
 
-foreground              #ebdbb2
-background              #282828
-selection_foreground    #928374
-selection_background    #ebdbb2
+# active_tab_foreground   #fbf1c7
+# active_tab_background   #665c54
+# inactive_tab_foreground #a89984
+# inactive_tab_background #3c3836
 
-active_tab_foreground   #fbf1c7
-active_tab_background   #665c54
-inactive_tab_foreground #a89984
-inactive_tab_background #3c3836
+color0  #000000
+color8  {{ .color.bg_bright }}
 
-# black  (bg3/bg4)
-color0                  #000000
-color8                  #7c6f64
+color1  {{ .color.red_bg }}
+color9  {{ .color.red_fg }}
 
-# red
-color1                  #cc241d
-color9                  #fb4934
+color2  {{ .color.green_bg }}
+color10 {{ .color.green_fg }}
 
-#: green
-color2                  #98971a
-color10                 #b8bb26
+color3  {{ .color.yellow_bg }}
+color11 {{ .color.yellow_fg }}
 
-# yellow
-color3                  #d79921
-color11                 #fabd2f
+color4  {{ .color.blue_bg }}
+color12 {{ .color.blue_fg }}
 
-# blue
-color4                  #458588
-color12                 #83a598
+color5  {{ .color.magenta_bg }}
+color13 {{ .color.magenta_fg }}
 
-# purple
-color5                  #b16286
-color13                 #d3869b
+color6  {{ .color.cyan_bg }}
+color14 {{ .color.cyan_fg }}
 
-# aqua
-color6                  #689d6a
-color14                 #8ec07c
-
-# white (fg4/fg3)
-color7                  #a89984
-color15                 #bdae93
+color7  {{ .color.fg_dim }}
+color15 {{ .color.fg_dim }}
