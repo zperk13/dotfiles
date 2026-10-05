@@ -1,0 +1,48 @@
+// -*- mode: jsonc -*-
+{
+    "spacing": 4, // Gaps between modules (4px)
+    "modules-left": [
+        "niri/workspaces"
+    ],
+    // "modules-center": [
+    //     "niri/window"
+    // ],
+    "modules-right": [
+        // "tray",
+        "cpu",
+        "custom/gpu",
+        "memory",
+        "clock"
+    ],
+    // Modules configuration
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+    },
+    "clock": {
+        // "timezone": "America/Chicago",
+        "interval": 1,
+        "format": "{:%a %b %d %H:%M:%S}",
+        "tooltip-format": "<big><tt>{calendar}</tt></big>",
+    },
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "RAM: {}%"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "custom/gpu": {
+      "exec": "gpu-usage-waybar",
+      "return-type": "json"
+    }
+}
