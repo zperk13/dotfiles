@@ -6,8 +6,8 @@
     ],
     "modules-right": [
         // "tray",
-        "network",
         "custom/stats",
+        "network",
         "clock"
     ],
     // Modules configuration
