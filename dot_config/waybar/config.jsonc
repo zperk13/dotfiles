@@ -1,6 +1,6 @@
 // -*- mode: jsonc -*-
 {
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 24, // Gaps between modules in pixels
     "modules-left": [
         "niri/workspaces"
     ],
